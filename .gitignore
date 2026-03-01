@@ -1,0 +1,31 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+arkgrid_cores.db
+
+# Local config overrides
+.nuxtrc.local
+
+# Node dependencies
+node_modules
+.pnpm-store/
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+.wrangler
+migrations/
+
+# Local env files
+.env
+.env.*
+!.env.example

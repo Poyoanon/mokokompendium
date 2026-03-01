@@ -1,0 +1,52 @@
+{
+  "name": "mokokompendium",
+  "type": "module",
+  "private": true,
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "@parcel/watcher",
+      "better-sqlite3"
+    ]
+  },
+  "scripts": {
+    "update-guide-dates": "node scripts/generate-guide-updated.mjs",
+    "predev": "pnpm update-guide-dates",
+    "prebuild": "pnpm update-guide-dates",
+    "pregenerate": "pnpm update-guide-dates",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy": "pnpm build && wrangler pages deploy dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.11.2",
+    "@nuxt/icon": "^2.2.1",
+    "@nuxt/ui": "^4.5.0",
+    "nuxt": "^4.3.1",
+    "vue": "^3.5.29",
+    "vue-router": "^5.0.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260303.0",
+    "@iconify-json/lucide": "^1.2.93",
+    "@nuxt/eslint": "^1.15.2",
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/test-utils": "^4.0.0",
+    "@vue/test-utils": "^2.4.6",
+    "eslint": "^10.0.2",
+    "eslint-plugin-security": "^4.0.0",
+    "happy-dom": "^20.7.0",
+    "nitro-cloudflare-dev": "^0.2.2",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18",
+    "wrangler": "^4.68.1"
+  }
+}

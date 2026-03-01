@@ -1,0 +1,15 @@
+# Cloudflare Pages configuration for Mokokompendium
+name = "mokokompendium"
+compatibility_date = "2024-12-01"
+pages_build_output_dir = "dist"
+
+# D1 database for skills/tripods data
+[[d1_databases]]
+binding = "DB"
+database_name = "mokokompendium-skills"
+database_id = "9accd886-cccd-45de-9773-d00e9181c0a0"
+
+[[d1_databases]]
+binding = "arkgrid_db"
+database_name = "mokokompendium-arkgrid"
+database_id = "da7d2d2e-b7c1-4d4f-b4f6-a66154e4ac9e"
