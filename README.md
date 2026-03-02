@@ -37,3 +37,4 @@ Tooltip/gameplay data is stored in Cloudflare D1 SQLite.
 Default local address: `http://localhost:3000`
 
 Contributions are welcome. Feel free to open an issue or submit a pull request.
+If you'd like to contribute to the class guides themselves, [check this wiki](https://github.com/Poyoanon/mokokompendium/wiki/Contributing-to-Class-Guides)!
