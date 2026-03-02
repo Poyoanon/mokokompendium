@@ -1,5 +1,5 @@
 import { asD1Database, type D1DatabaseLike } from '../utils/d1'
-import { isAncientElementalSkillGroupName, SUMMONER_ANCIENT_ELEMENTAL_SKILLS } from '../utils/skill-category'
+import { getSkillGroupAliasCandidates } from '../utils/skill-category'
 import { buildLocaleAwareEqualsClause, buildLocalizedSelectSql } from '../utils/tooltip-locale'
 
 const CDN_PROXY_BASE_URL = '/api/cdn/efui_iconatlas'
@@ -41,6 +41,10 @@ type SkillCategoryRow = {
   element_tag: string | null
   icon_file: string
   icon_index: number
+}
+
+type SkillTooltipGroupAliasRow = {
+  group_key: string
 }
 
 type SkillColorColumnInfo = {
@@ -125,18 +129,6 @@ const getSkillCategoryTagCandidates = (skillName: string) => {
     }
   }
 
-  // Handle the Summoner "Ancient Elemental Skill" gem alias in any locale.
-  if (isAncientElementalSkillGroupName(normalized)) {
-    addCandidate('Ancient Elemental Skill')
-    addCandidate('[Ancient Elemental Skill]')
-    addCandidate('Ancient Elemental')
-    addCandidate('[Ancient Elemental]')
-    addCandidate('Elemental ancestral')
-    addCandidate('[Elemental ancestral]')
-    addCandidate('Habilidad de elemental ancestral')
-    addCandidate('[Habilidad de elemental ancestral]')
-  }
-
   return [...candidates]
 }
 
@@ -172,66 +164,79 @@ async function buildSkillCategoryTooltip(
     alias: 's',
   })
 
-  if (isAncientElementalSkillGroupName(skillName)) {
-    const placeholders = SUMMONER_ANCIENT_ELEMENTAL_SKILLS.map(() => '?').join(', ')
-    const rows = await db.prepare(`
-      SELECT
-        s.skill_name,
-        ${localizedSkillNameSql} AS localized_skill_name,
-        ${localizedElementTagSql} AS element_tag,
-        s.icon_file,
-        s.icon_index
-      FROM skills s
-      WHERE s.class_id = ?
-        AND s.skill_name IN (${placeholders})
-      ORDER BY
-        CASE s.skill_name
-          WHEN 'Osh' THEN 1
-          WHEN 'Alimaji' THEN 2
-          WHEN 'Phoenix' THEN 3
-          WHEN 'Jahia & Ligheas' THEN 4
-          WHEN 'Akir' THEN 5
-          ELSE 99
-        END
-    `).bind(classId, ...SUMMONER_ANCIENT_ELEMENTAL_SKILLS).all() as { results?: SkillCategoryRow[] }
+  const groupAliasCandidates = getSkillGroupAliasCandidates(skillName)
+  if (groupAliasCandidates.length) {
+    const aliasPlaceholders = groupAliasCandidates.map(() => '?').join(', ')
 
-    const matches = (rows.results ?? [])
-      .filter((row) => typeof row.skill_name === 'string' && row.skill_name.trim().length > 0)
+    try {
+      const groupAliasRow = await db.prepare(`
+        SELECT group_key
+        FROM skill_tooltip_group_aliases
+        WHERE class_id = ?
+          AND alias_key IN (${aliasPlaceholders})
+        ORDER BY LENGTH(alias_key) DESC
+        LIMIT 1
+      `).bind(classId, ...groupAliasCandidates).first() as SkillTooltipGroupAliasRow | null
 
-    if (matches.length) {
-      const lines = ['[BLUE]Affected Skills[/BLUE]']
-      const uniqueTags = Array.from(new Set(
-        matches
-          .map((row) => row.element_tag?.trim())
-          .filter((tag): tag is string => !!tag && tag.length > 0)
-      ))
-      if (uniqueTags.length === 1) {
-        lines.push(`[PURPLE]${uniqueTags[0]}[/PURPLE]`)
-      }
+      const groupKey = groupAliasRow?.group_key?.trim()
+      if (groupKey) {
+        const groupedRows = await db.prepare(`
+          SELECT
+            m.skill_name,
+            ${localizedSkillNameSql} AS localized_skill_name,
+            ${localizedElementTagSql} AS element_tag,
+            s.icon_file,
+            s.icon_index
+          FROM skill_tooltip_group_members m
+          JOIN skills s
+            ON s.class_id = m.class_id
+            AND s.skill_name = m.skill_name
+          WHERE m.class_id = ?
+            AND m.group_key = ?
+          ORDER BY m.sort_order ASC, s.skill_name ASC
+        `).bind(classId, groupKey).all() as { results?: SkillCategoryRow[] }
 
-      for (const row of matches) {
-        const displayName = row.localized_skill_name?.trim() || row.skill_name.trim()
-        lines.push(`[GREEN]•[/GREEN] ${displayName}`)
-      }
+        const matches = (groupedRows.results ?? [])
+          .filter((row) => typeof row.skill_name === 'string' && row.skill_name.trim().length > 0)
 
-      const iconSource = matches[0]
-      if (iconSource) {
-        return {
-          icon_file: iconSource.icon_file,
-          icon_index: iconSource.icon_index,
-          description: lines.join('\n'),
-          cast_tag: null,
-          element_tag: null,
-          cast_tag_color: null,
-          element_tag_color: null,
-          cooldown_seconds: null,
-          parts_attack_level: null,
-          stiffness_type: null,
-          directional_attack_type: null,
-          counter_attack_type: null,
-          super_armor_type: null,
+        if (matches.length) {
+          const lines = ['[BLUE]Affected Skills[/BLUE]']
+          const uniqueTags = Array.from(new Set(
+            matches
+              .map((row) => row.element_tag?.trim())
+              .filter((tag): tag is string => !!tag && tag.length > 0)
+          ))
+          if (uniqueTags.length === 1) {
+            lines.push(`[PURPLE]${uniqueTags[0]}[/PURPLE]`)
+          }
+
+          for (const row of matches) {
+            const displayName = row.localized_skill_name?.trim() || row.skill_name.trim()
+            lines.push(`[GREEN]•[/GREEN] ${displayName}`)
+          }
+
+          const iconSource = matches[0]
+          if (iconSource) {
+            return {
+              icon_file: iconSource.icon_file,
+              icon_index: iconSource.icon_index,
+              description: lines.join('\n'),
+              cast_tag: null,
+              element_tag: null,
+              cast_tag_color: null,
+              element_tag_color: null,
+              cooldown_seconds: null,
+              parts_attack_level: null,
+              stiffness_type: null,
+              directional_attack_type: null,
+              counter_attack_type: null,
+              super_armor_type: null,
+            }
+          }
         }
       }
+    } catch {
+      // Group tables are optional during rollout; fallback to element-tag grouping.
     }
   }
 
@@ -387,12 +392,6 @@ export default defineEventHandler(async (event) => {
       alias: 's',
     })
 
-    setHeader(
-      event,
-      'Cache-Control',
-      import.meta.dev ? DEV_CACHE_CONTROL_HEADER : CACHE_CONTROL_HEADER
-    )
-
     let skill: SkillTooltipRow | null = null
 
     try {
@@ -482,6 +481,7 @@ export default defineEventHandler(async (event) => {
     }
 
     if (!skill) {
+      setHeader(event, 'Cache-Control', DEV_CACHE_CONTROL_HEADER)
       return {
         error: 'Skill not found',
         class_id: classId,
@@ -490,6 +490,12 @@ export default defineEventHandler(async (event) => {
     }
 
     const description = skill.description ?? null
+
+    setHeader(
+      event,
+      'Cache-Control',
+      import.meta.dev ? DEV_CACHE_CONTROL_HEADER : CACHE_CONTROL_HEADER
+    )
 
     return {
       skill_name: skillName,
@@ -511,6 +517,7 @@ export default defineEventHandler(async (event) => {
     }
   }
 
+  setHeader(event, 'Cache-Control', DEV_CACHE_CONTROL_HEADER)
   return {
     error: 'Please provide class_id and skill_name parameters'
   }

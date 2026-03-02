@@ -1,30 +1,23 @@
 import { describe, expect, it } from 'vitest'
 
-import { isAncientElementalSkillGroupName, SUMMONER_ANCIENT_ELEMENTAL_SKILLS } from '../../../server/utils/skill-category'
+import { getSkillGroupAliasCandidates, normalizeSkillGroupAliasKey } from '../../../server/utils/skill-category'
 
-describe('isAncientElementalSkillGroupName', () => {
-  it('matches english and spanish aliases for the Summoner group gem', () => {
-    expect(isAncientElementalSkillGroupName('Ancient Elemental Skill')).toBe(true)
-    expect(isAncientElementalSkillGroupName('[Ancient Elemental]')).toBe(true)
-    expect(isAncientElementalSkillGroupName('Elemental ancestral')).toBe(true)
-    expect(isAncientElementalSkillGroupName('Habilidad de elemental ancestral')).toBe(true)
-  })
-
-  it('rejects unrelated skill names', () => {
-    expect(isAncientElementalSkillGroupName('Ancient Spear')).toBe(false)
-    expect(isAncientElementalSkillGroupName('Water Elemental')).toBe(false)
+describe('normalizeSkillGroupAliasKey', () => {
+  it('normalizes case, surrounding brackets, and whitespace', () => {
+    expect(normalizeSkillGroupAliasKey('  [Ancient   Elemental]  ')).toBe('ancient elemental')
+    expect(normalizeSkillGroupAliasKey('Habilidad de elemental ancestral')).toBe('habilidad de elemental ancestral')
   })
 })
 
-describe('SUMMONER_ANCIENT_ELEMENTAL_SKILLS', () => {
-  it('keeps the canonical five Ancient Elemental summons', () => {
-    expect([...SUMMONER_ANCIENT_ELEMENTAL_SKILLS]).toEqual([
-      'Osh',
-      'Alimaji',
-      'Phoenix',
-      'Jahia & Ligheas',
-      'Akir',
+describe('getSkillGroupAliasCandidates', () => {
+  it('includes normalized alias and the no-skill variant', () => {
+    expect(getSkillGroupAliasCandidates('Ancient Elemental Skill')).toEqual([
+      'ancient elemental skill',
+      'ancient elemental',
     ])
   })
-})
 
+  it('returns an empty list for blank aliases', () => {
+    expect(getSkillGroupAliasCandidates('  ')).toEqual([])
+  })
+})

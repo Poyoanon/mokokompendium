@@ -1,35 +1,19 @@
-export const SUMMONER_ANCIENT_ELEMENTAL_SKILLS = [
-  'Osh',
-  'Alimaji',
-  'Phoenix',
-  'Jahia & Ligheas',
-  'Akir',
-] as const
+const normalizeSpacing = (value: string) => value.replace(/\s+/g, ' ').trim()
 
-const ANCIENT_ELEMENTAL_GROUP_KEYS = new Set([
-  'ancient elemental skill',
-  'ancient elemental',
-  'elemental ancestral',
-  'habilidad de elemental ancestral',
-])
+export const normalizeSkillGroupAliasKey = (value: string) =>
+  normalizeSpacing(value.trim().toLowerCase().replace(/^\[|\]$/g, ''))
 
-const normalizeGroupKey = (value: string) =>
-  value
-    .trim()
-    .toLowerCase()
-    .replace(/^\[|\]$/g, '')
-    .replace(/\s+/g, ' ')
+export const getSkillGroupAliasCandidates = (value: string) => {
+  const normalized = normalizeSkillGroupAliasKey(value)
+  if (!normalized) return []
 
-export const isAncientElementalSkillGroupName = (value: string) => {
-  const normalized = normalizeGroupKey(value)
-  if (!normalized) return false
-  if (ANCIENT_ELEMENTAL_GROUP_KEYS.has(normalized)) return true
-
+  const candidates = new Set<string>([normalized])
   if (normalized.endsWith(' skill')) {
-    const withoutSkill = normalized.replace(/\s+skill$/, '').trim()
-    return ANCIENT_ELEMENTAL_GROUP_KEYS.has(withoutSkill)
+    const withoutSkillSuffix = normalizeSpacing(normalized.replace(/\s+skill$/, ''))
+    if (withoutSkillSuffix.length > 0) {
+      candidates.add(withoutSkillSuffix)
+    }
   }
 
-  return false
+  return [...candidates]
 }
-
