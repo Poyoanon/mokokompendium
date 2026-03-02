@@ -114,6 +114,10 @@
   }
 
   .site-header-slot-end {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: max-content;
     justify-self: end;
   }
 
@@ -199,6 +203,16 @@
     color: #1a1206;
     border-color: rgb(255 190 60 / 35%);
     background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  }
+
+  .site-github-link {
+    border-color: var(--stroke);
+    background: var(--panel-strong);
+  }
+
+  .site-github-link:hover {
+    border-color: rgb(255 190 60 / 35%);
+    background: rgb(255 190 60 / 16%);
   }
 
   .mk-eyebrow {

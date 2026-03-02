@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
+const githubRepositoryUrl = 'https://github.com/Poyoanon/mokokompendium'
 
 const navigation = [
   { label: 'Home', to: '/', icon: 'i-lucide-home' },
@@ -27,18 +28,31 @@ const navigation = [
             </NuxtLink>
           </div>
 
-          <nav class="site-nav">
-            <NuxtLink
-              v-for="item in navigation"
-              :key="item.to"
-              :to="item.to"
-              class="site-nav-link text-sm"
-              :class="route.path === item.to || (item.to !== '/' && route.path.startsWith(item.to)) ? 'is-active' : ''"
+          <div class="site-header-slot-end">
+            <nav class="site-nav">
+              <NuxtLink
+                v-for="item in navigation"
+                :key="item.to"
+                :to="item.to"
+                class="site-nav-link text-sm"
+                :class="route.path === item.to || (item.to !== '/' && route.path.startsWith(item.to)) ? 'is-active' : ''"
+              >
+                <UIcon :name="item.icon" class="size-4" />
+                {{ item.label }}
+              </NuxtLink>
+            </nav>
+
+            <a
+              :href="githubRepositoryUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Mokokompendium GitHub repository"
+              class="site-nav-link site-github-link text-sm"
             >
-              <UIcon :name="item.icon" class="size-4" />
-              {{ item.label }}
-            </NuxtLink>
-          </nav>
+              <UIcon name="i-lucide-github" class="size-4" />
+              <span class="hidden sm:inline">GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
     </header>
