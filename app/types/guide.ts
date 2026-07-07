@@ -45,6 +45,17 @@ export interface RotationSection {
   steps?: string[]
 }
 
+export interface GuideIdentity {
+  name: string
+  description: string
+}
+
+export interface GuideSynergy {
+  name: string
+  description: string
+  skills: string[]
+}
+
 export interface ArkGridVariant {
   name: string
   description: string
@@ -88,6 +99,8 @@ export interface Build {
   description?: string
   playstyle?: string
   difficulty?: 'easy' | 'medium' | 'hard'
+  identity?: GuideIdentity
+  synergy?: GuideSynergy
   engravings?: Engraving[]
   variants?: ArkGridVariant[]
   preArkGrid?: PreArkGrid
@@ -102,15 +115,8 @@ export interface GuideMetadata {
   lastUpdated?: string
   patch: string
   builds: Build[]
-  identity: {
-    name: string
-    description: string
-  }
-  synergy?: {
-    name: string
-    description: string
-    skills: string[]
-  }
+  identity: GuideIdentity
+  synergy?: GuideSynergy
 }
 
 export interface ClassGuideDocument {
@@ -118,15 +124,8 @@ export interface ClassGuideDocument {
   class?: string
   subclass: string
   description: string
-  identity?: {
-    name: string
-    description: string
-  }
-  synergy?: {
-    name: string
-    description: string
-    skills: string[]
-  }
+  identity?: GuideIdentity
+  synergy?: GuideSynergy
   builds?: Build[]
   body?: unknown
   path?: string

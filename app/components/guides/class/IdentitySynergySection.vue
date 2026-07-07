@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { GuideIdentity, GuideSynergy } from '~/types/guide'
 import SkillTooltip from './SkillTooltip.vue'
 
 type SkillHeaderLine = {
@@ -9,17 +10,6 @@ type SkillHeaderLine = {
 type SkillDescriptionPart = {
   text: string
   color: string | null
-}
-
-type GuideIdentity = {
-  name: string
-  description: string
-}
-
-type GuideSynergy = {
-  name: string
-  description: string
-  skills: string[]
 }
 
 const props = defineProps<{

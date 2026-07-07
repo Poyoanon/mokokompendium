@@ -39,6 +39,17 @@ const arkPassiveSchema = z.object({
   tier: z.number().int().min(1).optional(),
 })
 
+const identitySchema = z.object({
+  name: z.string(),
+  description: z.string(),
+})
+
+const synergySchema = z.object({
+  name: z.string(),
+  description: z.string(),
+  skills: z.array(z.string()),
+})
+
 // Schema for variants
 const variantSchema = z.object({
   name: z.string(),
@@ -67,6 +78,8 @@ const buildSchema = z.object({
   description: z.string(),
   playstyle: z.string(),
   difficulty: z.enum(['easy', 'medium', 'hard']),
+  identity: identitySchema.optional(),
+  synergy: synergySchema.optional(),
   variants: z.array(variantSchema).optional(),
   preArkGrid: preArkGridSchema.optional(),
   skills: z.array(skillSchema).optional(),
@@ -85,15 +98,8 @@ const classGuideSchema = z.object({
   author: z.string().optional(),
   lastUpdated: z.string().optional(),
   patch: z.string(),
-  identity: z.object({
-    name: z.string(),
-    description: z.string(),
-  }),
-  synergy: z.object({
-    name: z.string(),
-    description: z.string(),
-    skills: z.array(z.string()),
-  }).optional(),
+  identity: identitySchema,
+  synergy: synergySchema.optional(),
   builds: z.array(buildSchema),
 })
 
