@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mokokompendium Class Guide Checker</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f1115;
+      --panel: #171a21;
+      --panel-2: #1f2430;
+      --border: #303746;
+      --text: #e7eaf0;
+      --muted: #a5adbb;
+      --good: #4ade80;
+      --warn: #fbbf24;
+      --bad: #fb7185;
+      --accent: #93c5fd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 32px auto;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin: 24px 0 14px;
+    }
+
+    button,
+    label.file {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--panel-2);
+      color: var(--text);
+      cursor: pointer;
+      font: inherit;
+    }
+
+    button.primary {
+      border-color: #2563eb;
+      background: #1d4ed8;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 420px;
+      resize: vertical;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #0b0d11;
+      color: var(--text);
+      font: 13px/1.45 ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      tab-size: 2;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--panel);
+      padding: 14px;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .badge.good {
+      border-color: color-mix(in srgb, var(--good), transparent 45%);
+      color: var(--good);
+    }
+
+    .badge.warn {
+      border-color: color-mix(in srgb, var(--warn), transparent 45%);
+      color: var(--warn);
+    }
+
+    .badge.bad {
+      border-color: color-mix(in srgb, var(--bad), transparent 45%);
+      color: var(--bad);
+    }
+
+    .result-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .result {
+      border: 1px solid var(--border);
+      border-left-width: 4px;
+      border-radius: 5px;
+      background: #12151b;
+      padding: 10px 12px;
+    }
+
+    .result.error {
+      border-left-color: var(--bad);
+    }
+
+    .result.warning {
+      border-left-color: var(--warn);
+    }
+
+    .result.info {
+      border-left-color: var(--accent);
+    }
+
+    .result strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .result code,
+    .hint code {
+      color: #bfdbfe;
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    }
+
+    .hint {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      main {
+        width: min(100vw - 20px, 1120px);
+        margin: 20px auto;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Class Guide Checker</h1>
+    <p>Paste or upload a class guide markdown file.</p>
+
+    <div class="toolbar">
+      <label class="file">
+        Upload .md
+        <input id="fileInput" type="file" accept=".md,.markdown,text/markdown,text/plain">
+      </label>
+      <button class="primary" id="checkButton" type="button">Check guide</button>
+      <button id="clearButton" type="button">Clear</button>
+    </div>
+
+    <div class="grid">
+      <textarea id="source" spellcheck="false" placeholder="Paste content/guides/classes/example.md here..."></textarea>
+
+      <section class="panel" aria-live="polite">
+        <div class="status">
+          <div>
+            <strong>Results</strong>
+            <p id="summary">No guide checked yet.</p>
+          </div>
+          <span id="statusBadge" class="badge">Idle</span>
+        </div>
+        <ul id="results" class="result-list"></ul>
+        <p class="hint">
+          Full YAML parsing uses <code>js-yaml</code> from CDN. If it cannot load, this page still checks delimiters, tabs, and tripod tags.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script>
+    const source = document.getElementById('source')
+    const fileInput = document.getElementById('fileInput')
+    const checkButton = document.getElementById('checkButton')
+    const clearButton = document.getElementById('clearButton')
+    const results = document.getElementById('results')
+    const summary = document.getElementById('summary')
+    const statusBadge = document.getElementById('statusBadge')
+
+    const VALID_DIFFICULTIES = new Set(['easy', 'medium', 'hard'])
+    const VALID_RUNE_RARITIES = new Set(['uncommon', 'rare', 'epic', 'legendary'])
+    const VALID_PRIORITIES = new Set(['required', 'recommended', 'optional'])
+    const VALID_ARK_PASSIVE_CATEGORIES = new Set(['evolution', 'enlightenment', 'leap'])
+
+    fileInput.addEventListener('change', async () => {
+      const file = fileInput.files && fileInput.files[0]
+      if (!file) return
+      source.value = await file.text()
+      runCheck()
+    })
+
+    checkButton.addEventListener('click', runCheck)
+    clearButton.addEventListener('click', () => {
+      source.value = ''
+      render([], [], 'No guide checked yet.')
+    })
+
+    function addIssue(collection, type, path, message, detail) {
+      collection.push({ type, path, message, detail })
+    }
+
+    function runCheck() {
+      const text = source.value
+      const errors = []
+      const warnings = []
+
+      checkRawMarkdown(text, errors, warnings)
+
+      const frontmatter = extractFrontmatter(text, errors)
+      if (!frontmatter) {
+        render(errors, warnings, 'Frontmatter could not be parsed.')
+        return
+      }
+
+      if (!window.jsyaml) {
+        addIssue(warnings, 'warning', 'yaml', 'YAML parser was not loaded.', 'Connect to the internet and reload this page for full schema checks.')
+        render(errors, warnings, 'Basic checks completed without YAML parsing.')
+        return
+      }
+
+      let data
+      try {
+        data = window.jsyaml.load(frontmatter.yaml)
+      } catch (error) {
+        addIssue(errors, 'error', 'frontmatter', 'Invalid YAML.', error.message)
+        render(errors, warnings, 'YAML parsing failed.')
+        return
+      }
+
+      validateGuide(data, errors, warnings)
+      render(errors, warnings, 'Guide check completed.')
+    }
+
+    function extractFrontmatter(text, errors) {
+      const normalized = text.replace(/\r\n/g, '\n')
+      const lines = normalized.split('\n')
+      if (lines[0] !== '---') {
+        addIssue(errors, 'error', 'frontmatter', 'Guide must start with a frontmatter delimiter.', 'The first line should be exactly ---')
+        return null
+      }
+
+      const endIndex = lines.findIndex((line, index) => index > 0 && line === '---')
+      if (endIndex === -1) {
+        addIssue(errors, 'error', 'frontmatter', 'Missing closing frontmatter delimiter.', 'Add a line containing exactly --- after the YAML block.')
+        return null
+      }
+
+      return {
+        yaml: lines.slice(1, endIndex).join('\n'),
+        body: lines.slice(endIndex + 1).join('\n'),
+      }
+    }
+
+    function checkRawMarkdown(text, errors, warnings) {
+      if (!text.trim()) {
+        addIssue(errors, 'error', 'file', 'No content provided.', 'Paste or upload a guide markdown file.')
+        return
+      }
+
+      const lines = text.split(/\n/)
+      lines.forEach((line, index) => {
+        const lineNumber = index + 1
+        if (line.includes('\t')) {
+          addIssue(errors, 'error', `line ${lineNumber}`, 'Tabs are not allowed in guide YAML.', 'Use 2 spaces for indentation.')
+        }
+        if (/\s+$/.test(line)) {
+          addIssue(warnings, 'warning', `line ${lineNumber}`, 'Trailing whitespace.', 'Remove extra spaces at the end of the line.')
+        }
+        if (/^\s*[A-Za-z0-9_-]+:\s*(['"]).*\1\s*$/.test(line)) {
+          addIssue(warnings, 'warning', `line ${lineNumber}`, 'Quoted scalar detected.', 'Normal sentence text should usually be unquoted YAML.')
+        }
+        if (line.includes('<tripod>') || line.includes('</tripod>')) {
+          checkTripodTags(line, lineNumber, errors)
+        }
+      })
+    }
+
+    function checkTripodTags(line, lineNumber, errors) {
+      const opens = (line.match(/<tripod>/g) || []).length
+      const closes = (line.match(/<\/tripod>/g) || []).length
+      if (opens !== closes) {
+        addIssue(errors, 'error', `line ${lineNumber}`, 'Mismatched tripod tags.', 'Use <tripod>Name</tripod>.')
+      }
+      if (/<tripod>[^<]*<tripod>/.test(line)) {
+        addIssue(errors, 'error', `line ${lineNumber}`, 'Malformed closing tripod tag.', 'Expected </tripod>, not <tripod>.')
+      }
+      if (/<tripod>\s*<\/tripod>/.test(line)) {
+        addIssue(errors, 'error', `line ${lineNumber}`, 'Empty tripod tag.', 'Put the exact tripod name between the tags.')
+      }
+    }
+
+    function validateGuide(data, errors, warnings) {
+      if (!isObject(data)) {
+        addIssue(errors, 'error', 'frontmatter', 'Frontmatter must be a YAML object.', 'The parsed YAML root was not an object.')
+        return
+      }
+
+      requireString(data, 'title', errors)
+      requireString(data, 'class', errors)
+      requireString(data, 'subclass', errors)
+      requireNumber(data, 'class_id', errors)
+      requireString(data, 'description', errors)
+      validateIdentity(data.identity, 'identity', errors)
+      if (data.synergy !== undefined) validateSynergy(data.synergy, 'synergy', errors)
+
+      if (!Array.isArray(data.builds) || data.builds.length === 0) {
+        addIssue(errors, 'error', 'builds', 'Guide must define at least one build.', 'Expected builds: [ ... ].')
+        return
+      }
+
+      data.builds.forEach((build, buildIndex) => {
+        validateBuild(build, `builds[${buildIndex}]`, errors, warnings)
+      })
+    }
+
+    function validateBuild(build, path, errors, warnings) {
+      if (!isObject(build)) {
+        addIssue(errors, 'error', path, 'Build must be an object.', '')
+        return
+      }
+
+      requireString(build, `${path}.name`, errors, 'name')
+      requireString(build, `${path}.engraving`, errors, 'engraving')
+      requireString(build, `${path}.description`, errors, 'description')
+      requireString(build, `${path}.playstyle`, errors, 'playstyle')
+
+      if (!VALID_DIFFICULTIES.has(build.difficulty)) {
+        addIssue(errors, 'error', `${path}.difficulty`, 'Invalid build difficulty.', 'Use easy, medium, or hard.')
+      }
+
+      if (build.identity !== undefined) validateIdentity(build.identity, `${path}.identity`, errors)
+      if (build.synergy !== undefined) validateSynergy(build.synergy, `${path}.synergy`, errors)
+      if (build.preArkGrid !== undefined) validatePreArkGrid(build.preArkGrid, `${path}.preArkGrid`, errors, warnings)
+      if (build.engravings !== undefined) validateEngravings(build.engravings, `${path}.engravings`, errors)
+      if (build.skills !== undefined) validateSkills(build.skills, `${path}.skills`, errors)
+      if (build.gems !== undefined) validateGems(build.gems, `${path}.gems`, errors)
+      if (build.arkPassives !== undefined) validateArkPassives(build.arkPassives, `${path}.arkPassives`, errors)
+
+      if (build.variants !== undefined) {
+        if (!Array.isArray(build.variants)) {
+          addIssue(errors, 'error', `${path}.variants`, 'Variants must be a list.', '')
+        } else {
+          build.variants.forEach((variant, index) => validateVariant(variant, `${path}.variants[${index}]`, errors, warnings))
+        }
+      }
+    }
+
+    function validateVariant(variant, path, errors) {
+      if (!isObject(variant)) {
+        addIssue(errors, 'error', path, 'Variant must be an object.', '')
+        return
+      }
+      requireString(variant, `${path}.name`, errors, 'name')
+      requireString(variant, `${path}.description`, errors, 'description')
+      if (variant.difficulty !== undefined && ![1, 2, 3].includes(variant.difficulty)) {
+        addIssue(errors, 'error', `${path}.difficulty`, 'Invalid variant difficulty.', 'Use 1, 2, or 3.')
+      }
+      if (variant.engravings !== undefined) validateEngravings(variant.engravings, `${path}.engravings`, errors)
+      if (variant.skills !== undefined) validateSkills(variant.skills, `${path}.skills`, errors)
+      if (variant.gems !== undefined) validateGems(variant.gems, `${path}.gems`, errors)
+      if (variant.arkPassives !== undefined) validateArkPassives(variant.arkPassives, `${path}.arkPassives`, errors)
+    }
+
+    function validatePreArkGrid(preArkGrid, path, errors) {
+      if (!isObject(preArkGrid)) {
+        addIssue(errors, 'error', path, 'preArkGrid must be an object.', '')
+        return
+      }
+      if (preArkGrid.engravings !== undefined) validateEngravings(preArkGrid.engravings, `${path}.engravings`, errors)
+      if (preArkGrid.skills !== undefined) validateSkills(preArkGrid.skills, `${path}.skills`, errors)
+      if (preArkGrid.gems !== undefined) validateGems(preArkGrid.gems, `${path}.gems`, errors)
+      if (preArkGrid.arkPassives !== undefined) validateArkPassives(preArkGrid.arkPassives, `${path}.arkPassives`, errors)
+    }
+
+    function validateIdentity(identity, path, errors) {
+      if (!isObject(identity)) {
+        addIssue(errors, 'error', path, 'Identity must be an object.', 'Expected name and description.')
+        return
+      }
+      requireString(identity, `${path}.name`, errors, 'name')
+      requireString(identity, `${path}.description`, errors, 'description')
+    }
+
+    function validateSynergy(synergy, path, errors) {
+      if (!isObject(synergy)) {
+        addIssue(errors, 'error', path, 'Synergy must be an object.', 'Expected name, description, and skills.')
+        return
+      }
+      requireString(synergy, `${path}.name`, errors, 'name')
+      requireString(synergy, `${path}.description`, errors, 'description')
+      requireStringArray(synergy, `${path}.skills`, errors, 'skills')
+    }
+
+    function validateEngravings(engravings, path, errors) {
+      if (!Array.isArray(engravings)) {
+        addIssue(errors, 'error', path, 'Engravings must be a list.', '')
+        return
+      }
+      engravings.forEach((engraving, index) => {
+        const itemPath = `${path}[${index}]`
+        if (!isObject(engraving)) {
+          addIssue(errors, 'error', itemPath, 'Engraving must be an object.', '')
+          return
+        }
+        requireString(engraving, `${itemPath}.name`, errors, 'name')
+        if (engraving.priority !== undefined && !VALID_PRIORITIES.has(engraving.priority)) {
+          addIssue(errors, 'error', `${itemPath}.priority`, 'Invalid engraving priority.', 'Use required, recommended, or optional.')
+        }
+      })
+    }
+
+    function validateSkills(skills, path, errors) {
+      if (!Array.isArray(skills)) {
+        addIssue(errors, 'error', path, 'Skills must be a list.', '')
+        return
+      }
+      skills.forEach((skill, index) => {
+        const itemPath = `${path}[${index}]`
+        if (!isObject(skill)) {
+          addIssue(errors, 'error', itemPath, 'Skill must be an object.', '')
+          return
+        }
+        requireString(skill, `${itemPath}.name`, errors, 'name')
+        if (skill.tripods !== undefined && !Array.isArray(skill.tripods)) {
+          addIssue(errors, 'error', `${itemPath}.tripods`, 'Tripods must be a list of names.', '')
+        }
+        if (skill.rune_rarity !== undefined && !VALID_RUNE_RARITIES.has(skill.rune_rarity)) {
+          addIssue(errors, 'error', `${itemPath}.rune_rarity`, 'Invalid rune rarity.', 'Use uncommon, rare, epic, or legendary.')
+        }
+      })
+    }
+
+    function validateGems(gems, path, errors) {
+      if (!Array.isArray(gems)) {
+        addIssue(errors, 'error', path, 'Gems must be a list.', '')
+        return
+      }
+      gems.forEach((gem, index) => {
+        const itemPath = `${path}[${index}]`
+        if (!isObject(gem)) {
+          addIssue(errors, 'error', itemPath, 'Gem must be an object.', '')
+          return
+        }
+        requireString(gem, `${itemPath}.skill`, errors, 'skill')
+        if (!['damage', 'cooldown'].includes(gem.type)) {
+          addIssue(errors, 'error', `${itemPath}.type`, 'Invalid gem type.', 'Use damage or cooldown.')
+        }
+        requireNumber(gem, `${itemPath}.priority`, errors, 'priority')
+      })
+    }
+
+    function validateArkPassives(passives, path, errors) {
+      if (!Array.isArray(passives)) {
+        addIssue(errors, 'error', path, 'Ark passives must be a list.', '')
+        return
+      }
+      passives.forEach((passive, index) => {
+        const itemPath = `${path}[${index}]`
+        if (!isObject(passive)) {
+          addIssue(errors, 'error', itemPath, 'Ark passive must be an object.', '')
+          return
+        }
+        requireString(passive, `${itemPath}.name`, errors, 'name')
+        requireNumber(passive, `${itemPath}.points`, errors, 'points')
+        if (!VALID_ARK_PASSIVE_CATEGORIES.has(passive.category)) {
+          addIssue(errors, 'error', `${itemPath}.category`, 'Invalid ark passive category.', 'Use evolution, enlightenment, or leap.')
+        }
+      })
+    }
+
+    function requireString(object, path, errors, key) {
+      const value = key ? object[key] : object[path]
+      if (typeof value !== 'string' || value.trim() === '') {
+        addIssue(errors, 'error', path, 'Expected a non-empty string.', '')
+      }
+    }
+
+    function requireNumber(object, path, errors, key) {
+      const value = key ? object[key] : object[path]
+      if (typeof value !== 'number' || Number.isNaN(value)) {
+        addIssue(errors, 'error', path, 'Expected a number.', '')
+      }
+    }
+
+    function requireStringArray(object, path, errors, key) {
+      const value = object[key]
+      if (!Array.isArray(value) || value.some((item) => typeof item !== 'string' || item.trim() === '')) {
+        addIssue(errors, 'error', path, 'Expected a list of non-empty strings.', '')
+      }
+    }
+
+    function isObject(value) {
+      return value !== null && typeof value === 'object' && !Array.isArray(value)
+    }
+
+    function render(errors, warnings, message) {
+      const issues = [...errors, ...warnings]
+      results.innerHTML = ''
+      summary.textContent = message
+
+      if (!issues.length) {
+        statusBadge.className = 'badge good'
+        statusBadge.textContent = 'Valid'
+        const item = document.createElement('li')
+        item.className = 'result info'
+        item.innerHTML = '<strong>No issues found.</strong><span>The guide passed the available checks.</span>'
+        results.appendChild(item)
+        return
+      }
+
+      statusBadge.className = errors.length ? 'badge bad' : 'badge warn'
+      statusBadge.textContent = `${errors.length} errors, ${warnings.length} warnings`
+
+      issues.forEach((issue) => {
+        const item = document.createElement('li')
+        item.className = `result ${issue.type}`
+        item.innerHTML = [
+          `<strong>${escapeHtml(issue.path)}: ${escapeHtml(issue.message)}</strong>`,
+          issue.detail ? `<span>${escapeHtml(issue.detail)}</span>` : '',
+        ].join('')
+        results.appendChild(item)
+      })
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;')
+    }
+  </script>
+</body>
+</html>
