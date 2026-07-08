@@ -541,4 +541,268 @@ builds:
           - Requiem Rain
           - Requiem Ash
           - Seraphic Leap
+       
+          - - name: Shining Knight (DPS)
+    engraving: Shining Knight
+    description: Simple DPS build with few shackles and low stagger.
+    playstyle: Cast 14 skills and activate identity to unleash massive damage.
+    difficulty: easy
+    identity:
+      name: Shining Knight
+      description: Shining Knight fills her meter by 1 stack with every skill cast and (Z) cast excluding Awakening, to unleash Final Splendor (X) at 15 stacks.
+    synergy:
+      name: Crit Hit Damage
+      description: 8% Critical Hit Damage
+      skills:
+        - Foresight Slash
+        - Lunging Stab
+    preArkGrid:
+      description: Pre and Post Ark Grid setup play nearly identically, the only major difference is that Pre-Ark Grid build doesn't gain a stack from activating (Z).
+      priorities:
+        - Prioritize casting low cooldown skills.
+        - Keep your synergy and movement speed buff going, they are crucial to maximize your damage.
+        - Try not to use Blade (Requiem) and T skills as the final skills to fill your meter, you will likely have Judgement skills available, and the Requiem skills enable you to fill the next meter more comfortably when used early.
+      arkPassives:
+        - name: Crit
+          points: 30
+          category: evolution
+          tier: 1
+        - name: Swiftness
+          points: 10
+          category: evolution
+          tier: 1
+        - name: Keen Sense
+          points: 1
+          category: evolution
+          tier: 2
+        - name: Limit Break
+          points: 2
+          category: evolution
+          tier: 2
+        - name: Unlimited Magick
+          points: 2
+          category: evolution
+          tier: 3
+        - name: Critical
+          points: 1
+          category: evolution
+          tier: 4
+        - name: Pulverize
+          point: 1
+          category: evolution        
+        - name: Standing Striker
+          points: 2
+          category: evolution
+          tier: 5
+        - name: Shining Knight
+          points: 3
+          category: enlightenment
+          tier: 1
+        - name: Sword Training
+          points: 3
+          category: enlightenment
+          tier: 2
+        - name: Light's Bond
+          points: 1
+          category: enlightenment
+          tier: 3
+        - name: Holy Sword Unleashed 
+          points: 1
+          category: enlightenment
+          tier: 3
+        - name: Last Light
+          points: 3
+          category: enlightenment
+          tier: 4
+        - name: Trinity
+          points: 1
+          category: enlightenment
+          tier: 4
+        - name: Charged Fury
+          points: 2
+          category: leap
+          tier: 1
+        - name: Awakening Amplifier
+          points: 1
+          category: leap
+          tier: 1
+        - name: Unleashed Power
+          points: 5
+          category: leap
+          tier: 1
+        - name: Release Potential
+          points: 3
+          category: leap
+          tier: 1
+        - name: Instant Spell
+          points: 3
+          category: leap
+          tier: 1
+        - name: Sword of Faith
+          points: 3
+          category: leap
+          tier: 2
+      engravings:
+        - name: Grudge
+          priority: required
+        - name: Keen Blunt Weapon
+          priority: required
+        - name: Adrenaline
+          priority: required
+        - name: Raid Captain
+          priority: required
+        - name: Cursed Doll
+          priority: optional
+        - name: Hit Master
+          priority: optional
+             
+      skills:
+        - name: Foresight Slash
+          level: 7
+          tripods:
+            - Target Weak Point
+            - Brutal Honesty
+          rune: Poison
+          rune_rarity: legendary
+          notes: |-
+            **Synery, Counter, Main Meter generation skill**
+            - <tripod>Brutal Honesty</tripod> enables you to cast it during most boss patterns. <tripod>Excellent Mobility</tripod> can be used for range, but not recommended.
+            - MAIN PRIORITY skill to cycle along with Sword of Revelation.
+        - name: Sword of Revelation
+          level: 10
+          tripods:
+            - Nimble Movement
+            - Steadfast
+            - Double Cross
+          rune: Quick Recharge
+          rune_rarity: legendary
+          notes: |-
+            **Counter, Self Buff, Main Meter generation skill**
+            - <tripod>Nimble Movement</tripod> enables Raid Captain.
+            - MAIN PRIORITY skill to cycle along Foresight Slash.
+        - name: Requiem Ash
+          level: 14
+          tripods:
+            - Swift Fingers
+            - Divine Concentration
+            - Righteous Punishment
+          rune: Galewind
+          rune_rarity: legendary
+          notes: |-
+            **Main Damage Skill, High Stagger Skill, Weak Point Destruction**
+            - Does damage. Don't use it last.
+        - name: Requiem Rain
+          level: 14
+          tripods:
+            - Swift Fingers
+            - Overflowing Light
+            - Archangel's Sword
+          rune: Galewind
+          rune_rarity: legendary
+          notes: |-
+            **Main Damage Skill, Mid-high Stagger Skill, Ranged**
+            - Use it after Requiem Ash.
+            - <tripod>Magick Control</tripod> can be taken if you run into MP issues.
+            - <tripod>Light of Destiny</tripod> can be used for a much faster cast at the cost of a little bit of damage.
+        - name: Meteor Strike
+          level: 10
+          tripods:
+            - Swift Fingers
+            - Stalwart Movement
+            - Double Stab
+          rune: Quick Recharge
+          rune_rarity: epic
+          notes: |-
+            **Main Meter Generation Skill**
+            - <tripod>Stalwart Movement</tripod> let's you tank most hits, but you still get launched.
+            - Great skill to free people from imprisonment
+            - Don't leave this at 2 stacks for too long.
+        - name: Lunging Stab
+          level: 10
+          tripods:
+            - Target Weak Point
+            - Nimble Movement
+            - Focused Blow
+          rune: Bleed
+          rune_rarity: legendary
+          notes: |-
+            **Synergy, Self Buff, Mobility**
+            - Skill with both synergy and self buff to maximize own damage. Sword of Revelation overwrites the self buff duration, so make sure not to cast them back to back.
+            - <tripod>Nimble Movement</tripod> enables Raid Captain.
+        - name: Judgment Stigmata
+          level: 14
+          tripods:
+            - Pilgrim
+            - Bladecraft Enhancement
+            - Stigmata of Revelation
+          rune: Vision
+          rune_rarity: legendary
+          notes: |-
+            **Stagger, Destruction**
+            - Minor damage, stagger and destruction filler skill. Use it any time.
+        - name: Whisper of Judgment
+          level: 14
+          tripods:
+            - Pilgrim
+            - Precise Sword Strike
+            - Storm's Protection
+          rune: Focus
+          rune_rarity: legendary
+          notes: |-
+            - Rune is interchangeable with Judgment Stigmate. Swap them if you don't run OOM.
+            - <tripod>Storm's Protection</tripod> lets you to tank a pattern.
+       
+      gems:
+        - skill: Final Splendor
+          type: damage
+          priority: 1
+        - skill: Requiem Ash
+          type: damage
+          priority: 2
+        - skill: Requiem Rain
+          type: damage
+          priority: 2
+        - skill: Whisper of Judgment
+          type: damage
+          priority: 2
+        - skill: Judgment Stigmata
+          type: damage
+          priority: 4
+        - skill: Sword of Revelation
+          type: cooldown
+          priority: 1
+        - skill: Requiem Ash
+          type: cooldown
+          priority: 3
+        - skill: Requiem Rain
+          type: cooldown
+          priority: 3
+        - skill: Lunging Stab
+          type: cooldown
+          priority: 2
+        - skill: Whisper of Judgment
+          type: cooldown
+          priority: 2
+        - skill: Judgment Stigmata
+          type: cooldown
+          priority: 2
+      rotation:
+        - Final Splendor
+        - Cataclysm
+        - Foresight Slash
+        - Sword of Revelation
+        - Requiem Ash
+        - Requiem Rain
+        - Sword of Revelation
+        - Lunging Stab
+        - Judgment Stigmata
+        - Whisper of Judgment
+        - Meteor Strike
+        - Sword of Revelation
+        - Meteor Strike
+        - Foresight Slash
+        - Lunging Stab
+        - Shining Knight (Z)
+
+
 ---
