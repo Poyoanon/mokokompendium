@@ -1,8 +1,0 @@
-allowBuilds:
-  '@parcel/watcher': true
-  better-sqlite3: false
-  esbuild: false
-  sharp: false
-  unrs-resolver: false
-  vue-demi: false
-  workerd: false
