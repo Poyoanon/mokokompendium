@@ -11,6 +11,8 @@
   },
   "scripts": {
     "update-guide-dates": "node scripts/generate-guide-updated.mjs",
+    "db:sync-skills": "python scripts/sync_raw_skill_compendium.py",
+    "db:sync-skills:dry-run": "python scripts/sync_raw_skill_compendium.py --dry-run",
     "predev": "pnpm update-guide-dates",
     "prebuild": "pnpm update-guide-dates",
     "pregenerate": "pnpm update-guide-dates",

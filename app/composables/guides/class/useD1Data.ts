@@ -60,6 +60,8 @@ type InlineTripodDetail = {
   description?: string | null
 }
 
+const TRIPOD_TOOLTIP_DATA_VERSION = '2026-07-13-gunslinger-tripods'
+
 type TooltipDataOptions = {
   tooltipLocale?: Ref<string> | ComputedRef<string>
   guide: Ref<ClassGuideDocument | null>
@@ -270,6 +272,7 @@ export function useD1Data(options: TooltipDataOptions) {
 
     const classId = guide.value?.meta?.class_id
     const skillCacheBust = import.meta.dev ? Date.now() : undefined
+    const tripodCacheBust = import.meta.dev ? Date.now() : TRIPOD_TOOLTIP_DATA_VERSION
     const locale = getTooltipLocale()
 
     const nextSkillIcons: Record<string, string | null> = {}
@@ -325,6 +328,7 @@ export function useD1Data(options: TooltipDataOptions) {
                     skill_name: skill.name,
                     tripod_name: tripodValue,
                     locale,
+                    v: tripodCacheBust,
                   },
                 })
                   const data = normalizeTripodApiResponse(response, tripodValue)
@@ -353,6 +357,7 @@ export function useD1Data(options: TooltipDataOptions) {
                     skill_name: skill.name,
                     tripod_name: tripodName,
                     locale,
+                    v: tripodCacheBust,
                   },
                 })
                 const data = normalizeTripodApiResponse(response, tripodName)
@@ -459,6 +464,7 @@ export function useD1Data(options: TooltipDataOptions) {
                 skill_name: skillName,
                 tripod_name: request.tripodName,
                 locale,
+                v: tripodCacheBust,
               },
             })
             const normalized = normalizeTripodApiResponse(response, request.tripodName)

@@ -52,14 +52,13 @@ export default defineEventHandler(async (event) => {
       locale,
     })
 
-    setHeader(event, 'Cache-Control', CACHE_CONTROL_HEADER)
-
     const skill = await db.prepare(`
       SELECT skill_id FROM skills
       WHERE class_id = ? AND ${skillNameClause.sql}
     `).bind(classId, ...skillNameClause.bindings).first() as { skill_id: number } | null
 
     if (!skill) {
+      setHeader(event, 'Cache-Control', 'no-store')
       return {
         error: 'Skill not found',
         class_id: classId,
@@ -83,6 +82,7 @@ export default defineEventHandler(async (event) => {
     } | null
 
     if (!tripod) {
+      setHeader(event, 'Cache-Control', 'no-store')
       return {
         error: 'Tripod not found',
         skill_id: skill.skill_id,
@@ -98,6 +98,8 @@ export default defineEventHandler(async (event) => {
     } else {
       tier = 3
     }
+
+    setHeader(event, 'Cache-Control', CACHE_CONTROL_HEADER)
 
     return {
       skill_name: skillName,
