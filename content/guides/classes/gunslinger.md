@@ -162,7 +162,7 @@ builds:
               - Filler skill.
               - Lvl. 1 weak point.
               - High stagger.
-          - name: Hour of Judgement
+          - name: Hour of Judgment
             level: 1
             notes: |-
               - Filler skill.
@@ -336,7 +336,7 @@ builds:
           - If you find yourself having lower uptime on DPS, go Unlimited Magick 1 and Zealous Smite 1.
       - name: Echoes of the Banquet
         difficulty: 3
-        description: Shotgun-focused Ark Grid setup revolving around Last Request buffing other shotgun skills, and shotgun skills resetting Last Request. Drops Hour of Judgement for Shotgun Rapid Fire. Incredibly high stagger and weak point with competitive performance to Eye of the Tigress.
+        description: Shotgun-focused Ark Grid setup revolving around Last Request buffing other shotgun skills, and shotgun skills resetting Last Request. Drops Hour of Judgment for Shotgun Rapid Fire. Incredibly high stagger and weak point with competitive performance to Eye of the Tigress.
         stats: Critical 20/30, Specialization 20/30
         arkgrid_cores: Echoes of the Banquet + Weapon Switch + Blowback
         arkgrid_prose: |-
