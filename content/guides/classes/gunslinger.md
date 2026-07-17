@@ -162,7 +162,7 @@ builds:
               - Filler skill.
               - Lvl. 1 weak point.
               - High stagger.
-          - name: Hour of Judgment
+          - name: Hour of Judgement
             level: 1
             notes: |-
               - Filler skill.
@@ -336,7 +336,7 @@ builds:
           - If you find yourself having lower uptime on DPS, go Unlimited Magick 1 and Zealous Smite 1.
       - name: Echoes of the Banquet
         difficulty: 3
-        description: Shotgun-focused Ark Grid setup revolving around Last Request buffing other shotgun skills, and shotgun skills resetting Last Request. Drops Hour of Judgment for Shotgun Rapid Fire. Incredibly high stagger and weak point with competitive performance to Eye of the Tigress.
+        description: Shotgun-focused Ark Grid setup revolving around Last Request buffing other shotgun skills, and shotgun skills resetting Last Request. Drops Hour of Judgement for Shotgun Rapid Fire. Incredibly high stagger and weak point with competitive performance to Eye of the Tigress.
         stats: Critical 20/30, Specialization 20/30
         arkgrid_cores: Echoes of the Banquet + Weapon Switch + Blowback
         arkgrid_prose: |-
@@ -360,9 +360,9 @@ builds:
             priority: required
           - name: Cursed Doll
             priority: required
-          - name: Hit Master
+          - name: Mass Increase
             priority: recommended
-          - name: MP Efficiency Increase
+          - name: Hit Master
             priority: optional
         skills:
           - name: Spiral Tracker
@@ -403,8 +403,6 @@ builds:
             rune_rarity: epic
             notes: |-
               **Synergy Skill**
-              - At level 10 the <tripod>Ignition</tripod> tripod reapplies the synergy and bleed/poison effects, letting it act as a solo synergy on an effective ~12 second duration (take Enhanced Grenade and Internal Ignition).
-              - The <tripod>Firework</tripod> tripod can be taken for extra stagger.
           - name: Dexterous Shot
             level: 4
             tripods:
@@ -415,6 +413,7 @@ builds:
               **Mobility Skill, Synergy Skill**
               - Can be left at level 1.
               - Requires you to glide near the boss to ensure the skill hits.
+              - If running another syn, go <tripod>Agile Movement</tripod>
           - name: Peacekeeper
             level: 4
             tripods:
@@ -422,7 +421,7 @@ builds:
             notes: |-
               **Mobility Skill, Counter**
           - name: Bullet Rain
-            level: 10
+            level: 14
             tripods:
               - In a Tight Spot
               - Ranged Shot
