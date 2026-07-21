@@ -16,7 +16,10 @@ jobs:
         with:
           node-version: lts/*
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
+      - name: Install dependencies
+        run: |
+          pnpm config set only-built-dependencies --json '["esbuild", "vue-demi"]'
+          pnpm install --frozen-lockfile
       - run: pnpm lint
       - run: pnpm test
       - run: npx nuxi typecheck
