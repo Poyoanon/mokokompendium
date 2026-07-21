@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: lts/*
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       - run: pnpm lint
       - run: pnpm test
       - run: npx nuxi typecheck
