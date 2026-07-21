@@ -6,7 +6,6 @@ on:
 jobs:
   run-checks:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v7
       - uses: pnpm/action-setup@v6
@@ -19,4 +18,5 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm lint
       - run: pnpm test
+      - run: npx nuxi prepare
       - run: npx nuxi typecheck
