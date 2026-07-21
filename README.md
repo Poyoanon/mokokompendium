@@ -31,7 +31,7 @@ Tooltip/gameplay data is stored in Cloudflare D1 SQLite.
 - Install dependencies: `pnpm install`
 - Build: `pnpm build`
 - Run dev server: `pnpm dev`
-- Run type checks: `pnpm nuxt typecheck`
+- Run type checks: `pnpm nuxi typecheck`
 - Run tests: `pnpm test`
 
 Default local address: `http://localhost:3000`
