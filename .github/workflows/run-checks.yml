@@ -1,0 +1,22 @@
+name: Run Checks
+
+on:
+  - pull_request
+
+jobs:
+  run-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: latest
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm lint
+      - run: pnpm test
+      - run: npx nuxi typecheck
