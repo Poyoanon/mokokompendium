@@ -213,7 +213,7 @@ builds:
           rune: Wealth
           rune_rarity: legendary
           notes: |-
-            **Meter Generation, Party MP Regeneration, Paralysis Immunity**
+            **Meter Generation, Pary MP Regeneration, Paralysis Immunity**
             - <tripod>Magical Healing</tripod> regenerates mana at a rate of 0.5% max mp per tick for 15 ticks total. Aim to hit the boss and any party members with mana at the same time.
             - This skill can be cancelled early if a higher priority skill comes off cooldown, but aim to cast this for as long as possible.
         - name: Aria
@@ -229,7 +229,7 @@ builds:
           notes: |-
             **Meter Generation Skill, Party Shield Skill**
             - Grants a 100% Max HP shield to party, recovering one bubble as well. Enemies hit are inflicted with -30% attack power and -20% attack speed.
-            - Typically, you should use this skill off cooldown for meter generation, but you can elect to save this skill for dangerous patterns, multiple damage patterns, or mechanics.
+            - Typically, you should use this skill off cooldown for mter generation, but you can elect to save this skill for dangerous patterns, multiple damage patterns, or mechanics.
             - Hyper Awakening variant additionally grants a crisis evasion buff to the party for 30s.
       gems:
         - skill: Serenade of Courage
@@ -268,26 +268,21 @@ builds:
       rotation_sections:
         - title: Buff Priorities
           steps:
-          - Heavenly Tune/Sonic Vibration
-          - Serenade of Courage
-          - Sonatina
-          - Aria
-        - title: Meter Generation Priority (Superspeed Cast Wind of Music)
+          - Heavenly Tune/Sonic Vibration (AP Buffs)
+          - Sonatina (brand)
+          - Serenade of Courage (identity)
+          - Aria (t skill)
+        - title: Meter Generation Priorities
           steps:
-          - Wind of Music
+          - Wind of Music <tripod>Superspeed Cast</tripod>
           - Soundholic
           - Rhythm Buckshot
-          - Sonatina
-        - title: Meter Generation Priority (Wind of Protection Wind of Music)
-          steps:
-          - Soundholic
-          - Rhythm Buckshot
-          - Wind of Music
+          - Wind of Music <tripod>Wind of Protection</tripod>
           - Sonatina
         - title: Defensive Priorities
           steps:
           - Guardian Tune
-          - Wind of Music
+          - Wind of Music <tripod>Wind of Protection</tripod>
           - Rhapsody of Light
     engravings:
       - name: Awakening
@@ -390,7 +385,7 @@ builds:
             rune: Wealth
             rune_rarity: epic
             notes: |-
-              **Meter Generation, Counter, Weak Point Lv. 1, Push Immunity, Mid Stagger**
+              **Meter Generation, Counter, Weak Point Lv. 1, Push Immunity, Mid Stagger*
               - Buckshot Acceleration star core grants you two stacks of Rhythm Buckshot, allowing you to hold onto one stack of Rhythm Buckshot. This improves your opportunities for hitting counters and allows you to keep other skills on cooldown easier.
           - name: Sonatina
             level: 10
@@ -412,7 +407,7 @@ builds:
             rune: Wealth
             rune_rarity: legendary
             notes: |-
-              **Meter Generation, Party MP Regeneration, Paralysis Immunity**
+              **Meter Generation, Pary MP Regeneration, Paralysis Immunity**
               - <tripod>Magical Healing</tripod> regenerates mana at a rate of 0.5% max mp per tick for 15 ticks total. Aim to hit the boss and any party members with mana at the same time.
               - This skill can be cancelled early if a higher priority skill comes off cooldown, but aim to cast this for as long as possible.
               - Legendary Wealth goes on this skill unless you are running Wind of Music with <tripod>Superspeed Cast</tripod> (WomWom).
@@ -429,7 +424,7 @@ builds:
             notes: |-
               **Meter Generation Skill, Party Shield Skill**
               - Grants a 100% Max HP shield to party, recovering one bubble as well. Enemies hit are inflicted with -30% attack power and -20% attack speed.
-              - Typically, you should use this skill off cooldown for meter generation, but you can elect to save this skill for dangerous patterns, multiple damage patterns, or mechanics.
+              - Typically, you should use this skill off cooldown for mter generation, but you can elect to save this skill for dangerous patterns, multiple damage patterns, or mechanics.
               - Hyper Awakening variant additionally grants a crisis evasion buff to the party for 30s.
         arkPassives:
           - name: Specialization
@@ -505,32 +500,26 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - With higher level cooldown gems, you can opt for less swiftness and more specialization. The swiftness recommendation listed is enough to hit 140% attack speed with 5% speed feast from the stronghold (1514).
-          - From level 9 gems and higher, you are able to build 30 spec. This grants higher identity buffing power (both efficiency and uptime) at the cost of longer cooldowns on utility skills (shields, damage reduction, MP recovery), lower uptime on Aria, and a tighter AP Buff cycle. While is is theoretically the ideal way to play, it is only recommended if you have high level gems and are extremely efficient at upkeeping AP Buff and Brand already (near 100% uptime).
+          - With higher level cooldown gems, you can opt for less swiftness and more specialization. The swiftness recommendation listed is enough to hit 140% attack speed with 5% speed feast from the stronghold (1514). From level 9 gems and higher, you are able to build 30 spec. This grants higher identity buffing power (both efficiency and uptime) at the cost of longer cooldowns on utility skills (shields, damage reduction, MP recovery), lower uptime on Aria, and a tigher AP Buff cycle. While is is theoretically the ideal way to play, it is only recommended if you have high level gems and are extremely efficient at upkeeping AP Buff and Brand already (near 100% uptime).
           - 30/30 Specialization will also require the engraving Spirit Absorption, which usually replaces Expert.
         rotation_sections:
         - title: Buff Priorities
           steps:
-          - Heavenly Tune/Sonic Vibration
-          - Serenade of Courage
-          - Sonatina
-          - Aria
-        - title: Meter Generation Priority (Superspeed Cast Wind of Music)
+          - Heavenly Tune/Sonic Vibration (AP Buffs)
+          - Sonatina (brand)
+          - Serenade of Courage (identity)
+          - Aria (t skill)
+        - title: Meter Generation Priorities
           steps:
-          - Wind of Music
+          - Wind of Music <tripod>Superspeed Cast</tripod>
           - Soundholic
           - Rhythm Buckshot
-          - Sonatina
-        - title: Meter Generation Priority (Wind of Protection Wind of Music)
-          steps:
-          - Soundholic
-          - Rhythm Buckshot
-          - Wind of Music
+          - Wind of Music <tripod>Wind of Protection</tripod>
           - Sonatina
         - title: Defensive Priorities
           steps:
           - Guardian Tune
-          - Wind of Music
+          - Wind of Music <tripod>Wind of Protection</tripod>
           - Rhapsody of Light
       - name: Sound Deluge
         difficulty: 1
@@ -640,7 +629,7 @@ builds:
             rune: Wealth
             rune_rarity: legendary
             notes: |-
-              **Meter Generation, Party MP Regeneration, Paralysis Immunity**
+              **Meter Generation, Pary MP Regeneration, Paralysis Immunity**
               - <tripod>Magical Healing</tripod> regenerates mana at a rate of 0.5% max mp per tick for 15 ticks total. Aim to hit the boss and any party members with mana at the same time.
               - <tripod>Sound Barrier</tripod> is required to take advantage of the Sound Deluge star core.
               - Sound Deluge reduces the cast time of Soundholic by 33%, reducing the ticks from 15 to 10.
@@ -659,7 +648,7 @@ builds:
             notes: |-
               **Meter Generation Skill, Party Shield Skill**
               - Grants a 100% Max HP shield to party, recovering one bubble as well. Enemies hit are inflicted with -30% attack power and -20% attack speed.
-              - Typically, you should use this skill off cooldown for meter generation, but you can elect to save this skill for dangerous patterns, multiple damage patterns, or mechanics.
+              - Typically, you should use this skill off cooldown for mter generation, but you can elect to save this skill for dangerous patterns, multiple damage patterns, or mechanics.
               - Hyper Awakening variant additionally grants a crisis evasion buff to the party for 30s.
         arkPassives:
           - name: Specialization
@@ -735,33 +724,27 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - With higher level cooldown gems, you can opt for less swiftness and more specialization. The swiftness recommendation listed is enough to hit 140% attack speed with 5% speed feast from the stronghold (1514).
-          - From level 9 gems and higher, you are able to build 30 spec. This grants higher identity buffing power (both efficiency and uptime) at the cost of longer cooldowns on utility skills (shields, damage reduction, MP recovery), lower uptime on Aria, and a tighter AP Buff cycle. While is is theoretically the ideal way to play, it is only recommended if you have high level gems and are extremely efficient at upkeeping AP Buff and Brand already (near 100% uptime).
+          - With higher level cooldown gems, you can opt for less swiftness and more specialization. The swiftness recommendation listed is enough to hit 140% attack speed with 5% speed feast from the stronghold (1514). From level 9 gems and higher, you are able to build 30 spec. This grants higher identity buffing power (both efficiency and uptime) at the cost of longer cooldowns on utility skills (shields, damage reduction, MP recovery), lower uptime on Aria, and a tigher AP Buff cycle. While is is theoretically the ideal way to play, it is only recommended if you have high level gems and are extremely efficient at upkeeping AP Buff and Brand already (near 100% uptime).
           - 30/30 Specialization will also require the engraving Spirit Absorption, which usually replaces Expert.
           - Sound Deluge scales okay with more specialization, but the main appeal of the this build is the action economy improvement that Sound Deluge grants. This is dramatically more impactful and noticeable with higher swiftness.
         rotation_sections:
         - title: Buff Priorities
           steps:
-          - Heavenly Tune/Sonic Vibration
-          - Sonatina
-          - Serenade of Courage
-          - Aria
-        - title: Meter Generation Priority (Superspeed Cast Wind of Music)
+          - Heavenly Tune/Sonic Vibration (AP Buffs)
+          - Sonatina (brand)
+          - Serenade of Courage (identity)
+          - Aria (t skill)
+        - title: Meter Generation Priorities
           steps:
-          - Wind of Music
+          - Wind of Music <tripod>Superspeed Cast</tripod>
           - Soundholic
           - Rhythm Buckshot
-          - Sonatina
-        - title: Meter Generation Priority (Wind of Protection Wind of Music)
-          steps:
-          - Soundholic
-          - Rhythm Buckshot
-          - Wind of Music
+          - Wind of Music <tripod>Wind of Protection</tripod>
           - Sonatina
         - title: Defensive Priorities
           steps:
           - Guardian Tune
-          - Wind of Music
+          - Wind of Music <tripod>Wind of Protection</tripod>
           - Rhapsody of Light
   - name: True Courage (DPS)
     engraving: True Courage
@@ -797,8 +780,8 @@ builds:
       - name: 11x
         difficulty: 1
         recommended: true
-        description: Standard True Courage build, is simply the upgraded version of Pre-Ark Grid True Courage. Sound Blitz star core is recommended. Cast normal skills to generate meter for a large damage skill. Flexible sending consistent 2-bubbles or saving up to 3-bubbles for burst windows.
-        arkgrid_cores: Serenade of Fortitude + Pious Serenade + Sound Blitz (112 Soundholic) | Serenade of Fortitude + Pious Serenade + Sonic Enhancement (111 Sonic Vibration and Harp)
+        description: Standard True Courage build, is simply the upgraded version of Pre-Ark Grid True Courage. Sound Blitz star core is recommended. Flexibile sending consistent 2-bubbles or saving up to 3-bubbles for burst windows.
+        arkgrid_cores: Serenade of Fortitude + Pious Serenade + Sound Blitz (112 Soundholic) | Serenade of Fortitude + Pious Serenade + Sonic Enhancement (111 Sonic Vibration + Harp)
         priorities:
           - Upkeep your damage synergy, Sonatina and maintain Adrenaline stacks.
           - Damage skills must be cast within Heavenly Tune window (8 seconds).
@@ -868,11 +851,11 @@ builds:
             points: 1
             category: enlightenment
             tier: 4
-          - name: Unleashed Power
+          - name: Transcendent Power
             points: 5
             category: leap
             tier: 1
-          - name: Release Potential
+          - name: Unleashed Power
             points: 4
             category: leap
             tier: 1
@@ -950,7 +933,7 @@ builds:
               - <tripod>Focus Fire</tripod> and damage gem MANDATORY for Sound Blitz core (Recommended).
               - Back Attack with Sound Blitz core whenever possible. Do not delay your casts to chase Back.
               - Inputting another skill or movement will preemptively cancel Soundholic.
-          - name: Harp of Rhythm
+          - name: Harp of Rythmn
             level: 14
             tripods:
               - Summoning Will
@@ -1147,11 +1130,11 @@ builds:
             points: 2
             category: enlightenment
             tier: 4
-          - name: Unleashed Power
+          - name: Transcendent Power
             points: 5
             category: leap
             tier: 1
-          - name: Release Potential
+          - name: Unleashed Power
             points: 4
             category: leap
             tier: 1
@@ -1229,7 +1212,7 @@ builds:
               - <tripod>Focus Fire</tripod> and damage gem MANDATORY for Sound Blitz core (Recommended).
               - Back Attack with Sound Blitz core whenever possible. Do not delay your casts to chase Back.
               - Inputting another skill or movement will preemptively cancel Soundholic.
-          - name: Harp of Rhythm
+          - name: Harp of Rythmn
             level: 14
             tripods:
               - Summoning Will
@@ -1336,7 +1319,7 @@ builds:
       - name: !!str 333
         difficulty: 1
         recommended: false
-        description: Spreads damage amongst Normal Skills at the cost of limited meter generation. Sound Shock becomes your bread and butter skill. Not forced to play in melee range. (NOTE) As of July 2026, this build lacks significant damage (upwards of 12% compared to 11x) and NOT recommended. Play this build only because you want to.
+        description: Spreads damage amongst Normal Skills at the cost of limited meter generation. Sound Shock becomes your bread and butter skill. Not forced to play in melee range. "Note:" As of July 2026, this build lacks significant damage (upwards of 12% compared to 11x) and NOT recommended. Play this build only because you want to.
         arkgrid_cores: Shock Loop + Harmonious Confluence + Binary Shock
         priorities:
           - Upkeep your damage synergy, Sonatina and maintain Adrenaline stacks.
@@ -1401,11 +1384,11 @@ builds:
             points: 2
             category: enlightenment
             tier: 4
-          - name: Unleashed Power
+          - name: Transcendent Power
             points: 5
             category: leap
             tier: 1
-          - name: Release Potential
+          - name: Unleashed Power
             points: 4
             category: leap
             tier: 1
@@ -1498,7 +1481,7 @@ builds:
               - Lowest priority damage skill.
               - Do not delay your casts to chase Back.
               - Inputting another skill or movement will preemptively cancel Soundholic.
-          - name: Harp of Rhythm
+          - name: Harp of Rythmn
             level: 14
             tripods:
               - Summoning Will

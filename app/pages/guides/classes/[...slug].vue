@@ -333,8 +333,8 @@ const headerAndSelectorsProps = computed(() => ({
 }))
 
 const identitySynergyProps = computed(() => ({
-  identity: guide.value?.identity,
-  synergy: guide.value?.synergy,
+  identity: currentBuild.value?.identity ?? guide.value?.identity,
+  synergy: currentBuild.value?.synergy ?? guide.value?.synergy,
   ...sharedSkillTooltipBindings.value,
 }))
 </script>

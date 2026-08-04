@@ -33,6 +33,12 @@ export default defineNuxtConfig({
   // Cloudflare Pages deployment with D1 support
   nitro: {
     preset: 'cloudflare-pages',
+    prerender: {
+      ignore: [
+        '/__nuxt_content/classGuides/sql_dump.txt',
+        '/__nuxt_content/guides/sql_dump.txt',
+      ],
+    },
   },
 
   // Content module configuration
