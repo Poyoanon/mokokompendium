@@ -825,8 +825,8 @@ builds:
           type: cooldown
           priority: 7
       rotation:
-        - Sword of Revelation
         - Foresight Slash
+        - Sword of Revelation
         - Meteor Strike
         - Lunging Stab
         - Shining Knight
@@ -834,18 +834,17 @@ builds:
         - Cataclysm
         - Requiem Rain
         - Requiem Ash
-        - Sword of Revelation
         - Foresight Slash
+        - Sword of Revelation  
+        - Meteor Strike
         - Judgment Stigmata
         - Whisper of Judgment
         - Lunging Stab
         - Meteor Strike
+        - Sword of Revelation
+        - Foresight Slash
+        - Sword of Revelation
         - Meteor Strike
-        - Sword of Revelation
-        - Foresight Slash
-        - Sword of Revelation
-        - Lunging Stab
-        - Foresight Slash
         - Shining Knight
         - Final Splendor
     engravings:
