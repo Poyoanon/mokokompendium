@@ -3,10 +3,10 @@ title: Destroyer Guide
 class: Warrior
 subclass: Destroyer
 class_id: 103
-description: All about Destroyer Rage Hammer & Gravity Training Ark Grids and before the Ark Grid (Pre-Ark Grid) for both builds.
+description: A complete guide to Destroyer, covering the Rage Hammer and Gravity Training builds with their Ark Grid variants and Pre-Ark Grid setups.
 identity:
   name: Hypergravity Zone Mode / Gravity Release Mode
-  description: Destroyer generates gravity cores with blue skills and fills the identity gauge with purple skills. Pressing Z enters a mode determined by your class engraving, described under each build.
+  description: Destroyer generates gravity cores with blue skills and spends blue cores by using purple skills to fill the identity gauge with purple skills. Pressing Z enters a mode determined by your class engraving, described under each build.
 synergy:
   name: Armor Destruction & Target Focus
   description: Reduces the armor of enemies through 3 of normal (blue) skills. Running Crash <tripod>Target Focus</tripod> is increase the stagger damage from all sources while using the skill
@@ -21,23 +21,23 @@ builds:
     description: High burst damage focused build with enhanced purple skills by the Gravity Release Mode (Z). Excellent utility with weakpoint and stagger.
     identity:
       name: Gravity Release Mode
-      description: Activated when the identity gauge is filled. In this mode (Z), the first purple skill you use deals increased damage.
-    playstyle: Get a 3 cores by using the blue skills and use the purple skills to fill the Gravity Release Mode (Z) and use the Z before the hit the most damage skills.
+      description: Activated on pressing Z while the identity gauge is filled. In this mode (Z), the next purple skill you use deals increased damage.
+    playstyle: Get 3 cores by using blue skills and use purple skills to fill the Gravity Release Mode (Z), use Z once one of your big skill is ready to be used for maximum damage (Perfect Swing/Supernova).
     difficulty: medium
     preArkGrid:
-      description: Build the 3 cores -> use the purple skills to fill the mode -> use the Z and hit the most damage skills.
+      description: Build 3 cores -> use purple skill to fill the identity -> repeat until meter is full -> use Z and one of your big damage skills.
       priorities:
         - Hit all purple skills from the front
-        - Take <tripod>taunt</tripod> tripod if boss a tauntable one
-        - Use the Z buff only for Supernova or Perfect Swing skills
-        - Use your push immune skills to hold on in front of the boss
-        - Avoid overcap gaining the cores from blue skills
-        - Check boss's HP before the hit for long charging skills (Supernova, Perfect Swing, etc.) do not interrupt by the cutscenes or major mechanics
+        - Take <tripod>taunt</tripod> tripod if boss is tauntable
+        - Use Z buff only for Supernova(T) or Perfect Swing
+        - Use your push immune skills to stay at the front of the boss
+        - Pair a 2 core skill with a 1 core skill to avoid overcapping on cores
+        - Be Patient and wait for an opening before sending your long charging skills (Supernova, Perfect Swing, etc.) Be careful to not get interrupted by cutscenes or major mechanics or missing your attacks from the boss turning at the last moment.
       arkPassiveTips:
-        - Try to get %80-82 crit rate on P (Character Details) and minimum 874 Spec on the <untag>Evolution</untag>
+        - Try to get 80-82% crit rate on P (Character Details) and minimum 874 Spec on the <untag>Evolution</untag>
         - Focus on the main <untag>Enlightenment</untag> line before going for side nodes.
         - If you do not have enough points to max on the <untag>Leap</untag> you can follow these steps, if you have 10p invest to Circulation. If you have 20p or more invest to Accumulation.
-        - Also if you already reach the crit and spec goal and still have points to invest, you can invest to swiftness as well.
+        - Also if you already reach the crit and spec goal and still have points to invest, you can add excess points to swiftness as well.
       arkPassives:
         - name: Crit
           points: 24
@@ -210,7 +210,7 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Extra movement, can proc Runes twice**
-            - Judgment Rune is added to utilize CJ if mana is needed.
+            - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
         - name: Dreadnaught
           level: 10
@@ -225,7 +225,7 @@ builds:
             - <tripod>Tenacity</tripod> is used to tank patterns while also generating cores. This skill can also apply armor destruction synergy, but you must give up the <tripod>Tenacity</tripod>.
             - <tripod>Splendid Attack</tripod> is similar to Heavy Crush’s <tripod>Aftershock</tripod>, the animation leaves an orb on the ground.
             - Downgrade to level 7 for prevent mana issues and also shorter animation
-            - For an alternetive to Dreadnaught, you can use Power Strike with the 3-1-2 tripods and same rune.
+            - For an alternative to Dreadnaught, you can use Power Strike with the 3-1-2 tripods and same rune.
         - name: Supernova
           level_label: Hyper Awakening Technique
           notes: |-
@@ -310,15 +310,15 @@ builds:
       - name: Singularity
         difficulty: 1
         recommended: true
-        description: Same playstyle as pre-ark grid but it has more QoL. Like Perfect Swing always hits as Front Attack and charge fastly.
+        description: The same playstyle as the Pre-Ark Grid setup, with added quality of life. Perfect Swing always counts as a front attack and charges faster.
         stats: Critical 25/30, Specialization 15/30
         arkgrid_cores: Singularity + Absolute Control + Broken Chains
         arkgrid_prose: |-
           Core priority is Singularity > Absolute Control > Broken Chains.
           Minimum: Sun 14 Moon 14 Star 10.
-          This called as 111 build and there is other alternatives; 112 > 122 > 121. All of these options overall dps are almost similar but the T damage increases while purples decrease.
+          This setup is known as the 111 build. The alternatives, in order of preference, are 112, 122, and 121. Overall damage is similar across all of them, but Hyper Awakening damage increases as purple skill damage drops.
         priorities:
-          - Same Crit and Spec goals in here. Crit; %80-82, Spec; 874 minimum. For extra points, you can invest to swiftness as well.
+          - The same stat goals apply here; 80-82% Critical Rate and at least 874 Specialization. Put any leftover points into Swiftness.
           - Supernova should hit in front of the boss for maximum damage.
           - Z buff prioritize for Supernova and Perfect Swing.
           - Take <tripod>taunt</tripod> tripod if boss is tauntable.
@@ -406,7 +406,7 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Extra movement, can proc Runes twice**
-            - Judgment Rune is added to utilize CJ if mana is needed.
+            - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
         - name: Dreadnaught
           level: 10
@@ -420,7 +420,7 @@ builds:
             **All-in-1 Utility: DR, Super Armor, Stagger, Weak Point, Counter**
             - <tripod>Tenacity</tripod> is used to tank patterns while also generating cores. This skill can also apply armor destruction synergy, but you must give up the <tripod>Tenacity</tripod>.
             - Downgrade to level 7 for prevent mana issues and also shorter animation
-            - For an alternetive to Dreadnaught, you can use Power Strike with the 3-1-2 tripods and same rune.
+            - For an alternative to Dreadnaught, you can use Power Strike with the 3-1-2 tripods and same rune.
             - Protection rune is choosable to tank the patterns
         - name: Supernova
           level_label: Hyper Awakening Technique
@@ -539,8 +539,8 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - Crit / Spec values depend on your crit synergie, engraving or bracelet so the main goal is as close to 100 crit rate (you should see %80-82 Crit Rate in your character profile) and minimum 874 spec.
-          - Also Swift as an option for extra points.
+          - Your Critical Rate and Specialization depend on your crit synergy, engravings, and bracelet. Aim for as close to 100% Critical Rate (Total of all sources) as you can while keeping at least 874 Specialization.
+          - Swiftness is an option for any remaining points.
         rotation:
         - Terra Nova
         - Seismic Hammer
@@ -561,7 +561,7 @@ builds:
         - Perfect Swing
       - name: Dimensional Collapse
         difficulty: 3
-        description: Gain a stack every Z usage when the stacks reach x2, purple skills reset and for the next 4 times when purple skills hit, gain 3 cores. TLDR; Do the regular rotation to fill Z -> Use Z (gain x1 stack) -> Regular rotation to fill Z -> Use Z (gain x2 stack) -> Use x4 purple skills (without using blue skills) -> Use Z -> Repeat. THIS BUILD IS NOT RECOMMENDED
+        description: Each Gravity Release activation grants a stack. At two stacks your purple skills reset, and the next four purple skill hits each grant three cores. In short; run the normal rotation to fill the gauge, activate for the first stack, fill it again, activate for the second stack, cast four purple skills without using blue skills, then activate again and repeat. This build is not recommended.
         stats: Critical 26/30, Specialization 12/30, Swiftness 2/30
         arkgrid_cores: Dimensional Collapse + Gravity Enhancement + Turbulent Release
         arkgrid_prose: |-
@@ -583,9 +583,9 @@ builds:
           - name: MP Efficiency Increase
             priority: optional
         priorities:
-          - Use your awakening as your backup when rotation is failed
-          - Must to hit with your purple skills after the x2 Dimensional stacks.
-          - Use your push immune wisely because this build has less push immune window
+          - Keep your Awakening as a backup for when the rotation breaks down.
+          - You must land your purple skills once you have two Dimensional Collapse stacks.
+          - Use push immunity carefully, since this build has fewer windows for it.
           - Use stimulants before start the raid
         skills:
         - name: Perfect Swing
@@ -671,7 +671,7 @@ builds:
           rune_rarity: epic
           notes: |-
             **Extra movement, can proc Runes twice**
-            - Judgment Rune is added to utilize CJ if mana is needed.
+            - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
         - name: Power Strike
           level: 11
@@ -806,8 +806,8 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - Can invest 1p to Inertia Enhancement instead of Gravity Conversion
-          - Same goals are here; Crit %80-82, Spec 874 minimum. Rest points into Swiftness
+          - You can put one point into Inertia Enhancement instead of Gravity Conversion.
+          - The same goals apply; 80-82% Critical Rate (in character details) and at least 874 Specialization.
         rotation:
           - Power Shoulder
           - Heavy Crush
@@ -827,7 +827,7 @@ builds:
           - Perfect Swing
       - name: Earth Wave
         difficulty: 2
-        description: All the charges skills gone and these skills become instant. This build is the fastest destroyer build currently.
+        description: This build replaces the charged skills with instant ones, making it the fastest Destroyer build at the moment.
         stats: Critical 27/30, Specialization 4/30, Swiftness 9/30
         arkgrid_cores: Earth Wave + Gravity Run + Reckless Blow
         arkgrid_prose: |-
@@ -849,11 +849,11 @@ builds:
           - name: Stabilized Status
             priority: optional
         priorities:
-          - Z Buff priorty is Earth Wave > Perfect Swing > Seismic Hammer
-          - Use the T skill when blue skills on CD
-          - When Seismic Hammer and Full Swing off cooldown at same time, use Seismic Hammer
+          - Z Buff priority is Earth Wave > Perfect Swing > Seismic Hammer
+          - Use your Hyper Awakening Technique while your blue skills are on cooldown.
+          - When Seismic Hammer and Full Swing come off cooldown together, use Seismic Hammer first.
           - There are 2 breakpoints for spec. Try to get used to play with lower spec.
-          - Do not full cast Full Swing charge, just tap it.
+          - Do not fully charge Full Swing; tap it instead.
           - Adjust your pet effect which stat is deficient for you
         skills:
         - name: Perfect Swing
@@ -935,7 +935,7 @@ builds:
           rune_rarity: epic
           notes: |-
             **Extra movement, can proc Runes twice**
-            - Judgment Rune is added to utilize CJ if mana is needed.
+            - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
         - name: Power Strike
           level: 7
@@ -1071,15 +1071,14 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - Ark passive stats to vary rely on your bracelet, Adrenaline or card set etc. But there are major goals;
-          - Crit %60-62 on stat page (P) with Relic Adrenaline or crit %80-82 on stat page (P) without Adrenaline
-          - Spec as close as above 551 or as close as above 874. There is no point in staying at 700ish. Just set it like between 551-600 or 874-900 or something like that.
-          - All the rest points into Swiftness
-          - If spec value as close as above 874 spec use Full Swing with <tripod>Tenacity</tripod>
-          - If a crit synergy (%10 Crit Rate comes from) on your side decrease 5-6p crit and invest to Swiftness
-          - If a 2 synergy (%20 Crit Rate comes from) on your side decrease 10-11p crit and invest swiftness or spec which one suits your gameplay
+          - Your Ark Passive stats vary with your bracelet, Adrenaline usage, and card set, but there are a few main goals.
+          - With Adrenaline, aim for 60-62% Critical Rate on the character stat page. Without it, aim for 80-82%.
+          - For Specialization, aim just above either 874 or 551, and put the rest into Swiftness.
+          - If your Specialization is just above 874, run Full Swing with <tripod>Tenacity</tripod>.
+          - If a crit synergy (10% Crit Rate comes from) on your side decrease 5-6p crit and invest to Swiftness
+          - If a 2 synergy (20% Crit Rate comes from) on your side decrease 10-11p crit and invest swiftness or spec which one suits your gameplay
           - Adjust your pet effect which stat is deficient for you
-          - Example stat spread look like; Crit 985 Spec 594 Swift 1027 (with Adrenaline & FS not push immune) or Crit 985 Spec 894 Swift 727 (with Adrenaline & FS push immune) or Crit 1545 Spec 584 Swift 477 (without Adrenaline & FS not push immune)
+          - Example spreads, both with Adrenaline; Crit 985 Spec 594 Swift 1027 (FS not push immune) or Crit 985 Spec 894 Swift 727 (FS push immune) and without Adrenaline; Crit 1545 Spec 584 Swift 477 (FS not push immune)
         rotation:
           - Heavy Crush
           - Gravity Release Mode
@@ -1106,23 +1105,23 @@ builds:
     identity:
       name: Hypergravity Zone
       description: Gravity Training focuses on Hypergravity zone and utilizing gravity release skills to fill up Gravity Meter. Gravity Release skills still make up a relevant portion of your damage, but the majority comes from the Hypergravity zone basic attacks.
-    playstyle: Pre Ark Grid and Gravity Reversal builds are using Hypergravity zone basic attacks. Gravity Destruction build using only 2 purple skills and Gravity Core build using Vortex Gravity skill to deal damage.
+    playstyle: The Pre-Ark Grid and Gravity Reversal setups deal damage with basic attacks inside the Hypergravity Zone (Z). Gravity Destruction relies on just two purple skills, and Gravity Core builds around Vortex Gravity in the Hypergravity Zone (Z).
     difficulty: easy
     preArkGrid:
-      description: Build the Hypergravity zone by using purple skills and hit with the basic attacks while Hypergravity Zone activated.
+      description: Fill the Hypergravity Zone gauge with your purple skills, then deal damage with basic attacks while the zone is active.
       priorities:
-        - After activate the Hypergravity Zone (Z) stay in front of the boss as long as you can and try to land all basic attacks
-        - Build your Hypergravity Zone (Z) as soon as possible
-        - Try to land purple skill in front of the boss but it is not a big deal if you can't
-        - Do not use the Vortex skill (Z skill inside the Hypergravity Zone) unless need a counter
-        - Care about grap pattern
-        - Do not chase the front if remaining gauge less than %20-30
-        - Try to reach Attack Speed between %134-140
+        - Once the Hypergravity Zone is active, stay in front of the boss for as long as possible and land every basic attack you can.
+        - Fill the Hypergravity Zone gauge as quickly as you can.
+        - Purple skills do not need to hit from the front.
+        - Do not use Vortex Gravity, the skill available inside the Hypergravity Zone, unless you need a counter.
+        - Watch out for grab patterns.
+        - Do not chase the front of the boss when less than 20-30% of the gauge remains.
+        - Aim for an Attack Speed between 134% and 140%.
       arkPassiveTips:
         - Focus on the main <untag>Enlightenment</untag> line before going for side nodes.
-        - Spec points are very important so find a bracelet with highest spec and never decrease your spec in the <untag>Evolution</untag>
-        - Can use Concentrated Attack on <untag>Leap</untag> as an alternative
-        - For an alternative <untag>Enlightenment</untag> tree is downgrade the New Core Lv 2 and invest Gravity Conversion Lv 5
+        - Specialization matters a great deal here. Look for a bracelet with as much of it as possible, and never reduce your Specialization in the <untag>Evolution</untag>.
+        - Concentrated Attack is an alternative in the <untag>Leap</untag>.
+        - As an alternative <untag>Enlightenment</untag>, drop New Core to level 2 and raise Gravity Conversion to level 5.
       engravings:
         - name: Grudge
           priority: required
@@ -1219,7 +1218,7 @@ builds:
           rune_rarity: epic
           notes: |-
             **Extra movement, can proc Runes twice**
-            - Judgment Rune is added to utilize CJ if mana is needed.
+            - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
         - name: Power Strike
           level: 10
@@ -1309,7 +1308,7 @@ builds:
       - name: Gravity Reversal
         difficulty: 1
         recommended: true
-        description: It has same everything with the Pre-Ark Grid build. Only benefit from the Ark passive is longer bonk duration and Attack Speed.
+        description: Identical to the Pre-Ark Grid setup. The only gains from the Ark Grid are a longer Hypergravity Zone duration and more Attack Speed.
         stats: Crit 10/30, Specialization 30/30
         arkgrid_cores: Gravity Reversal + Event Horizon + Collapse
         arkgrid_prose: |-
@@ -1320,11 +1319,11 @@ builds:
         - Build your Hypergravity Zone (Z) as soon as possible
         - Try to land purple skill in front of the boss but it is not a big deal if you can't
         - Do not use the Vortex skill (Z skill inside the Hypergravity Zone) unless need a counter
-        - Care about grap pattern
-        - Do not chase the front if remaining gauge less than %20-30
-        - Try to reach Attack Speed between %134-140
-        - If you're using Adrenaline you need to hit Vortex Gravity while hitting in the Hypergravity Zone to keep Adrenaline stacks
-        - Adrenaline and non Adrenaline builds do similar dps
+        - Care about grab pattern
+        - Do not chase the front if remaining gauge less than 20-30%
+        - Try to reach Attack Speed between 134-140%
+        - If you are running Adrenaline, cast Vortex Gravity during the Hypergravity Zone to keep your stacks.
+        - Adrenaline and non-Adrenaline setups deal similar damage.
         skills:
         - name: Perfect Swing
           level: 14
@@ -1406,7 +1405,7 @@ builds:
           rune_rarity: epic
           notes: |-
             **Extra movement, can proc Runes twice**
-            - Judgment Rune is added to utilize CJ if mana is needed.
+            - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
         - name: Power Strike
           level: 10
@@ -1552,28 +1551,28 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - If using the Chain Strike skill on T than invest Instant Spell 2p and decrease the Release Potential to lv 4 and invest to Concentrated Attack instead of Circulation
+          - If you run Chain Strike as your Hyper Awakening Technique, put two points into Instant Spell, drop Release Potential to level 4, and take Concentrated Attack instead of Circulation.
           - For an alternative <untag>Enlightenment</untag> tree is downgrade the New Core Lv 2 and invest Gravity Conversion Lv 5
-          - Do not decrease the Spec
-          - If you have more DMG gems, use them on purple skills instead of Power Strike and Power Shoulder cooldowns.
-          - Attack Speed goal is %134 minimum
+          - Do not reduce your Specialization.
+          - If you have spare damage gems, put them on purple skills rather than on Power Strike and Power Shoulder cooldowns.
+          - Aim for at least 134% Attack Speed.
       - name: Gravity Destruction
         difficulty: 3
         recommended: false
-        description: Everthing is changed for this build. Hypergravity Zone basic attacks are not highest damage instead of it using only 2 purples to dealing damage. THIS BUILD IS NOT RECOMMENDED
+        description: This build changes everything. Basic attacks inside the Hypergravity Zone are no longer your main damage source; instead you rely on just two purple skills. This build is not recommended.
         stats: Crit 30/30, Specialization 10/30
         arkgrid_cores: Gravity Destruction + Gravitational Circulation + Rock Blade
         arkgrid_prose: |-
           Core priority is Gravity Destruction > Gravitational Circulation > Rock Blade.
           Minimum: Sun 17 Moon 14 Star 10.
         priorities:
-        - Do not fall when using the Seismic Hammer or Earth Wave otherwise they are not reset each other
-        - Do not cast Seismic Hammer or Earth Wave just before the cutscene otherwise they are not reset each other
+        - Do not get knocked down while casting Seismic Hammer or Earth Wave, or they will not reset each other.
+        - Do not cast Seismic Hammer or Earth Wave immediately before a cutscene, or they will not reset each other.
         - Try to hit in front of the boss
-        - Use the Hypergravity Zone (Z) to get immune or continue to deal damage if failed the cooldown reset of purples each other
-        - Do not pass the %114 Attack speed otherwise need a mana food
-        - If you have a good support and summoner in your party, can drop MP Efficiency Increase and eat mana food, feast. Replace it with Cursed Doll or Stabilized Status
-        - Downgrade the skills for mana management
+        - If the rotation fails, activate the Hypergravity Zone for immunity and continue deal damage.
+        - Stay below 114% Attack Speed, or you will need mana food.
+        - With a strong support and a Summoner in your party, you can drop MP Efficiency Increase, eat mana food and a feast, and run Cursed Doll or Stabilized Status instead.
+        - Lower your skill levels to manage mana.
         - Do not use all skill points
         skills:
         - name: Gravitational Energy
@@ -1650,7 +1649,7 @@ builds:
           rune_rarity: epic
           notes: |-
             **Extra movement, can proc Runes twice**
-            - Judgment Rune is added to utilize CJ if mana is needed.
+            - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
         - name: Dreadnaught
           level: 7
@@ -1806,12 +1805,12 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - Calculate own crit rate if there is some an extra points invest to swiftness (do not pass %114 unless you need eat mana food) or spec
+          - Work out your own Critical Rate first, then put any spare points into Swiftness, staying below 114% unless you are willing to eat mana food, or into Specialization.
           - If you don't have Relic Adrenaline, use Standing Striker instead of Blunt Thorn and set other things for not overcap the crit rate
       - name: Gravity Core
         difficulty: 3
         recommended: false
-        description: All the buffs goes to Vortex Gravity and hit with it in front of the boss at least 10 times. This skill can useble only inside the Hypergravity Zone (Z). In other word build the Hypergravity Zone (Z) and activate it than hit with the Vortex Gravity (Z) skill.
+        description: Every buff goes into Vortex Gravity, which you want to land in front of the boss at least ten times. The skill is only available inside the Hypergravity Zone, so fill the gauge, activate the zone, then cast Vortex Gravity.
         stats: Crit 10/30, Specialization 30/30
         arkgrid_cores: Gravity Core + Gravitational Rush + Shattered Earth
         arkgrid_prose: |-
@@ -1819,13 +1818,13 @@ builds:
           Minimum: Sun 17 Moon 14 Star 14.
         priorities:
         - Build the Hypergravity Zone as soon as possible
-        - Reach %120 crit rate for Blunt Thorn build or %100 crit rate for Standing Striker build.
-        - Try to hit in front of the boss all 10 hits at least
-        - Reach %130 Attack Speed minimum
-        - Swift Attack (one of the blue cores) is an alternative to get more Attack Speed
-        - Atk/Move Speed bracelet recommended
+        - Reach 120% crit rate for Blunt Thorn build or 100% crit rate for Standing Striker build.
+        - Try to land all ten hits from the front of the boss.
+        - Reach at least 130% Attack Speed.
+        - Swift Attack, one of the blue cores, is an alternative source of Attack Speed.
+        - Atk/Move Speed line is recommended on your bracelet
         - If you want to use Earth Eater with the <tripod>Gravity Charge</tripod> tripod than change the Earth Wave tripods in order to 2-3-2.
-        - This build effect from your FPS and latency. If you have less than 30ms it has playable otherwise need a macro for it or a lot of exercise. Test it in Trixion first than Guardian Raids.
+        - This build is sensitive to your frame rate and latency. Below 30 milliseconds it is comfortable to play; above that you will need either a macro or a lot of practice. Test it in Trixion before taking it into Guardian Raids.
         - Use stimulant before the raid.
         skills:
         - name: Perfect Swing
@@ -1907,7 +1906,7 @@ builds:
           rune_rarity: epic
           notes: |-
             **Extra movement, can proc Runes twice**
-            - Judgment Rune is added to utilize CJ if mana is needed.
+            - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
         - name: Power Strike
           level: 10
@@ -2058,8 +2057,8 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - One of the goals is Attack Speed %130 minimum. There are sources; Basic Attack Speed (P -> Character Details) + %8 (from x4 Gravity Acceleration) + %9 Support + %5 Feast + %3 Wine
-          - Cap the Blunt Thorn otherwise use Standing Striker. There are sources; Basic Crit Rate (P -> Character Details) + %20 (Relic Adrenaline) + %38 (From enlightenment) + %7 (Master)
+          - Aim for at least 130% Attack Speed. The sources are your base Attack Speed from the Character Details page + 8% from four points of Gravity Acceleration + 9% from a support + 5% from a feast + 3% from wine.
+          - Cap Blunt Thorn if you can, otherwise use Standing Striker. The sources are your base Critical Rate from the Character Details page + 20% from relic Adrenaline + 38% from the Enlightenment tree + 7% from Master (if invested).
           - On side nodes Gravity Conversion has priority
-          - Inertia Enhancement and Gravity Acceleration switchable each other depends on what you need. For Attack Speed invest to Gravity Acceleration or for crit rate invest to Inertia Enhancement
+          - Inertia Enhancement and Gravity Acceleration are interchangeable depending on what you need; Gravity Acceleration for Attack Speed, Inertia Enhancement for Critical Rate.
 ---
