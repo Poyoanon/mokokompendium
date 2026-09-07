@@ -212,6 +212,7 @@ builds:
             **Extra movement, can proc Runes twice**
             - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
+            - Other alternative runes are Rage and Quick Recharge
         - name: Dreadnaught
           level: 10
           tripods:
@@ -316,7 +317,7 @@ builds:
         arkgrid_prose: |-
           Core priority is Singularity > Absolute Control > Broken Chains.
           Minimum: Sun 14 Moon 14 Star 10.
-          This setup is known as the 111 build. The alternatives, in order of preference, are 112, 122, and 121. Overall damage is similar across all of them, but Hyper Awakening damage increases as purple skill damage drops.
+          This setup is known as the 111 build. The alternatives, in order of preference, are 112, 122, and 121. Overall damage is similar across all of them, but Hyper Awakening Technique (T) damage increases as purple skill damage drops.
         priorities:
           - The same stat goals apply here; 80-82% Critical Rate and at least 874 Specialization. Put any leftover points into Swiftness.
           - Supernova should hit in front of the boss for maximum damage.
@@ -1071,7 +1072,7 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - Your Ark Passive stats vary with your bracelet, Adrenaline usage, and card set, but there are a few main goals.
+          - Your Ark Passive stats vary with your bracelet, Adrenaline usage, but there are a few main goals.
           - With Adrenaline, aim for 60-62% Critical Rate on the character stat page. Without it, aim for 80-82%.
           - For Specialization, aim just above either 874 or 551, and put the rest into Swiftness.
           - If your Specialization is just above 874, run Full Swing with <tripod>Tenacity</tripod>.
@@ -1122,6 +1123,79 @@ builds:
         - Specialization matters a great deal here. Look for a bracelet with as much of it as possible, and never reduce your Specialization in the <untag>Evolution</untag>.
         - Concentrated Attack is an alternative in the <untag>Leap</untag>.
         - As an alternative <untag>Enlightenment</untag>, drop New Core to level 2 and raise Gravity Conversion to level 5.
+      arkPassives:
+          - name: Crit
+            points: 10
+            category: evolution
+            tier: 1
+          - name: Specialization
+            points: 30
+            category: evolution
+            tier: 1
+          - name: Limit Break
+            points: 1
+            category: evolution
+            tier: 2
+          - name: Keen Sense
+            points: 2
+            category: evolution
+            tier: 2
+          - name: Strike
+            points: 2
+            category: evolution
+            tier: 3
+          - name: Critical
+            points: 1
+            category: evolution
+            tier: 4
+          - name: Pulverize
+            points: 1
+            category: evolution
+            tier: 4
+          - name: Standing Striker
+            points: 2
+            category: evolution
+            tier: 5
+          - name: Gravity Shock
+            points: 1
+            category: enlightenment
+            tier: 1
+          - name: Gravity Charge
+            points: 3
+            category: enlightenment
+            tier: 2
+          - name: Gravity Training
+            points: 3
+            category: enlightenment
+            tier: 3
+          - name: Inertia Enhancement
+            points: 1
+            category: enlightenment
+            tier: 3
+          - name: New Core
+            points: 3
+            category: enlightenment
+            tier: 4
+          - name: Gravity Conversion
+            points: 1
+            category: enlightenment
+            tier: 4
+          - name: Unleashed Power
+            points: 5
+            category: leap
+            tier: 1
+          - name: Release Potential
+            points: 4
+            category: leap
+            tier: 1
+          - name: Instant Spell
+            points: 2
+            category: leap
+            tier: 1
+          - name: Gravity Preservation
+            points: 3
+            category: leap
+            tier: 2
       engravings:
         - name: Grudge
           priority: required
@@ -1220,6 +1294,7 @@ builds:
             **Extra movement, can proc Runes twice**
             - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
+            - Running Crash with 1-3-1 tripod are alternative of it.
         - name: Power Strike
           level: 10
           tripods:
@@ -1231,13 +1306,12 @@ builds:
           notes: |-
             **Applies our Synergy, Counter**
             - After the initial hit of Power Strike, it's possible to animation cancel the other hits. All hits can apply armor destruction synergy and also count as a counter.
-            - Dreadnaught with 1-1-2 tripod or Running Crash with 1-3-1 tripod are alternative of it.
-        - name: Supernova
+            - Dreadnaught with 1-1-2 tripod
+        - name: Chain Strike
           level_label: Hyper Awakening Technique
           notes: |-
-            **Fast Filler the Hypergravity Zone**
-            - Do not full cast it, just tap it.
-            - Other Hyper Awakening skill can usable but need to change leap tree for it
+            **One of the Highest Damage Skill**
+            - It is hit 3 times in row, try to at least hit the last attack in front
         - name: Terra Nova / Galaxy Break
           icon: Terra Nova
           level_label: Awakening / Hyper Awakening
@@ -1282,11 +1356,16 @@ builds:
       rotation_sections:
         - title: Rotation
           steps:
-            - Endure Pain
-            - Supernova
-            - Heavy Crush
             - Power Shoulder
+            - Heavy Crush
+            - Earth Eater
+            - Endure Pain
+            - Perfect Swing
+            - Chain Strike
             - Earth Wave
+            - Heavy Crush
+            - Power Strike
+            - Seismic Hammer
             - Hypergravity Zone
             - Basic Attack
     engravings:
@@ -1301,8 +1380,6 @@ builds:
       - name: Cursed Doll
         priority: recommended
       - name: Stabilized Status
-        priority: optional
-      - name: Adrenaline
         priority: optional
     variants:
       - name: Gravity Reversal
@@ -1322,8 +1399,6 @@ builds:
         - Care about grab pattern
         - Do not chase the front if remaining gauge less than 20-30%
         - Try to reach Attack Speed between 134-140%
-        - If you are running Adrenaline, cast Vortex Gravity during the Hypergravity Zone to keep your stacks.
-        - Adrenaline and non-Adrenaline setups deal similar damage.
         skills:
         - name: Perfect Swing
           level: 14
@@ -1407,6 +1482,7 @@ builds:
             **Extra movement, can proc Runes twice**
             - Judgment Rune is added to utilize Conviction-Judgement if mana is needed.
             - Downgrade to level 7 for prevent mana issues
+            - Running Crash with 1-3-1 tripod are alternative of it.
         - name: Power Strike
           level: 10
           tripods:
@@ -1418,7 +1494,7 @@ builds:
           notes: |-
             **Applies Armor Destruction Synergy, Counter**
             - After the initial hit of Power Strike, it's possible to animation cancel the other hits. All hits can apply armor destruction synergy and also count as a counter.
-            - Dreadnaught with 1-1-2 tripod or Running Crash with 1-3-1 tripod are alternative of it.
+            - Dreadnaught with 1-1-2 tripod
         - name: Supernova
           level_label: Hyper Awakening Technique
           notes: |-
@@ -1467,18 +1543,13 @@ builds:
           type: cooldown
           priority: 8
         rotation_sections:
-          - title: Rotation (With Blue T Skill)
+          - title: Rotation
             steps:
-            - Power Shoulder
-            - Heavy Crush
-            - Earth Eater
             - Endure Pain
-            - Perfect Swing
-            - Chain Strike
-            - Earth Wave
+            - Supernova
             - Heavy Crush
-            - Power Strike
-            - Seismic Hammer
+            - Power Shoulder
+            - Earth Wave
             - Hypergravity Zone
             - Basic Attack
         arkPassives:
@@ -1969,7 +2040,6 @@ builds:
         rotation_sections:
           - title: Rotation
             steps:
-            - Heavy Crush
             - Hypergravity Zone
             - Vortex Gravity
             - Endure Pain
@@ -1980,7 +2050,6 @@ builds:
             - Hypergravity Zone
             - Vortex Gravity
             - Terra Nova
-            - Heavy Crush
             - Hypergravity Zone
             - Vortex Gravity
         arkPassives:
