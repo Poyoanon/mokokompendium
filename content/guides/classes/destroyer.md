@@ -185,7 +185,7 @@ builds:
           rune_rarity: epic
           notes: |-
             **DR, Shield, and Super Armor on Demand**
-            - EP is a key skill in setting up any Purple skill prioritizing PS, SH, FS, but not overlapping with EE due to it having Tenacity.
+            - Endure Pain is a key skill in setting up any Purple skill prioritizing Perfect Swing, Seismic Hammer, Full Swing, but not overlapping with Earth Eater due to it having Tenacity.
             - Switching to Taunt when fighting targets that are tauntable.
         - name: Heavy Crush
           level: 10
@@ -197,8 +197,8 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Best utility skill, Short CD, Applies Synergy**
-            - HC is our primary skill to generate 1 core.
-            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also applies synergy
+            - Heavy Crush is our primary skill to generate 1 core.
+            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also reapplies synergy
             - There is alternatives for rune to some situations. Purify (for cleanse), Conviction (for cd and mana regen), Bleed and Poison (for damage)
         - name: Power Shoulder
           level: 10
@@ -233,8 +233,8 @@ builds:
             **Main Damage Skill**
             - Bigger and stronger version of Perfect Swing with longer cooldown and charge up time.
             - Hit front
-        - name: Terra Nova / Galaxy Break
-          icon: Terra Nova
+        - name: Terra Break / Galaxy Break
+          icon: Terra Break
           level_label: Awakening / Hyper Awakening
           notes: |-
             **Meter Generation Skill**
@@ -275,7 +275,7 @@ builds:
           type: cooldown
           priority: 7
       rotation:
-        - Terra Nova
+        - Terra Break
         - Seismic Hammer
         - Gravity Release Mode
         - Supernova
@@ -382,7 +382,7 @@ builds:
           rune_rarity: legendary
           notes: |-
             **DR, Shield, and Super Armor on Demand**
-            - EP is a key skill in setting up any Purple skill prioritizing PS, SH, FS, but not overlapping with EE due to it having Tenacity.
+            - Endure Pain is a key skill in setting up any Purple skill prioritizing Perfect Swing, Seismic Hammer, Full Swing, but not overlapping with Earth Eater due to it having Tenacity.
             - Switching to <tripod>Taunt</tripod> when fighting targets that are tauntable.
         - name: Heavy Crush
           level: 10
@@ -394,8 +394,8 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Best utility skill, Short CD, Applies Synergy**
-            - HC is our primary skill to generate 1 core.
-            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also applies synergy
+            - Heavy Crush is our primary skill to generate 1 core.
+            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also reapplies synergy
             - There is alternatives for rune to some situations. Purify (for cleanse), Conviction (for cd and mana regen), Bleed and Poison (for damage)
         - name: Power Shoulder
           level: 10
@@ -429,8 +429,8 @@ builds:
             **Main Damage Skill**
             - Bigger and stronger version of Perfect Swing with longer cooldown and charge up time.
             - Hit front
-        - name: Terra Nova / Galaxy Break
-          icon: Terra Nova
+        - name: Terra Break / Galaxy Break
+          icon: Terra Break
           level_label: Awakening / Hyper Awakening
           notes: |-
             **Meter Generation Skill**
@@ -543,7 +543,7 @@ builds:
           - Your Critical Rate and Specialization depend on your crit synergy, engravings, and bracelet. Aim for as close to 100% Critical Rate (Total of all sources) as you can while keeping at least 874 Specialization.
           - Swiftness is an option for any remaining points.
         rotation:
-        - Terra Nova
+        - Terra Break
         - Seismic Hammer
         - Gravity Release Mode
         - Supernova
@@ -647,7 +647,7 @@ builds:
           rune_rarity: legendary
           notes: |-
             **DR, Shield, and Super Armor on Demand**
-            - EP is a key skill in setting up any Purple skill prioritizing PS, SH, FS, but not overlapping with EE due to it having Tenacity.
+            - Endure Pain is a key skill in setting up any Purple skill prioritizing Perfect Swing, Seismic Hammer, Full Swing, but not overlapping with Earth Eater due to it having Tenacity.
             - Switching to <tripod>Taunt</tripod> when fighting targets that are tauntable.
         - name: Heavy Crush
           level: 10
@@ -659,8 +659,8 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Best utility skill, Short CD, Applies Synergy**
-            - HC is our primary skill to generate 1 core.
-            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also applies synergy
+            - Heavy Crush is our primary skill to generate 1 core.
+            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also reapplies synergy
             - There is alternatives for rune to some situations. Purify (for cleanse), Conviction (for cd and mana regen), Bleed and Poison (for damage)
         - name: Power Shoulder
           level: 10
@@ -692,8 +692,8 @@ builds:
             **Main Damage Skill**
             - Bigger and stronger version of Perfect Swing with longer cooldown and charge up time.
             - Hit front
-        - name: Terra Nova / Galaxy Break
-          icon: Terra Nova
+        - name: Terra Break / Galaxy Break
+          icon: Terra Break
           level_label: Awakening / Hyper Awakening
           notes: |-
             **Meter Generation Skill**
@@ -815,7 +815,7 @@ builds:
           - Seismic Hammer
           - Gravity Release Mode
           - Supernova
-          - Terra Nova
+          - Terra Break
           - Gravity Release Mode
           - Perfect Swing
           - Endure Pain
@@ -923,8 +923,8 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Best utility skill, Short CD, Applies Synergy**
-            - HC is our primary skill to generate 1 core.
-            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also applies synergy
+            - Heavy Crush is our primary skill to generate 1 core.
+            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also reapplies synergy
             - There is alternatives for rune to some situations. Purify (for cleanse), Conviction (for cd and mana regen), Bleed and Poison (for damage)
         - name: Power Shoulder
           level: 10
@@ -952,9 +952,9 @@ builds:
           level_label: Hyper Awakening Technique
           notes: |-
             **Extra blue skill and Decent Damage**
-            - It is hit 3 times in row, try to at least hit the last attack in front
-        - name: Terra Nova / Galaxy Break
-          icon: Terra Nova
+            - It is hits 3 times in row, try to at least hit the last attack in front
+        - name: Terra Break / Galaxy Break
+          icon: Terra Break
           level_label: Awakening / Hyper Awakening
           notes: |-
             **Meter Generation Skill**
@@ -1084,7 +1084,7 @@ builds:
           - Heavy Crush
           - Gravity Release Mode
           - Earth Wave
-          - Terra Nova
+          - Terra Break
           - Seismic Hammer
           - Gravity Release Mode
           - Perfect Swing
@@ -1279,8 +1279,8 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Best utility skill, Short CD, Applies Synergy**
-            - HC is our primary skill to generate 1 core.
-            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also applies synergy
+            - Heavy Crush is our primary skill to generate 1 core.
+            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also reapplies synergy
             - There is alternatives for rune to some situations. Purify (for cleanse), Conviction (for cd and mana regen), Bleed and Poison (for damage)
         - name: Power Shoulder
           level: 10
@@ -1311,9 +1311,9 @@ builds:
           level_label: Hyper Awakening Technique
           notes: |-
             **One of the Highest Damage Skill**
-            - It is hit 3 times in row, try to at least hit the last attack in front
-        - name: Terra Nova / Galaxy Break
-          icon: Terra Nova
+            - It is hits 3 times in row, try to at least hit the last attack in front
+        - name: Terra Break / Galaxy Break
+          icon: Terra Break
           level_label: Awakening / Hyper Awakening
           notes: |-
             **Meter Generation Skill**
@@ -1467,8 +1467,8 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Best utility skill, Short CD, Applies Synergy**
-            - HC is our primary skill to generate 1 core.
-            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also applies synergy
+            - Heavy Crush is our primary skill to generate 1 core.
+            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also reapplies synergy
             - There is alternatives for rune to some situations. Purify (for cleanse), Conviction (for cd and mana regen), Bleed and Poison (for damage)
         - name: Power Shoulder
           level: 10
@@ -1501,8 +1501,8 @@ builds:
             **Fast Filler the Hypergravity Zone**
             - Do not full cast it, just tap it.
             - Other Hyper Awakening skill can usable but need to change leap tree for it
-        - name: Terra Nova / Galaxy Break
-          icon: Terra Nova
+        - name: Terra Break / Galaxy Break
+          icon: Terra Break
           level_label: Awakening / Hyper Awakening
           notes: |-
             **Meter Generation Skill**
@@ -1656,7 +1656,7 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Can combo 6 orb generation fast with Heavy Crush weaving**
-            - <tripod>Wavering</tripod> Gravity tripod generates 2 cores in a chain within 3 seconds combined with HC generating 1 core. Allowing us to combo 3 core purple skills back to back to generate a large amount of Gravity Meter.
+            - <tripod>Wavering</tripod> Gravity tripod generates 2 cores in a chain within 3 seconds combined with Heavy Crush generating 1 core. Allowing us to combo 3 core purple skills back to back to generate a large amount of Gravity Meter.
         - name: Seismic Hammer
           level: 14
           tripods:
@@ -1708,8 +1708,8 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Best utility skill, Short CD, Applies Synergy**
-            - HC is our primary skill to generate 1 core.
-            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also applies synergy
+            - Heavy Crush is our primary skill to generate 1 core.
+            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also reapplies synergy
             - There is alternatives for rune to some situations. Purify (for cleanse), Conviction (for cd and mana regen), Bleed and Poison (for damage)
         - name: Power Shoulder
           level: 7
@@ -1737,9 +1737,9 @@ builds:
           level_label: Hyper Awakening Technique
           notes: |-
             **Third Highest Damage Skill**
-            - It is hit 3 times in row, try to at least hit the last attack in front
-        - name: Terra Nova / Galaxy Break
-          icon: Terra Nova
+            - It is hits 3 times in row, try to at least hit the last attack in front
+        - name: Terra Break / Galaxy Break
+          icon: Terra Break
           level_label: Awakening / Hyper Awakening
           notes: |-
             **Meter Generation Skill**
@@ -1876,7 +1876,7 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - Work out your own Critical Rate first, then put any spare points into Swiftness, staying below 114% unless you are willing to eat mana food, or into Specialization.
+          - Work out your own Critical Rate first, then put any spare points into Swiftness, staying below 114% attack speed unless you are willing to eat mana food, or into Specialization.
           - If you don't have Relic Adrenaline, use Standing Striker instead of Blunt Thorn and set other things for not overcap the crit rate
       - name: Gravity Core
         difficulty: 3
@@ -1964,8 +1964,8 @@ builds:
           rune_rarity: legendary
           notes: |-
             **Best utility skill, Short CD, Applies Synergy**
-            - HC is our primary skill to generate 1 core.
-            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also applies synergy
+            - Heavy Crush is our primary skill to generate 1 core.
+            - <tripod>Aftershock</tripod> tripod can reapply bleed or poison ticks also reapplies synergy
             - There is alternatives for rune to some situations. Purify (for cleanse), Conviction (for cd and mana regen), Bleed and Poison (for damage)
         - name: Power Shoulder
           level: 10
@@ -1996,8 +1996,8 @@ builds:
           notes: |-
             **Fast Filler the Hypergravity Zone**
             - Do not full charge it, just tap it
-        - name: Terra Nova / Galaxy Break
-          icon: Terra Nova
+        - name: Terra Break / Galaxy Break
+          icon: Terra Break
           level_label: Awakening / Hyper Awakening
           notes: |-
             **Meter Generation Skill**
@@ -2049,7 +2049,7 @@ builds:
             - Supernova
             - Hypergravity Zone
             - Vortex Gravity
-            - Terra Nova
+            - Terra Break
             - Hypergravity Zone
             - Vortex Gravity
         arkPassives:
