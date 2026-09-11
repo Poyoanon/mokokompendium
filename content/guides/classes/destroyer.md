@@ -1075,7 +1075,7 @@ builds:
           - Your Ark Passive stats vary with your bracelet, Adrenaline usage, but there are a few main goals.
           - With Adrenaline, aim for 60-62% Critical Rate on the character stat page. Without it, aim for 80-82%.
           - For Specialization, aim just above either 874 or 551, and put the rest into Swiftness.
-          - If your Specialization is just above 874, run Full Swing with <tripod>Tenacity</tripod>.
+          - If your Specialization is just above 874, run Full Swing with Tenacity.
           - If a crit synergy (10% Crit Rate comes from) on your side decrease 5-6p crit and invest to Swiftness
           - If a 2 synergy (20% Crit Rate comes from) on your side decrease 10-11p crit and invest swiftness or spec which one suits your gameplay
           - Adjust your pet effect which stat is deficient for you
@@ -1636,6 +1636,21 @@ builds:
         arkgrid_prose: |-
           Core priority is Gravity Destruction > Gravitational Circulation > Rock Blade.
           Minimum: Sun 17 Moon 14 Star 10.
+        engravings:
+          - name: Grudge
+            priority: required
+          - name: Master Brawler
+            priority: required
+          - name: Barricade
+            priority: required
+          - name: MP Efficiency Increase
+            priority: required
+          - name: Adrenaline
+            priority: recommended
+          - name: Cursed Doll
+            priority: optional
+          - name: Stabilized Status
+            priority: optional
         priorities:
         - Do not get knocked down while casting Seismic Hammer or Earth Wave, or they will not reset each other.
         - Do not cast Seismic Hammer or Earth Wave immediately before a cutscene, or they will not reset each other.
@@ -1887,6 +1902,19 @@ builds:
         arkgrid_prose: |-
           Core priority is Gravity Core > Gravitational Rush > Shattered Earth.
           Minimum: Sun 17 Moon 14 Star 14.
+        engravings:
+          - name: Grudge
+            priority: required
+          - name: Master Brawler
+            priority: required
+          - name: Barricade
+            priority: required
+          - name: Cursed Doll
+            priority: required
+          - name: Adrenaline
+            priority: recommended
+          - name: Stabilized Status
+            priority: optional
         priorities:
         - Build the Hypergravity Zone as soon as possible
         - Reach 120% crit rate for Blunt Thorn build or 100% crit rate for Standing Striker build.
