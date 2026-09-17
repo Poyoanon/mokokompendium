@@ -1,3 +1,5 @@
+import { defineTooltipEventHandler } from '../utils/tooltip-cache'
+import { getSpecialSkillNames, getSpecialSkillTooltip } from '../utils/special-skill'
 import { asD1Database, type D1DatabaseLike } from '../utils/d1'
 import { getSkillGroupAliasCandidates } from '../utils/skill-category'
 import { buildLocaleAwareEqualsClause, buildLocalizedSelectSql } from '../utils/tooltip-locale'
@@ -301,7 +303,7 @@ async function buildSkillCategoryTooltip(
   }
 }
 
-export default defineEventHandler(async (event) => {
+export default defineTooltipEventHandler(async (event) => {
   const query = getQuery(event)
   const locale = query.locale
 
@@ -330,9 +332,11 @@ export default defineEventHandler(async (event) => {
     `).bind(classId).all() as { results?: SkillNameRow[] }
 
     return {
-      skills: (rows.results ?? [])
-        .map((row) => row.skill_name)
-        .filter((name): name is string => typeof name === 'string' && name.length > 0)
+      skills: [...new Set([
+        ...(rows.results ?? []).map((row) => row.skill_name)
+          .filter((name): name is string => typeof name === 'string' && name.length > 0),
+        ...getSpecialSkillNames(classId),
+      ])].sort()
     }
   }
 
@@ -477,7 +481,8 @@ export default defineEventHandler(async (event) => {
     }
 
     if (!skill) {
-      skill = await buildSkillCategoryTooltip(db, classId, skillName, locale)
+      skill = await getSpecialSkillTooltip(db, classId, skillName, locale)
+        ?? await buildSkillCategoryTooltip(db, classId, skillName, locale)
     }
 
     if (!skill) {
@@ -513,7 +518,13 @@ export default defineEventHandler(async (event) => {
       counter_attack_type: skill.counter_attack_type ?? null,
       super_armor_type: skill.super_armor_type ?? null,
       description,
-      url: getSkillIconUrl(skill.icon_file, skill.icon_index)
+      // Basic attacks have no atlas icon in the archive. Use a bundled input
+      // symbol instead of requesting the invalid /_0.png atlas path.
+      url: skill.icon_file?.trim()
+        ? getSkillIconUrl(skill.icon_file, skill.icon_index)
+        : /^(?:hypergravity )?basic attack$/i.test(skillName.trim())
+          ? '/icons/basic-attack.svg'
+          : null
     }
   }
 

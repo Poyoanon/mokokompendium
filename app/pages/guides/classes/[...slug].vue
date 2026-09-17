@@ -20,6 +20,7 @@ import { useSectionBindings } from '~/composables/guides/class/useSectionBinding
 import { useSelectionState } from '~/composables/guides/class/useSelectionState'
 import { useTooltipInteractions } from '~/composables/guides/class/useTooltipInteractions'
 import { useSiteLocale } from '~/composables/useSiteLocale'
+import { getClassIconPath } from '~/utils/class-icon'
 
 const {
   guide,
@@ -324,6 +325,7 @@ const buildContentBindings = computed(() => ({
 const headerAndSelectorsProps = computed(() => ({
   title: guide.value?.title ?? '',
   description: guide.value?.description ?? '',
+  classIcon: getClassIconPath(guide.value),
   guideUpdatedDate: guideUpdatedDate.value,
   builds: guide.value?.builds ?? [],
   selectedBuild: selectedBuild.value,
@@ -333,6 +335,8 @@ const headerAndSelectorsProps = computed(() => ({
 }))
 
 const identitySynergyProps = computed(() => ({
+  inlineTripods: inlineTripods.value,
+  partParser: getInlineGuideTextParts,
   identity: currentBuild.value?.identity ?? guide.value?.identity,
   synergy: currentBuild.value?.synergy ?? guide.value?.synergy,
   ...sharedSkillTooltipBindings.value,

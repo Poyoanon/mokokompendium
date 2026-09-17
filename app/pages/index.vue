@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { getClassIconPath } from '~/utils/class-icon'
 import { withContentQueryRetry } from '~/utils/content-query-retry'
 import { getGuideUpdatedDate } from '~/utils/guide-updated'
 
@@ -12,13 +13,6 @@ const { data: guides } = await useAsyncData('guides', () =>
 const hasGuides = computed(() =>
   (classGuides.value?.length ?? 0) + (guides.value?.length ?? 0) > 0
 )
-
-const summonerIconPath = '/classicons/class_summoner.png'
-
-const isSummonerGuide = (guide: { subclass?: string | null, path?: string }) => {
-  const subclass = guide.subclass?.trim().toLowerCase()
-  return subclass === 'summoner' || guide.path?.includes('/summoner')
-}
 
 const getUpdatedDate = (guide: { path?: string | null, lastUpdated?: string | null }) => getGuideUpdatedDate(guide)
 </script>
@@ -84,8 +78,8 @@ const getUpdatedDate = (guide: { path?: string | null, lastUpdated?: string | nu
                 class="mk-link-card group flex items-center gap-4 p-4"
               >
                 <img
-                  v-if="isSummonerGuide(guide)"
-                  :src="summonerIconPath"
+                  v-if="getClassIconPath(guide)"
+                  :src="getClassIconPath(guide) ?? undefined"
                   :alt="`${guide.subclass || guide.title} icon`"
                   class="size-11 rounded-xl border border-zinc-700/70 bg-zinc-900/70 object-cover shrink-0"
                 >

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const githubRepositoryUrl = 'https://github.com/Poyoanon/mokokompendium'
+const kofiDonationUrl = 'https://ko-fi.com/poyoanon'
 
 const navigation = [
   { label: 'Home', to: '/', icon: 'i-lucide-home' },
@@ -41,6 +42,17 @@ const navigation = [
                 {{ item.label }}
               </NuxtLink>
             </nav>
+
+            <a
+              :href="kofiDonationUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Support Mokokompendium on Ko-fi"
+              class="site-nav-link site-kofi-link text-sm"
+            >
+              <UIcon name="i-lucide-coffee" class="size-4" />
+              <span class="hidden sm:inline">Donate</span>
+            </a>
 
             <a
               :href="githubRepositoryUrl"

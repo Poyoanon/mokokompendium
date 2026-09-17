@@ -37,7 +37,7 @@ const createHarness = (locale: string) => {
     getArkPassiveKey: (passive: { name: string }) => passive.name,
   })
 
-  return { skillTooltipMeta, getSkillHeaderLines: parsing.getSkillHeaderLines }
+  return { skillTooltipMeta, ...parsing }
 }
 
 describe('useParsing skill header colors', () => {
@@ -72,3 +72,15 @@ describe('useParsing skill header colors', () => {
   })
 })
 
+
+
+describe('guide priority tripod tags', () => {
+  it('parses Taunt as a tripod even without skill or passive names', () => {
+    const { getInlineGuideTextParts } = createHarness('en')
+    expect(getInlineGuideTextParts('Take <tripod>Taunt</tripod> against tauntable bosses.')).toEqual([
+      { type: 'text', value: 'Take ' },
+      { type: 'tripod', key: 'Taunt', name: 'Taunt' },
+      { type: 'text', value: ' against tauntable bosses.' },
+    ])
+  })
+})

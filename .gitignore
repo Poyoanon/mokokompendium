@@ -28,3 +28,6 @@ migrations/
 .env
 .env.*
 !.env.example
+
+# Python import tooling
+__pycache__/

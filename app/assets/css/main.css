@@ -215,6 +215,17 @@
     background: rgb(255 190 60 / 16%);
   }
 
+  .site-kofi-link {
+    border-color: var(--stroke);
+    background: var(--panel-strong);
+  }
+
+  .site-kofi-link:hover {
+    color: var(--text);
+    border-color: rgb(255 94 91 / 45%);
+    background: rgb(255 94 91 / 16%);
+  }
+
   .mk-eyebrow {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 0.8rem;

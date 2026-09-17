@@ -888,12 +888,18 @@ export function useParsing(options: ParsingOptions) {
     }
 
     const parts: InlineGuidePart[] = []
-    for (const segment of getInlineUntagSegments(text)) {
-      if (!segment.value.length) continue
-      if (segment.isUntagged) {
-        parts.push({ type: 'text', value: segment.value })
-      } else {
-        parts.push(...getPartsFromSegment(segment.value))
+    for (const token of getGuideTripodTokens(text)) {
+      if (token.type === 'tripod') {
+        parts.push(token)
+        continue
+      }
+      for (const segment of getInlineUntagSegments(token.value)) {
+        if (!segment.value.length) continue
+        if (segment.isUntagged) {
+          parts.push({ type: 'text', value: segment.value })
+        } else {
+          parts.push(...getPartsFromSegment(segment.value))
+        }
       }
     }
     return parts.length ? parts : [{ type: 'text', value: text }]

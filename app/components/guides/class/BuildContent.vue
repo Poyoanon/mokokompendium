@@ -146,7 +146,7 @@ const onPreArkOpenUpdate = (value: boolean) => {
         heading-class="mk-eyebrow mb-2"
         skill-scope-base="pre-ark-tip"
         :items="props.content.preArkGrid.tips ?? []"
-        :part-parser="props.actions.getInlineSkillParts"
+        :part-parser="props.actions.getInlineGuideTextParts"
         passive-scope="preArk"
         v-bind="props.bindings.sharedInlineTextListBindings"
       />

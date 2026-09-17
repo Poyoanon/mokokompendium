@@ -60,7 +60,7 @@ type InlineTripodDetail = {
   description?: string | null
 }
 
-const TRIPOD_TOOLTIP_DATA_VERSION = '2026-07-13-gunslinger-tripods'
+const TRIPOD_TOOLTIP_DATA_VERSION = '2026-09-10-destroyer-tooltips'
 
 type TooltipDataOptions = {
   tooltipLocale?: Ref<string> | ComputedRef<string>
@@ -325,7 +325,7 @@ export function useD1Data(options: TooltipDataOptions) {
                   const response = await $fetch<TripodApiResponse>('/api/tripods', {
                   query: {
                     class_id: classId,
-                    skill_name: skill.name,
+                    skill_name: getSkillLookupName(skill),
                     tripod_name: tripodValue,
                     locale,
                     v: tripodCacheBust,
@@ -354,7 +354,7 @@ export function useD1Data(options: TooltipDataOptions) {
                 const response = await $fetch<TripodApiResponse>('/api/tripods', {
                   query: {
                     class_id: classId,
-                    skill_name: skill.name,
+                    skill_name: getSkillLookupName(skill),
                     tripod_name: tripodName,
                     locale,
                     v: tripodCacheBust,
@@ -382,18 +382,33 @@ export function useD1Data(options: TooltipDataOptions) {
       if (skill.notes) {
         for (const tripodName of getTripodNamesFromNotes(skill.notes)) {
           const key = getInlineTripodKey(skill.name, tripodName)
-          registerInlineTripodRequest(key, tripodName, [skill.name])
+          registerInlineTripodRequest(key, tripodName, [getSkillLookupName(skill)])
         }
       }
     }
 
     const guideInlineTripodSkillNames = [
-      ...(currentVariant.value?.skills ?? []).map((skill) => skill.name),
-      ...(preArkGrid.value?.skills ?? []).map((skill) => skill.name),
+      ...synergySkills,
+      ...(currentVariant.value?.skills ?? []).map(getSkillLookupName),
+      ...(preArkGrid.value?.skills ?? []).map(getSkillLookupName),
     ]
 
-    for (const tripodName of getTripodNamesFromNotes(currentVariant.value?.description)) {
-      registerInlineTripodRequest(getGuideTripodKey(tripodName), tripodName, guideInlineTripodSkillNames)
+    const guideTripodSources = [
+      guide.value?.synergy?.description,
+      currentBuild.value?.synergy?.description,
+      currentVariant.value?.description,
+      preArkGrid.value?.description,
+      ...(currentVariant.value?.priorities ?? []),
+      ...(currentVariant.value?.tips ?? []),
+      ...(currentVariant.value?.arkPassiveTips ?? []),
+      ...(preArkGrid.value?.priorities ?? []),
+      ...(preArkGrid.value?.tips ?? []),
+      ...(preArkGrid.value?.arkPassiveTips ?? []),
+    ]
+    for (const source of guideTripodSources) {
+      for (const tripodName of getTripodNamesFromNotes(source)) {
+        registerInlineTripodRequest(getGuideTripodKey(tripodName), tripodName, guideInlineTripodSkillNames)
+      }
     }
 
     const skillNamesToFetch = Array.from(skillIconNames)

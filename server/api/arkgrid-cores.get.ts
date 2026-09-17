@@ -1,7 +1,8 @@
+import { defineTooltipEventHandler } from '../utils/tooltip-cache'
 import { asD1Database } from '../utils/d1'
 import { buildLocalizedSelectSql } from '../utils/tooltip-locale'
 
-export default defineEventHandler(async (event) => {
+export default defineTooltipEventHandler(async (event) => {
   const query = getQuery(event)
   const locale = query.locale
 

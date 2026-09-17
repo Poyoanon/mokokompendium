@@ -1,3 +1,4 @@
+import { defineTooltipEventHandler } from '../utils/tooltip-cache'
 import { asD1Database } from '../utils/d1'
 import { buildLocaleAwareEqualsClause, buildLocalizedSelectSql } from '../utils/tooltip-locale'
 
@@ -32,7 +33,7 @@ function getIconUrl(iconFile: string, iconIndex: number): string {
   return `${CDN_PROXY_BASE_URL}/${folder}/${filename}`
 }
 
-export default defineEventHandler(async (event) => {
+export default defineTooltipEventHandler(async (event) => {
   const query = getQuery(event)
   const locale = query.locale
 

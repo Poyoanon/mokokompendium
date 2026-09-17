@@ -116,7 +116,7 @@ builds:
               **Mobility Skill, Synergy Skill**
               - Can be left at level 1.
               - Requires you to glide near the boss to ensure the skill hits.
-          - name: Peacekeeper
+          - name: Peace Keeper
             level: 4
             tripods:
               - Excellent Mobility
@@ -414,7 +414,7 @@ builds:
               - Can be left at level 1.
               - Requires you to glide near the boss to ensure the skill hits.
               - If running another syn, go <tripod>Agile Movement</tripod>
-          - name: Peacekeeper
+          - name: Peace Keeper
             level: 4
             tripods:
               - Excellent Mobility

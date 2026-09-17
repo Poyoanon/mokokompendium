@@ -1,3 +1,4 @@
+import { defineTooltipEventHandler } from '../utils/tooltip-cache'
 import { asD1Database } from '../utils/d1'
 import { buildLocaleAwareEqualsClause, buildLocalizedSelectSql } from '../utils/tooltip-locale'
 
@@ -11,7 +12,7 @@ function getTripodUrl(tier: number, index: number): string {
   return `${CDN_PROXY_BASE_URL}/tripod_tier/${filename}`
 }
 
-export default defineEventHandler(async (event) => {
+export default defineTooltipEventHandler(async (event) => {
   const query = getQuery(event)
   const locale = query.locale
 
