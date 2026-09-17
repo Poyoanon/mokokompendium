@@ -174,12 +174,12 @@ builds:
           tripods:
             - Quick Prep
             - Stabilized Light
-            - Shining Protection
+            - Light Ward
           rune: Galewind
           rune_rarity: epic
           notes: |-
             **Damage Reduction, Shielding, Weak Point Lv. 1, Push Immunity**
-            - <tripod>Shining Protection</tripod> grants yourself 50% Damage Reduction for the duration of the cast, and 75% Damage Reduction to allies for 3 seconds.
+            - <tripod>Light Ward</tripod> grants yourself 50% Damage Reduction for the duration of the cast, and 75% Damage Reduction to allies for 3 seconds.
             - The shield, damage reduction, and duration is reapplied on every tick.
             - Protection and Quick Recharge are also viable rune options.
         - name: Rhythm Buckshot
@@ -373,12 +373,12 @@ builds:
             tripods:
               - Quick Prep
               - Stabilized Light
-              - Shining Protection
+              - Light Ward
             rune: Galewind
             rune_rarity: epic
             notes: |-
               **Damage Reduction, Shielding, Weak Point Lv. 1, Push Immunity**
-              - <tripod>Shining Protection</tripod> grants yourself 50% Damage Reduction for the duration of the cast, and 75% Damage Reduction to allies for 3 seconds.
+              - <tripod>Light Ward</tripod> grants yourself 50% Damage Reduction for the duration of the cast, and 75% Damage Reduction to allies for 3 seconds.
               - The shield, damage reduction, and duration is reapplied on every tick.
               - Protection and Quick Recharge are also viable rune options.
           - name: Rhythm Buckshot
@@ -602,12 +602,12 @@ builds:
             tripods:
               - Quick Prep
               - Stabilized Light
-              - Shining Protection
+              - Light Ward
             rune: Galewind
             rune_rarity: epic
             notes: |-
               **Damage Reduction, Shielding, Weak Point Lv. 1, Push Immunity**
-              - <tripod>Shining Protection</tripod> grants yourself 50% Damage Reduction for the duration of the cast, and 75% Damage Reduction to allies for 3 seconds.
+              - <tripod>Light Ward</tripod> grants yourself 50% Damage Reduction for the duration of the cast, and 75% Damage Reduction to allies for 3 seconds.
               - The shield, damage reduction, and duration is reapplied on every tick.
               - Protection and Quick Recharge are also viable rune options.
           - name: Rhythm Buckshot
@@ -1073,7 +1073,7 @@ builds:
       - name: Tempest Refrain (222)
         difficulty: 1
         recommended: false
-        description: Locks your ability to cast 3-bar Tempest and significantly buffs your 2-bar and normal skill damage. Longer downtime between Tempests due to Sun core which reduces meter generation (and in turn mana generation). Inflexible version of the Standard 112 build (Recommended) which would otherwise allow you to send 1- and 3 bar-buffs. Only play this if you do not have cores for 112.
+        description: Locks your ability to cast 3-bar Tempest, but significantly buffs your 2-bar and normal skill damage. Longer downtime between Tempests due to Sun core, which reduces meter generation (and in turn mana generation). Inflexible version of the Standard 112 build (Recommended) which would otherwise allow you to send 1- and 3- bar buffs. Only play this if you do not have cores for 112.
         arkgrid_cores: Tempest Refrain + Second Impact + Sound Blitz
         priorities:
           - Upkeep your damage synergy, Sonatina and maintain Adrenaline stacks.
@@ -1328,7 +1328,7 @@ builds:
       - name: Sound Shock Loop (333)
         difficulty: 1
         recommended: false
-        description: Sound Shock becomes your bread and butter. Spreads damage amongst Normal Skills at significant cost to meter generation. Not forced to play in melee range. As of September 2026 (Dimensionalist Release), Bard lacks significant damage in normal skills, requires higher uptime casts, and this build STILL falls behind in Trixion and real practice (upwards of 12% compared to 112). This build is NOT recommended even if you have cores. Leave it in the Chaos Rift or play it if you are hipster.
+        description: Sound Shock becomes your bread and butter. Damage is spread amongst Normal Skills at significant cost to meter generation. Not forced to play in melee range. As of September 2026, 333 lacks the damage in normal skills, requires higher uptime casting, and this build STILL falls behind in Trixion and real practice (upwards of 12% compared to 112). This build is NOT recommended even if you have cores. Leave it in the Chaos Rift or play it if you are hipster.
         arkgrid_cores: Shock Loop + Harmonious Confluence + Binary Shock
         priorities:
           - Upkeep your damage synergy, Sonatina and maintain Adrenaline stacks.
