@@ -90,7 +90,7 @@ builds:
             **Martial Art Skill**
             - Recovers a lot of energy per use.
             - Decently strong for being a martial art skill.
-            - Lightning Fast can be used as 3rd tripod instead, the cast time goes from 0.8s to 0.7s, with epic vision, for a small damage decrease. 
+            - Lightning Fast can be used as 3rd tripod instead, the cast time goes from 0.8s to 0.7s, with epic vision, for a small damage decrease.
         - name: Force Orb
           level: 14
           tripods:
@@ -301,7 +301,7 @@ builds:
         - Flash Step
         - Flash Step
         - Flash Step
-       - Heavenly Spiral Palm
+        - Heavenly Spiral Palm
         - Energy Blast
         - Skysplitting Fist
         - Force Orb
@@ -387,7 +387,7 @@ builds:
               **Martial Art Skill**
               - Recovers a lot of energy per use.
               - Decently strong for being a martial art skill.
-              - Lightning Fast can be used as 3rd tripod instead, the cast time goes from 0.8s to 0.7s, with epic vision, for a small damage decrease. 
+              - Lightning Fast can be used as 3rd tripod instead, the cast time goes from 0.8s to 0.7s, with epic vision, for a small damage decrease.
           - name: Force Orb
             level: 14
             tripods:
@@ -701,7 +701,7 @@ builds:
               **Martial Art Skill**
               - Recovers a lot of energy per use.
               - Decently strong for being a martial art skill.
-              - Lightning Fast can be used as 3rd tripod instead, the cast time goes from 0.8s to 0.7s, with epic vision, for a small damage decrease. 
+              - Lightning Fast can be used as 3rd tripod instead, the cast time goes from 0.8s to 0.7s, with epic vision, for a small damage decrease.
           - name: Force Orb
             level: 14
             tripods:
@@ -1021,7 +1021,7 @@ builds:
               **Martial Art Skill**
               - Recovers a lot of energy per use.
               - Decently strong for being a martial art skill.
-              - Lightning Fast can be used as 3rd tripod instead, the cast time goes from 0.8s to 0.7s, with epic vision, for a small damage decrease. 
+              - Lightning Fast can be used as 3rd tripod instead, the cast time goes from 0.8s to 0.7s, with epic vision, for a small damage decrease.
               - First Tripod is flexible, pick what you prefer, the energy is usually wasted on this build.
           - name: Flash Step
             level: 10
