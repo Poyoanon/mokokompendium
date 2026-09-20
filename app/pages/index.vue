@@ -67,6 +67,17 @@ const getUpdatedDate = (guide: { path?: string | null, lastUpdated?: string | nu
               </div>
               <UIcon name="i-lucide-chevron-right" class="size-4 text-zinc-600 mt-1" />
             </NuxtLink>
+
+            <NuxtLink to="/tools/gold-eff-calc" class="mk-link-card group flex items-start gap-4 p-5">
+              <div class="size-11 rounded-xl border border-zinc-700/70 bg-zinc-900/70 flex items-center justify-center shrink-0">
+                <UIcon name="i-lucide-list-chevrons-up-down" class="size-5 text-zinc-200" />
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="text-base font-semibold text-zinc-100">Gold Efficiency Calc</h3>
+                <p class="text-sm text-zinc-400 mt-1">Find what the next most efficient use of gold is, based on current progress.</p>
+              </div>
+              <UIcon name="i-lucide-chevron-right" class="size-4 text-zinc-600 mt-1" />
+            </NuxtLink>
           </div>
         </section>
 
