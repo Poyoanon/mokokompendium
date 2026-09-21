@@ -12,7 +12,7 @@ synergy:
     - Bolting Crash
 identity:
   name: Hype
-  description: Hype meter refills overtime and as you press martial art skills, once full, Soulfist can enter "Hype" with the identity button (Z). In this mode you get additional damage, extra attack speed, extra cooldown as well as extra Force Skills damage. Using Force Skills or waiting out the timer will force you out of Hype, you can cancel Hype by pressing the secondary identity button (X).
+  description: Hype meter refills over time and as you press martial art skills, once full, Soulfist can enter "Hype" with the identity button (Z). In this mode you get additional damage, extra attack speed, extra cooldown as well as extra Force Skills damage. Using Force Skills or waiting out the timer will force you out of Hype, you can cancel Hype by pressing the secondary identity button (X).
 builds:
   - name: Robust Energy
     engraving: Robust Energy
@@ -36,7 +36,7 @@ builds:
           priority: optional
       priorities:
         - Make sure to spam Flash Step and Bolting Crash when Hype is recovering to shorten the window before you can enter it again.
-        - Try to bomb off cooldown as much as possible unless you know that a big dps window is coming.
+        - Try to bomb off cooldown as much as possible unless you know that a big DPS window is coming.
         - Do not waste energy while in Hype.
       skills:
         - name: Energy Blast
@@ -144,8 +144,8 @@ builds:
           level_label: Hyper Awakening Technique
           notes: |-
             **Force Skill**
-            - Short cooldown, aim for 1 cast per hype
-            - The Leap node Final Strike makes it refund the hype that it spends while adding damage.
+            - Short cooldown, aim for 1 cast per Hype
+            - The Leap node Final Strike makes it refund the Hype that it spends while adding damage.
         - name: World Decimation / Falling Sun
           icon: World Decimation
           level_label: Awakening / Hyper Awakening
@@ -331,10 +331,10 @@ builds:
             priority: optional
         priorities:
           - Maximize damage by using Energy Blast, Tempest Blast and Heavenly Spiral Palm.
-          - Knowning when to cancel and when to extend hype will be key to being able to recover against bad patterns.
+          - Knowing when to cancel and when to extend Hype will be key to being able to recover against bad patterns.
           - The rotation is fairly flexible so make use of adequate Superarmor as you need it.
           - Make sure to spam Martial Arts Skills when Hype is recovering to shorten the window before you can enter it again.
-          - Try to bomb off cooldown as much as possible unless you know that a big dps window is coming.
+          - Try to bomb off cooldown as much as possible unless you know that a big DPS window is coming.
         skills:
           - name: Energy Blast
             level: 14
@@ -441,8 +441,8 @@ builds:
             level_label: Hyper Awakening Technique
             notes: |-
               **Force Skill**
-              - Short cooldown, aim for 1 cast per hype
-              - The Leap node Final Strike makes it refund the hype that it spends while adding damage.
+              - Short cooldown, aim for 1 cast per Hype
+              - The Leap node Final Strike makes it refund the Hype that it spends while adding damage.
           - name: World Decimation / Falling Sun
             icon: World Decimation
             level_label: Awakening / Hyper Awakening
@@ -497,7 +497,7 @@ builds:
             dmg: 7.0
           - name: World Decimation
             dmg: 5.0
-          - name: Yin Yan Palm
+          - name: Yin Yang Palm
             dmg: 1.5
           - name: Skysplitting Fist
             dmg: 1.5
@@ -625,7 +625,7 @@ builds:
             - Energy Blast
       - name: Bombies WIP
         difficulty: 2
-        description: RS Ark grid build focusing entirely on Awakening to get big burst of damage, this build is not particularily recommended but it was added for people that don't care about other variants of RS and prefers the pre-ark grid version.
+        description: RS Ark grid build focusing entirely on Awakening to get big burst of damage, this build is not particularly recommended but it was added for people that don't care about other variants of RS and prefers the pre-ark grid version.
         stats: Specialization 30/30, Crit 5/30, Swiftness 5/30
         arkgrid_cores: Sky Shattering Strike + Adamentine Body + Dance of Heavenly Flowers
         arkgrid_prose: |-
@@ -648,7 +648,7 @@ builds:
           - This build should excel in homework content style phasing.
           - To do damage, you NEED to land bomb.
           - Make sure to spam Martial Arts Skills when Hype is recovering to shorten the window before you can enter it again.
-          - Try to bomb off cooldown as much as possible unless you know that a big dps window is coming.
+          - Try to bomb off cooldown as much as possible unless you know that a big DPS window is coming.
         skills:
           - name: Energy Blast
             level: 14
@@ -738,7 +738,7 @@ builds:
               - Synergy is on cast, not on hit.
               - Same cooldown no matter how many charges you use.
               - Can be used with Galewind rune instead.
-              - The Energy regen is with Tireless is per cast, not per hit.
+              - The energy regeneration from Tireless is per cast, not per hit.
           - name: Bolting Crash
             level: 4
             tripods:
@@ -755,8 +755,8 @@ builds:
             level_label: Hyper Awakening Technique
             notes: |-
               **Force Skill**
-              - Short cooldown, aim for 1 cast per hype
-              - The Leap node Final Strike makes it refund the hype that it spends while adding damage.
+              - Short cooldown, aim for 1 cast per Hype
+              - The Leap node Final Strike makes it refund the Hype that it spends while adding damage.
           - name: World Decimation / Falling Sun
             icon: World Decimation
             level_label: Awakening / Hyper Awakening
@@ -920,7 +920,7 @@ builds:
           - Tempest Blast
       - name: Orbies
         difficulty: 3
-        description: RS Ark grid build focusing on Force Orb casts and spamming Energy Bullet to extend Hype to allow for more Force Skills uses. This build shoud technically do more damage but is also the sweatiest of the bunch with higher uptime required and lower downtime, with added jank interactions with Energy Bullet near the end of Hype to be wary of.
+        description: RS Ark grid build focusing on Force Orb casts and spamming Energy Bullet to extend Hype to allow for more Force Skills uses. This build should technically do more damage but is also the sweatiest of the bunch with higher uptime required and lower downtime, with added jank interactions with Energy Bullet near the end of Hype to be wary of.
         stats: Specialization 30/30, Crit 6/30, Swiftness 4/30
         arkgrid_cores: Hundred Chain Strike + Recovery Bullet + Energy Burst
         arkgrid_prose: |-
@@ -942,7 +942,7 @@ builds:
         priorities:
           - Make sure you have one stack of Destiny before you enter Hype (can be leftover from last Hype) so that you get the refund on using your Force Orb Skill right away.
           - Make sure to spam Martial Arts Skills when Hype is recovering to shorten the window before you can enter it again.
-          - Try to bomb off cooldown as much as possible unless you know that a big dps window is coming.
+          - Try to bomb off cooldown as much as possible unless you know that a big DPS window is coming.
         skills:
           - name: Energy Blast
             level: 14
@@ -993,7 +993,7 @@ builds:
             rune_rarity: legendary
             notes: |-
               **Force Skill**
-              - Main purpose is to extend hype by landing hits on the boss and to proc reduction to Energy Skills every 2 Destiny Skills.
+              - Main purpose is to extend Hype by landing hits on the boss and to proc reduction to Energy Skills every 2 Destiny Skills.
               - Does decent damage for being so low cooldown
               - The Hype extension is per hit, do NOT miss this skill.
               - Oversupply is a very slight damage increase but Penetrating Pain has extra AOE that could make hits that were to miss end up hitting the boss.
@@ -1053,8 +1053,8 @@ builds:
             level_label: Hyper Awakening Technique
             notes: |-
               **Force Skill**
-              - Short cooldown, aim for 1 cast per hype
-              - The Leap node Final Strike makes it refund the hype that it spends while adding damage.
+              - Short cooldown, aim for 1 cast per Hype
+              - The Leap node Final Strike makes it refund the Hype that it spends while adding damage.
           - name: World Decimation / Falling Sun
             icon: World Decimation
             level_label: Awakening / Hyper Awakening
@@ -1263,4 +1263,341 @@ builds:
             - Tempest Blast
             - Energy Bullet
             - Force Orb
+  - name: Supreme Art
+    engraving: Supreme Art
+    difficulty: medium
+    identity:
+      name: Supreme Art
+      description: Supreme Art Soulfist generates meter based on the inner force cost of Martial Arts Skills. Activating the identity (Z) will send out Supreme Technique, Supreme Palm, or Supreme Godfist depending on the identity stage.
+    variants:
+      - name: Yin Yang
+        difficulty: 2
+        description: SA Ark grid build focusing on the alternating usage of Supreme Art and Yin Yang Palm.
+        stats: Swift 30/30, Crit 10/30
+        arkgrid_cores: Force Cycle + Protective Cycle + Yin Yang Technique
+        arkgrid_prose: |-
+          Minimum: Sun 14 Moon 14 for playstyle activation. Will likely be weaker than pre-arkgrid.
+          Recommended: Sun 17 Moon 17 Star 14 to obtain damage and QoL for our main damage skills.
+        engravings:
+          - name: Grudge
+            priority: required
+          - name: Adrenaline
+            priority: required
+          - name: Keen Blunt Weapon
+            priority: required
+          - name: Raid Captain
+            priority: required
+          - name: Mass Increase
+            priority: recommended
+          - name: Cursed Doll
+            priority: optional
+          - name: Stabilized Status
+            priority: optional
+        priorities:
+          - After the opener, this build variant does not have a strict rotation; it operates according to the following guidelines for each of the stages in the identity (Z1, Z2, Z3).
+          - Z1 - Use every skill once to generate meter. The priority is to proc Conviction + Judgement if used and then putting Skysplitting Fist + Merciless Pummel on cooldown. Use Rule the World if available.
+          - Z2 - Try to use every skill once to generate meter as they come off of cooldown. If Skysplitting Fist and Merciless Pummel are 4+ seconds of cooldown left when meter is filled, move to Z3. Use Rule the World if available.
+          - Z3 - Lead with Skysplitting Fist and Merciless Pummel if not used in Z2. Ideally use Flash Step x3 + Shadowbreaker + Celestial Palm + Yin Yang Palm to finish the gauge.
+          - Do not use Skysplitting Fist and Merciless Pummel in Z3 if they are not the first two skills as this will put your meter generation in the next rotation in a deficit. If you are missing any meter from previous forms, you may need to use Illusion Strike + Bolting Crash to fill.
+          - Prioritize Rule the World in Z1/Z2; do not use it in Z3 unless the boss is leaving and you need to fill the gauge now to send Z3.
+        skills:
+          - name: Yin Yang Palm
+            level: 14
+            tripods:
+              - Swift Fingers
+              - Weak Point Detection
+              - Energy Training
+            rune: Vision
+            rune_rarity: legendary
+            notes: |-
+              **Main Damage Skill.**
+              - Paralysis Immunity
+              - Using Supreme Technique or Supreme Palm will empower the next Yin Yang Palm use
+              - Using Yin Yang Palm will increase the damage of Supreme Art skills for 12 seconds
+              - **Meter Generation**: 2060
+          - name: Illusion Strike
+            level: 14
+            tripods:
+              - Enhanced Strike
+              - Apex
+              - Seething Fighting Spirit
+            rune: Judgment
+            rune_rarity: legendary
+            notes: |-
+              **Meter Generation Skill**
+              - Paralysis Immunity
+              - Can be substituted with Bleed or Poison
+              - **Meter Generation**: 1540
+          - name: Celestial Palm
+            level: 14
+            tripods:
+              - Enhanced Strike
+              - Harsh Training
+              - Wide Hit
+            rune: Quick Recharge
+            rune_rarity: epic
+            notes: |-
+              **Meter Generation Skill**
+              - **Meter Generation**: 1224
+          - name: Shadowbreaker
+            level: 11
+            tripods:
+              - Brutal Honesty
+              - Weak Point Detection
+              - Sixth Sense
+            rune: Conviction
+            rune_rarity: legendary
+            notes: |-
+              **Meter Generation Skill**
+              - Paralysis Immunity
+              - Can be substituted with Quick Recharge
+              - **Meter Generation**: 1152
+          - name: Bolting Crash
+            level: 10
+            tripods:
+              - Brutal Honesty
+              - Fighting Spirit Enh.
+              - Tough Shoulder
+            rune: Quick Recharge
+            rune_rarity: rare
+            notes: |-
+              **Utility, Counter**
+              - Paralysis Immunity
+              - Synergy is on hit, not on cast.
+              - Can be substituted with Bleed or Poison rune
+              - **Meter Generation**: 826
+          - name: Merciless Pummel
+            level: 14
+            tripods:
+              - In a Tight Spot
+              - Clear Hit
+              - Double Up
+            rune: Galewind
+            rune_rarity: legendary
+            notes: |-
+              **Secondary Damage Skill**
+              - Paralysis Immunity
+              - **Meter Generation**: 1346
+          - name: Flash Step
+            level: 7
+            tripods:
+              - Excellent Mobility
+              - Fighting Spirit Enhancement
+            rune: Quick Recharge
+            rune_rarity: legendary
+            notes: |-
+              **Utility Skill, Mobility, Synergy**
+              - Paralysis Immunity
+              - Synergy is on cast, not on hit.
+              - Same cooldown no matter how many charges you use.
+              - **Meter Generation**: 346 per cast
+          - name: Skysplitting Fist
+            level: 14
+            tripods:
+              - Sturdy Armor
+              - Aircleave
+              - Weak Point Detection
+            rune: Galewind
+            rune_rarity: legendary
+            notes: |-
+              **Secondary Damage Skill**
+              - Paralysis Immunity
+              - **Meter Generation**: 2203
+          - name: Rule the World
+            level_label: Hyper Awakening Technique
+            notes: |-
+              **Meter Generation Skill, Secondary Damage Skill**
+              - Aim to use Rule the World once every rotation of Supreme Art Forms.
+              - The Leap node Sky Walk takes advantage of the multiple form changes to have reduced cooldown.
+              - Sky Walk also allows for traversal through the boss.
+              - **Meter Generation**: 3386
+          - name: Decimation Ray / Supernova Purgation Ray
+            icon: Decimation Ray
+            level_label: Awakening / Hyper Awakening
+            notes: |-
+              **Meter Generation Skill**
+              - Does basically no damage.
+              - Used mainly in the opener or to help reset meter state.
+              - **Meter Generation**: 15000
+        gems:
+          - skill: Supreme Art
+            type: damage
+            priority: 1
+          - skill: Yin Yang Palm
+            type: damage
+            priority: 2
+          - skill: Skysplitting Fist
+            type: damage
+            priority: 3
+          - skill: Merciless Pummel
+            type: damage
+            priority: 4
+          - skill: Illusion Strike
+            type: damage
+            priority: 5
+          - skill: Celestial Palm
+            type: damage
+            priority: 6
+          - skill: Yin Yang Palm
+            type: cooldown
+            priority: 1
+          - skill: Skysplitting Fist
+            type: cooldown
+            priority: 2
+          - skill: Merciless Pummel
+            type: cooldown
+            priority: 3
+          - skill: Illusion Strike
+            type: cooldown
+            priority: 4
+          - skill: Celestial Palm
+            type: cooldown
+            priority: 5
+        dps_distribution:
+          - name: Supreme Art
+            dmg: 33.0
+          - name: Yin Yang Palm
+            dmg: 27.0
+          - name: Skysplitting Fist
+            dmg: 10
+          - name: Rule the World
+            dmg: 8
+          - name: Merciless Pummel
+            dmg: 8
+          - name: Celestial Palm
+            dmg: 4.5
+          - name: Illusion Strike
+            dmg: 4
+          - name: Shadowbreaker
+            dmg: 2
+        arkPassives:
+          - name: Crit
+            points: 10
+            category: evolution
+            tier: 1
+          - name: Swiftness
+            points: 30
+            category: evolution
+            tier: 1
+          - name: Keen Sense
+            points: 2
+            category: evolution
+            tier: 2
+          - name: Limit Break
+            points: 1
+            category: evolution
+            tier: 2
+          - name: Zealous Smite
+            points: 2
+            category: evolution
+            tier: 3
+          - name: Critical
+            points: 1
+            category: evolution
+            tier: 4
+          - name: Pulverize
+            points: 1
+            category: evolution
+            tier: 4
+          - name: Standing Striker
+            points: 2
+            category: evolution
+            tier: 5
+          - name: Supreme Art
+            points: 3
+            category: enlightenment
+            tier: 1
+          - name: Supreme Esoterica
+            points: 1
+            category: enlightenment
+            tier: 2
+          - name: Blooming Convergence
+            points: 3
+            category: enlightenment
+            tier: 3
+          - name: Primodial Energy
+            points: 2
+            category: enlightenment
+            tier: 3
+          - name: Quintuple Equilibrium
+            points: 3
+            category: enlightenment
+            tier: 4
+          - name: Unleashed Power
+            points: 5
+            category: leap
+            tier: 1
+          - name: Release Potential
+            points: 4
+            category: leap
+            tier: 1
+          - name: Instant Spell
+            points: 2
+            category: leap
+            tier: 1
+          - name: Sky Walk
+            points: 3
+            category: leap
+            tier: 2
+        arkPassiveTips:
+          - Try to get at least 90% crit rate. Critical swapped into Master if below Crit Rate. Keen Sense swapped into Limit Break if above Crit Rate.
+          - If you are overcapped on crit rate because of multiple additional crit sources, consider using Blunt Thorn to utilize the overcap.
+        rotation_sections:
+          - title: Opener Rotation
+            steps:
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Illusion Strike
+            - Celestial Palm
+            - Skysplitting Fist
+            - Merciless Pummel
+            - Rule the World
+            - Supreme Technique
+            - Yin Yang Palm
+            - Supreme Palm
+            - Supreme Godfist
+            - Illusion Strike
+            - Celestial Palm
+            - Bolting Crash
+            - Yin Yang Palm
+            - Skysplitting Fist
+            - Merciless Pummel
+            - Shadowbreaker
+            - Supreme Technique
+            - Decimation Ray
+            - Illusion Strike
+            - Celestial Palm
+            - Yin Yang Palm
+            - Supreme Palm
+            - Supreme Godfist
+          - title: Sample Standard Rotation (from 0 meter and all skills up)
+            steps:
+            - Illusion Strike
+            - Celestial Palm
+            - Shadowbreaker
+            - Bolting Crash
+            - Yin Yang Palm
+            - Skysplitting Fist
+            - Merciless Pummel
+            - Rule the World
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Supreme Technique
+            - Illusion Strike
+            - Celestial Palm
+            - Shadowbreaker
+            - Bolting Crash
+            - Yin Yang Palm
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Supreme Palm
+            - Skysplitting Fist
+            - Merciless Pummel
+            - Celestial Palm
+            - Shadowbreaker
+            - Yin Yang Palm
+            - Supreme Godfist
 ---
