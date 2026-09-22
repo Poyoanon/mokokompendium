@@ -15,7 +15,7 @@ identity:
 builds:
   - name: Robust Energy
     engraving: Robust Energy
-    description: 20 seconds of high damage followed by 10 seconds of downtime, excels at fights where it can abuse the downtime, also brings the strongest awakening in the game as added bonus.
+    description: Roughly 20 seconds of high damage followed by around 10 seconds of downtime, excels at fights where it can abuse the downtime, also brings the strongest awakening in the game as added bonus.
     playstyle: Enter Hype, do 2 damage rotation while weaving in Martial Art skills to manage your Energy bar, leave Hype and recover Hype for the next cycle.
     difficulty: medium
     preArkGrid:
