@@ -1295,7 +1295,7 @@ builds:
             priority: optional
         priorities:
           - After the opener, this build variant does not have a strict rotation; it operates according to the following guidelines for each of the stages in the identity (Z1, Z2, Z3).
-          - Z1 - Use every skill once to generate meter. The priority is to proc Conviction + Judgement if used and then putting Skysplitting Fist + Merciless Pummel on cooldown. Use Rule the World if available.
+          - Z1 - Use every skill once to generate meter. The priority is putting Skysplitting Fist + Merciless Pummel on cooldown. Use Rule the World if available.
           - Z2 - Try to use every skill once to generate meter as they come off of cooldown. If Skysplitting Fist and Merciless Pummel are 4+ seconds of cooldown left when meter is filled, move to Z3. Use Rule the World if available.
           - Z3 - Lead with Skysplitting Fist and Merciless Pummel if not used in Z2. Ideally use Flash Step x3 + Shadowbreaker + Celestial Palm + Yin Yang Palm to finish the gauge.
           - Do not use Skysplitting Fist and Merciless Pummel in Z3 if they are not the first two skills as this will put your meter generation in the next rotation in a deficit. If you are missing any meter from previous forms, you may need to use Illusion Strike + Bolting Crash to fill.
@@ -1311,7 +1311,6 @@ builds:
             rune_rarity: legendary
             notes: |-
               **Main Damage Skill.**
-              - Paralysis Immunity
               - Using Supreme Technique or Supreme Palm will empower the next Yin Yang Palm use
               - Using Yin Yang Palm will increase the damage of Supreme Art skills for 12 seconds
               - **Meter Generation**: 2060
@@ -1321,12 +1320,10 @@ builds:
               - Enhanced Strike
               - Apex
               - Seething Fighting Spirit
-            rune: Judgment
+            rune: Bleed
             rune_rarity: legendary
             notes: |-
               **Meter Generation Skill**
-              - Paralysis Immunity
-              - Can be substituted with Bleed or Poison
               - **Meter Generation**: 1540
           - name: Celestial Palm
             level: 14
@@ -1338,6 +1335,7 @@ builds:
             rune_rarity: epic
             notes: |-
               **Meter Generation Skill**
+              - The only non-paralysis immune skill in the kit.
               - **Meter Generation**: 1224
           - name: Shadowbreaker
             level: 11
@@ -1345,11 +1343,10 @@ builds:
               - Brutal Honesty
               - Weak Point Detection
               - Sixth Sense
-            rune: Conviction
-            rune_rarity: legendary
+            rune: Galewind
+            rune_rarity: epic
             notes: |-
               **Meter Generation Skill**
-              - Paralysis Immunity
               - Can be substituted with Quick Recharge
               - **Meter Generation**: 1152
           - name: Bolting Crash
@@ -1358,13 +1355,11 @@ builds:
               - Brutal Honesty
               - Fighting Spirit Enh.
               - Tough Shoulder
-            rune: Quick Recharge
-            rune_rarity: rare
+            rune: Poison
+            rune_rarity: legendary
             notes: |-
               **Utility, Counter**
-              - Paralysis Immunity
               - Synergy is on hit, not on cast.
-              - Can be substituted with Bleed or Poison rune
               - **Meter Generation**: 826
           - name: Merciless Pummel
             level: 14
@@ -1376,7 +1371,6 @@ builds:
             rune_rarity: legendary
             notes: |-
               **Secondary Damage Skill**
-              - Paralysis Immunity
               - **Meter Generation**: 1346
           - name: Flash Step
             level: 7
@@ -1387,7 +1381,6 @@ builds:
             rune_rarity: legendary
             notes: |-
               **Utility Skill, Mobility, Synergy**
-              - Paralysis Immunity
               - Synergy is on cast, not on hit.
               - Same cooldown no matter how many charges you use.
               - **Meter Generation**: 346 per cast
@@ -1401,7 +1394,6 @@ builds:
             rune_rarity: legendary
             notes: |-
               **Secondary Damage Skill**
-              - Paralysis Immunity
               - **Meter Generation**: 2203
           - name: Rule the World
             level_label: Hyper Awakening Technique
@@ -1559,11 +1551,11 @@ builds:
             - Supreme Godfist
             - Illusion Strike
             - Celestial Palm
+            - Shadowbreaker
             - Bolting Crash
             - Yin Yang Palm
             - Skysplitting Fist
             - Merciless Pummel
-            - Shadowbreaker
             - Supreme Technique
             - Decimation Ray
             - Illusion Strike
