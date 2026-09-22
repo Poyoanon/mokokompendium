@@ -273,13 +273,17 @@ builds:
             category: enlightenment
             tier: 2
           - name: Swiftness Barrage
-            points: 2
+            points: 1
             category: enlightenment
             tier: 3
           - name: Barrage Output Enhancement
             points: 3
             category: enlightenment
             tier: 3
+          - name: Positioning System
+            points: 1
+            category: enlightenment
+            tier: 4
           - name: Summon A.C.T
             points: 3
             category: enlightenment
@@ -538,13 +542,17 @@ builds:
             category: enlightenment
             tier: 2
           - name: Swiftness Barrage
-            points: 2
+            points: 1
             category: enlightenment
             tier: 3
           - name: Barrage Output Enhancement
             points: 3
             category: enlightenment
             tier: 3
+          - name: Positioning System
+            points: 1
+            category: enlightenment
+            tier: 4
           - name: Summon A.C.T
             points: 3
             category: enlightenment
