@@ -308,13 +308,17 @@ builds:
             category: enlightenment
             tier: 2
           - name: Secret Bullet
-            points: 2
+            points: 1
             category: enlightenment
             tier: 3
           - name: "Peacemaker: Rifle"
             points: 3
             category: enlightenment
             tier: 3
+          - name: Gun Replacement Skill
+            points: 1
+            category: enlightenment
+            tier: 4
           - name: Pacifist
             points: 3
             category: enlightenment
@@ -618,13 +622,17 @@ builds:
             category: enlightenment
             tier: 2
           - name: Secret Bullet
-            points: 2
+            points: 1
             category: enlightenment
             tier: 3
           - name: "Peacemaker: Rifle"
             points: 3
             category: enlightenment
             tier: 3
+          - name: Gun Replacement Skill
+            points: 1
+            category: enlightenment
+            tier: 4
           - name: Pacifist
             points: 3
             category: enlightenment
