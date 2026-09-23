@@ -11,7 +11,7 @@ synergy:
     - Flash Step
 identity:
   name: Hype
-  description: Hype meter refills overtime and as you press martial art skills, once full, Soulfist can enter "Hype" with the identity button (Z). In this mode you get additional damage, extra attack speed, extra cooldown as well as extra Force Skills damage. Using Force Skills or waiting out the timer will force you out of Hype, you can cancel Hype by pressing the secondary identity button (X).
+  description: Hype meter refills over time and as you press martial art skills, once full, Soulfist can enter "Hype" with the identity button (Z). In this mode you get additional damage, extra attack speed, extra cooldown as well as extra Force Skills damage. Using Force Skills or waiting out the timer will force you out of Hype, you can cancel Hype by pressing the secondary identity button (X).
 builds:
   - name: Robust Energy
     engraving: Robust Energy
