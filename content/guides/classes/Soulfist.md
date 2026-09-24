@@ -912,7 +912,7 @@ builds:
           - Tempest Blast
       - name: Orbies
         difficulty: 3
-        description: RS Ark grid build focusing on Force Orb casts and spamming Energy Bullet to extend Hype to allow for more Force Skills uses. This build shoud technically do more damage but is also the sweatiest of the bunch with higher uptime required and lower downtime, with added jank interactions with Energy Bullet near the end of Hype to be wary of.
+        description: RS Ark grid build focusing on Force Orb casts and spamming Energy Bullet to extend Hype to allow for more Force Skills uses. This build should technically do more damage but is also the sweatiest of the bunch with higher uptime required and lower downtime, with added jank interactions with Energy Bullet near the end of Hype to be wary of.
         stats: Specialization 30/30, Crit 6/30, Swiftness 4/30
         arkgrid_cores: Hundred Chain Strike + Recovery Bullet + Energy Burst
         arkgrid_prose: |-
