@@ -1247,7 +1247,7 @@ builds:
           - Akir Burst should be used frequently but aim to use it when 6 orbs are filled up, an easy way to tell is to check if the Jahia & Ligheas icon lights up. When it does use Akir Burst.
           - Akir Burst will refresh all your summons duration when cast.
           - Pauru's Command Skill should be used regularly but if you are outside of Akir Burst and will enter shortly holding it for a few seconds is acceptable.
-          - Elcid cannot move as she has no legs, if the boss moves make sure to resummon her to keep applying your synergy as well as a decent ammount of DPS.
+          - Elcid cannot move as she has no legs, if the boss moves make sure to resummon her to keep applying your synergy as well as a decent amount of DPS.
         skills:
           - name: Steed Charge
             level: 14
@@ -1523,7 +1523,7 @@ builds:
           - Akir Burst will refresh all your summons duration when cast.
           - Do not use Maririn or Pauru's Command Skills for damage. Maririn's Command Skill should only be used for stagger checks and Pauru's only when extra Weak Point Destruction is needed.
           - Keep Shurdi active at all times, but with its long duration and frequent Akir Burst refreshes you do not need to spam it off cooldown.
-          - Elcid cannot move as she has no legs, if the boss moves make sure to resummon her to keep applying your synergy as well as a decent ammount of DPS.
+          - Elcid cannot move as she has no legs, if the boss moves make sure to resummon her to keep applying your synergy as well as a decent amount of DPS.
           - Fleeting Gale Bird is your highest priority normal skill as your pets basic attacks will constantly lower its cooldown.
         skills:
           - name: Steed Charge
@@ -1777,7 +1777,7 @@ builds:
             points: 5
             category: leap
             tier: 1
-          - name: Igna's Breath
+          - name: Tame
             points: 3
             category: leap
             tier: 2
@@ -1802,7 +1802,7 @@ builds:
           - Steed Charge is one of your strongest burst skills, so try to keep it off cooldown and fit as many casts as possible inside Akir Burst.
           - Pauru and Maririn's Command Skills can be used normally, and if possible try to fit Pauru's Command Skill inside Akir Burst.
           - Keep Shurdi active at all times, but with its long duration and frequent Akir Burst refreshes you do not need to spam it off cooldown.
-          - Elcid cannot move as she has no legs, if the boss moves make sure to resummon her to keep applying your synergy as well as a decent ammount of DPS.
+          - Elcid cannot move as she has no legs, if the boss moves make sure to resummon her to keep applying your synergy as well as a decent amount of DPS.
         skills:
           - name: Steed Charge
             level: 14
