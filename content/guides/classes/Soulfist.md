@@ -9,14 +9,13 @@ synergy:
   description: 6.0% Attack Power granted to the party. This can be on cast or on hit depending on the skill.
   skills:
     - Flash Step
-    - Bolting Crash
 identity:
   name: Hype
   description: Hype meter refills over time and as you press martial art skills, once full, Soulfist can enter "Hype" with the identity button (Z). In this mode you get additional damage, extra attack speed, extra cooldown as well as extra Force Skills damage. Using Force Skills or waiting out the timer will force you out of Hype, you can cancel Hype by pressing the secondary identity button (X).
 builds:
   - name: Robust Energy
     engraving: Robust Energy
-    description: 20 seconds of high damage followed by 10 seconds of downtime, excels at fights where it can abuse the downtime, also brings the strongest awakening in the game as added bonus.
+    description: Roughly 20 seconds of high damage followed by around 10 seconds of downtime, excels at fights where it can abuse the downtime, also brings the strongest awakening in the game as added bonus.
     playstyle: Enter Hype, do 2 damage rotation while weaving in Martial Art skills to manage your Energy bar, leave Hype and recover Hype for the next cycle.
     difficulty: medium
     preArkGrid:
@@ -35,7 +34,7 @@ builds:
         - name: Stabilized Status
           priority: optional
       priorities:
-        - Make sure to spam Flash Step and Bolting Crash when Hype is recovering to shorten the window before you can enter it again.
+        - Make sure to spam Flash Step and Lightning Palm when Hype is recovering to shorten the window before you can enter it again.
         - Try to bomb off cooldown as much as possible unless you know that a big DPS window is coming.
         - Do not waste energy while in Hype.
       skills:
@@ -44,7 +43,7 @@ builds:
           tripods:
             - Tenacity
             - Ferocious Strike
-             - Explosive Strength
+            - Explosive Strength
           rune: Galewind
           rune_rarity: legendary
           notes: |-
@@ -79,7 +78,7 @@ builds:
             - Mid range.
             - Weakpoint Lv. 1
         - name: Skysplitting Fist
-          level: 13
+          level: 14
           tripods:
             - Firepower Control
             - Aircleave
@@ -109,7 +108,7 @@ builds:
             - Swift Fingers
             - Reverse Polarities
             - Energy Training
-          rune: Vision
+          rune: Galewind
           rune_rarity: epic
           notes: |-
             **Martial Art Skill**
@@ -127,17 +126,14 @@ builds:
             - Synergy is on cast, not on hit.
             - Same cooldown no matter how many charges you use.
             - Can be used with Galewind rune instead.
-            - The Energy regen is with Tireless is per cast, not per hit.
-        - name: Bolting Crash
-          level: 4
-          tripods:
-            - Brutal Honesty
+            - The Energy regenaration from Tireless is per cast, not per hit.
+        - name: Lightning Palm
+          level: 3
           rune: Galewind
           rune_rarity: epic
           notes: |-
             **Utility, Counter**
-            - You can drop Flash Step to level 7 if you prefer having more tripods on this skill.
-            - Synergy is on hit, not on cast.
+            - You can drop Flash Step to level 7 if you prefer having more tripods on this skill, it can do around 3% of damage distribution at level 10.
             - Counter or generating energy will be the main use of this skill.
             - can be used with Quick Recharge Rune instead.
         - name: Sky Slash
@@ -280,13 +276,12 @@ builds:
           category: leap
           tier: 2
       arkPassiveTips:
-        - Swift amount TBD once we have our hands on the build. Aim for 330 Swift with lv.8 Cooldown Gems for now.
-        - Use Optimized Training 1 if needed to fit the rotation in.
+        - Aim for 330 Swift with lv.8 Cooldown Gems for now.
       rotation:
         - Flash Step
         - Flash Step
         - Flash Step
-        - Bolting Crash
+        - Lightning Palm
         - Hype
         - Skysplitting Fist
         - Heavenly Spiral Palm
@@ -300,18 +295,17 @@ builds:
         - Flash Step
         - Flash Step
         - Flash Step
-        - Flash Step
         - Heavenly Spiral Palm
         - Energy Blast
         - Skysplitting Fist
         - Force Orb
         - Tempest Blast
     variants:
-      - name: Blasties WIP
+      - name: Blasties
         difficulty: 1
         recommended: true
         description: RS Ark grid build focusing on powering up all the big Force Skills
-        stats: Specialization 30/30, Crit 6/30, Swiftness 4/30
+        stats: Specialization 30/30, Crit 7/30, Swiftness 3/30
         arkgrid_cores: Piercing Spiral + Heavenly Squall + Brilliant Rush
         arkgrid_prose: |-
           Core priority is Piercing Spiral > Heavenly Squall > Brilliant Rush
@@ -331,7 +325,7 @@ builds:
             priority: optional
         priorities:
           - Maximize damage by using Energy Blast, Tempest Blast and Heavenly Spiral Palm.
-          - Knowing when to cancel and when to extend Hype will be key to being able to recover against bad patterns.
+          - Knowning when to cancel and when to extend Hype will be key to being able to recover against bad patterns.
           - The rotation is fairly flexible so make use of adequate Superarmor as you need it.
           - Make sure to spam Martial Arts Skills when Hype is recovering to shorten the window before you can enter it again.
           - Try to bomb off cooldown as much as possible unless you know that a big DPS window is coming.
@@ -424,17 +418,14 @@ builds:
               - Synergy is on cast, not on hit.
               - Same cooldown no matter how many charges you use.
               - Can be used with Galewind rune instead.
-              - The Energy regen is with Tireless is per cast, not per hit.
-          - name: Bolting Crash
-            level: 4
-            tripods:
-              - Brutal Honesty
-            rune: Galewind
+              - The Energy regenaration from Tireless is per cast, not per hit.
+          - name: Lightning Palm
+            level: 3
+            rune: Bleed
             rune_rarity: epic
             notes: |-
               **Utility, Counter**
-              - You can drop Flash Step to level 7 if you prefer having more tripods on this skill.
-              - Synergy is on hit, not on cast.
+              - You can drop Flash Step to level 7 if you prefer having more tripods on this skill, it can do around 3% of damage distribution at level 10.
               - Counter or generating energy will be the main use of this skill.
               - can be used with Quick Recharge Rune instead.
           - name: Sky Slash
@@ -478,10 +469,10 @@ builds:
           - skill: Skysplitting Fist
             type: cooldown
             priority: 3
-          - skill: Force Orb
+          - skill: Tempest Blast
             type: cooldown
             priority: 4
-          - skill: Yin Yang Palm
+          - skill: Flash Step
             type: cooldown
             priority: 5
         dps_distribution:
@@ -497,21 +488,21 @@ builds:
             dmg: 7.0
           - name: World Decimation
             dmg: 5.0
-          - name: Yin Yang Palm
-            dmg: 1.5
+          - name: Yin Yan Palm
+            dmg: 6.0
           - name: Skysplitting Fist
-            dmg: 1.5
+            dmg: 9.0
         arkPassives:
           - name: Specialization
             points: 30
             category: evolution
             tier: 1
           - name: Crit
-            points: 5
+            points: 7
             category: evolution
             tier: 1
           - name: Swiftness
-            points: 5
+            points: 3
             category: evolution
             tier: 1
           - name: Keen Sense
@@ -574,62 +565,67 @@ builds:
             points: 2
             category: leap
             tier: 1
-          - name: Final Strike
+          - name: Level Adaptation
             points: 3
             category: leap
             tier: 2
         arkPassiveTips:
-          - Swift amount TBD once we have our hands on the build. Aim for 170 Swift with Lv. 8 Gems.
+          - Aim for 230 Swift with Lv. 8 Gems.
+          - Depending on Bracelet or Crit syn you can drop Master or Keen Sense.
+          - Skillcode 781D20D86A3680F98FA9F462AF0B247C51F30BB3DAB31FD3A011E8AF44B36BA20DFDCD21BC7CEBC312BFBFEBB23E911EF9F69CDD7926B8FED3B1A60D5C5F0D41
         rotation_sections:
           - title: General Damage Rotation
             steps:
             - Flash Step
             - Flash Step
             - Flash Step
-            - Bolting Crash
+            - Lightning Palm
             - Hype
+            - Skysplitting Fist
             - Heavenly Spiral Palm
-            - Force Orb
             - Energy Blast
-            - Sky Slash
-            - Yin Yang Palm
             - Tempest Blast
+            - Force Orb
+            - Yin Yang Palm
+            - Sky Slash
+            - Lightning Palm
+            - Flash Step
+            - Flash Step
             - Flash Step
             - Skysplitting Fist
-            - Bolting Crash
-            - Flash Step
-            - Flash Step
+            - Yin Yang Palm
             - Heavenly Spiral Palm
-            - Force Orb
             - Energy Blast
+            - Skysplitting Fist
             - Tempest Blast
+            - Force Orb
           - title: Bomb Rotation
             steps:
             - Flash Step
             - Flash Step
             - Flash Step
-            - Bolting Crash
+            - Lightning Palm
             - Hype
+            - Skysplitting Fist
             - Heavenly Spiral Palm
-            - Force Orb
-            - Tempest Blast
             - Energy Blast
+            - Tempest Blast
+            - Force Orb
+            - Yin Yang Palm
             - Flash Step
             - World Decimation
             - Sky Slash
-            - Skysplitting Fist
-            - Yin Yang Palm
             - Heavenly Spiral Palm
-            - Force Orb
-            - Tempest Blast
             - Energy Blast
+            - Tempest Blast
+            - Force Orb
       - name: Bombies WIP
         difficulty: 2
-        description: RS Ark grid build focusing entirely on Awakening to get big burst of damage, this build is not particularly recommended but it was added for people that don't care about other variants of RS and prefers the pre-ark grid version.
+        description: RS Ark grid build focusing entirely on Awakening to get big burst of damage, this build is not particularily recommended but it was added for people that don't care about other variants of RS and prefers the pre-ark grid version.
         stats: Specialization 30/30, Crit 5/30, Swiftness 5/30
-        arkgrid_cores: Sky Shattering Strike + Adamentine Body + Dance of Heavenly Flowers
+        arkgrid_cores: Sky Shattering Strike + Chain Annihilation + Blinding Obliteration
         arkgrid_prose: |-
-          Core priority is Sky Shattering Strike > Adamentine Body > Dance of Heavenly Flowers.
+          Core priority is Sky Shattering Strike > Chain Annihilation > Blinding Obliteration.
           Minimum: Sun 14 Moon 14 Star 14.
         engravings:
           - name: Grudge
@@ -647,7 +643,7 @@ builds:
         priorities:
           - This build should excel in homework content style phasing.
           - To do damage, you NEED to land bomb.
-          - Make sure to spam Martial Arts Skills when Hype is recovering to shorten the window before you can enter it again.
+          - Make sure to spam Flash Step and Lightning Palm when Hype is recovering to shorten the window before you can enter it again.
           - Try to bomb off cooldown as much as possible unless you know that a big DPS window is coming.
         skills:
           - name: Energy Blast
@@ -690,7 +686,7 @@ builds:
               - Mid range.
               - Weakpoint Lv. 1
           - name: Skysplitting Fist
-            level: 13
+            level: 14
             tripods:
               - Firepower Control
               - Aircleave
@@ -738,17 +734,14 @@ builds:
               - Synergy is on cast, not on hit.
               - Same cooldown no matter how many charges you use.
               - Can be used with Galewind rune instead.
-              - The energy regeneration from Tireless is per cast, not per hit.
-          - name: Bolting Crash
-            level: 4
-            tripods:
-              - Brutal Honesty
-            rune: Galewind
+              - The Energy regenaration from Tireless is per cast, not per hit.
+          - name: Lightning Palm
+            level: 3
+            rune: Bleed
             rune_rarity: epic
             notes: |-
               **Utility, Counter**
-              - You can drop Flash Step to level 7 if you prefer having more tripods on this skill.
-              - Synergy is on hit, not on cast.
+              - You can drop Flash Step to level 7 if you prefer having more tripods on this skill, it can end up with roughly 3% damage distribution.
               - Counter or generating energy will be the main use of this skill.
               - can be used with Quick Recharge Rune instead.
           - name: Sky Slash
@@ -893,13 +886,12 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - Swift amount TBD once we have our hands on the build. Aim for 330 Swift with lv.8 Cooldown Gems for now.
-          - Use Optimized Training 1 if needed to fit the rotation in.
+          - Aim for 330 Swift with lv.8 Cooldown Gems.
         rotation:
           - Flash Step
           - Flash Step
           - Flash Step
-          - Bolting Crash
+          - Lightning Palm
           - Hype
           - Skysplitting Fist
           - Heavenly Spiral Palm
@@ -943,6 +935,7 @@ builds:
           - Make sure you have one stack of Destiny before you enter Hype (can be leftover from last Hype) so that you get the refund on using your Force Orb Skill right away.
           - Make sure to spam Martial Arts Skills when Hype is recovering to shorten the window before you can enter it again.
           - Try to bomb off cooldown as much as possible unless you know that a big DPS window is coming.
+          - Make sure to let your Energy Bullet go back up to 2 stacks while Hype is off, otherwise you get bugged cooldown.
         skills:
           - name: Energy Blast
             level: 14
@@ -1036,17 +1029,14 @@ builds:
               - Synergy is on cast, not on hit.
               - Same cooldown no matter how many charges you use.
               - Can be used with Galewind rune instead.
-              - The Energy regen is with Tireless is per cast, not per hit.
-          - name: Bolting Crash
-            level: 4
-            tripods:
-              - Brutal Honesty
+              - The Energy regenaration from Tireless is per cast, not per hit.
+          - name: Lightning Palm
+            level: 3
             rune: Galewind
             rune_rarity: epic
             notes: |-
               **Utility, Counter**
-              - You can drop Flash Step to level 7 if you prefer having more tripods on this skill.
-              - Synergy is on hit, not on cast.
+              - You can drop Flash Step to level 7 if you prefer having more tripods on this skill, it can deal around 3% of damage distrubtion at level 10.
               - Counter will be the main use of this skill in this build as you do not need the extra energy from using it.
               - can be used with Quick Recharge Rune instead.
           - name: Sky Slash
@@ -1196,10 +1186,9 @@ builds:
           - Aim for 270 Swift with lv.8 Cooldown Gems. Lower as you get more comfortable if you feel like it.
           - Technically able to play at base Swiftness but you will cycle slower.
           - Swiftness is a bit wasted as a stat since you get attacked speed capped from Recoil Control.
-          - Use Optimized Training 1 instead of Keen Sense if needed to fit the rotation in.
           - Depending on Bracelet or Crit syn you can drop Master or Keen Sense.
-          - Skillcode 699D791A0BE3BF03CF4346A7FC0B0DCBD3E67E898DABDF8846AE3592F5E521B7AE7CAC2C95A9A9B1BBFEDB94AD5F2E1FFCB734FA56CE97DA44EA9A752CE06C9F
-        rotation:
+          - Skillcode 87457B2C234BC3DDFAA74585D2311E2250ADB44AAF5DD95B8C4CFD509290025AFB6AB071118D718902B1CBCB48676FA5CEE32DD01F0C4F930324CB77EAF31444
+        rotation_sections:
           - title: Standard DPS rotation
             steps:
             - Energy Bullet
@@ -1232,7 +1221,6 @@ builds:
             - Energy Blast
             - Skysplitting Fist
             - Tempest Blast
-            - Energy Bullet
             - Force Orb
           - title: Hype is back, 1 destiny stack but Force Orb still has 3s cooldown OR Hype is back, 0 destiny stack, Energy bullet is not two charges.
             steps:
