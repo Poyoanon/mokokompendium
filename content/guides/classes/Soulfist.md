@@ -1188,7 +1188,7 @@ builds:
           - Swiftness is a bit wasted as a stat since you get attacked speed capped from Recoil Control.
           - Depending on Bracelet or Crit syn you can drop Master or Keen Sense.
           - Skillcode 87457B2C234BC3DDFAA74585D2311E2250ADB44AAF5DD95B8C4CFD509290025AFB6AB071118D718902B1CBCB48676FA5CEE32DD01F0C4F930324CB77EAF31444
-        rotation:
+        rotation_sections:
           - title: Standard DPS rotation
             steps:
             - Energy Bullet
