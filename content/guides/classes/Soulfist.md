@@ -3,7 +3,7 @@ title: Soulfist Guide
 class: Martial Artist
 subclass: Soulfist
 class_id: 304
-description: Comprehensive Guide to Robust Energy builds for Soulfist including pre-Ark Grid.
+description: Comprehensive Guide to Robust Energy and Supreme Art builds for Soulfist including pre-Ark Grid.
 synergy:
   name: Attack Power
   description: 6.0% Attack Power granted to the party. This can be on cast or on hit depending on the skill.
@@ -1257,6 +1257,12 @@ builds:
     identity:
       name: Supreme Art
       description: Supreme Art Soulfist generates meter based on the inner force cost of Martial Arts Skills. Activating the identity (Z) will send out Supreme Technique, Supreme Palm, or Supreme Godfist depending on the identity stage.
+    synergy:
+      name: Attack Power
+      description: 6.0% Attack Power granted to the party. This can be on cast or on hit depending on the skill.
+      skills:
+        - Flash Step
+        - Bolting Crash
     variants:
       - name: Yin Yang
         difficulty: 2
@@ -1302,6 +1308,7 @@ builds:
               - Using Supreme Technique or Supreme Palm will empower the next Yin Yang Palm use
               - Using Yin Yang Palm will increase the damage of Supreme Art skills for 12 seconds
               - **Meter Generation**: 2060
+              - **Stagger**: 377
           - name: Illusion Strike
             level: 14
             tripods:
@@ -1313,6 +1320,7 @@ builds:
             notes: |-
               **Meter Generation Skill**
               - **Meter Generation**: 1540
+              - **Stagger**: 150
           - name: Celestial Palm
             level: 14
             tripods:
@@ -1325,6 +1333,7 @@ builds:
               **Meter Generation Skill**
               - The only non-paralysis immune skill in the kit.
               - **Meter Generation**: 1224
+              - **Stagger**: 150
           - name: Shadowbreaker
             level: 11
             tripods:
@@ -1337,6 +1346,7 @@ builds:
               **Meter Generation Skill**
               - Can be substituted with Quick Recharge
               - **Meter Generation**: 1152
+              - **Stagger**: 149
           - name: Bolting Crash
             level: 10
             tripods:
@@ -1349,6 +1359,7 @@ builds:
               **Utility, Counter**
               - Synergy is on hit, not on cast.
               - **Meter Generation**: 826
+              - **Stagger**: 76
           - name: Merciless Pummel
             level: 14
             tripods:
@@ -1360,6 +1371,7 @@ builds:
             notes: |-
               **Secondary Damage Skill**
               - **Meter Generation**: 1346
+              - **Stagger**: 300
           - name: Flash Step
             level: 7
             tripods:
@@ -1372,6 +1384,7 @@ builds:
               - Synergy is on cast, not on hit.
               - Same cooldown no matter how many charges you use.
               - **Meter Generation**: 346 per cast
+              - **Stagger**: 75 per cast
           - name: Skysplitting Fist
             level: 14
             tripods:
@@ -1383,6 +1396,7 @@ builds:
             notes: |-
               **Secondary Damage Skill**
               - **Meter Generation**: 2203
+              - **Stagger**: 294
           - name: Rule the World
             level_label: Hyper Awakening Technique
             notes: |-
@@ -1391,6 +1405,7 @@ builds:
               - The Leap node Sky Walk takes advantage of the multiple form changes to have reduced cooldown.
               - Sky Walk also allows for traversal through the boss.
               - **Meter Generation**: 3386
+              - **Stagger**: 351
           - name: Decimation Ray / Supernova Purgation Ray
             icon: Decimation Ray
             level_label: Awakening / Hyper Awakening
@@ -1399,6 +1414,7 @@ builds:
               - Does basically no damage.
               - Used mainly in the opener or to help reset meter state.
               - **Meter Generation**: 15000
+              - **Stagger**: 197
         gems:
           - skill: Supreme Art
             type: damage
@@ -1522,6 +1538,7 @@ builds:
         arkPassiveTips:
           - Try to get at least 90% crit rate. Critical swapped into Master if below Crit Rate. Keen Sense swapped into Limit Break if above Crit Rate.
           - If you are overcapped on crit rate because of multiple additional crit sources, consider using Blunt Thorn to utilize the overcap.
+          - Skillcode 7A340FCCB91DC1017106D7AB2EAE807A3F64C7557301A59C58FB2BAC733C198D680D4A21E01187885790325B5FDC865CCFE096FB514AFA7D71FEBE61CE72AB98
         rotation_sections:
           - title: Opener Rotation
             steps:
@@ -1553,14 +1570,14 @@ builds:
             - Supreme Godfist
           - title: Sample Standard Rotation (from 0 meter and all skills up)
             steps:
+            - Skysplitting Fist
+            - Merciless Pummel
+            - Rule the World
             - Illusion Strike
             - Celestial Palm
             - Shadowbreaker
             - Bolting Crash
             - Yin Yang Palm
-            - Skysplitting Fist
-            - Merciless Pummel
-            - Rule the World
             - Flash Step
             - Flash Step
             - Flash Step
