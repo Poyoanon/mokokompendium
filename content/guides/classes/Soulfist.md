@@ -3,7 +3,7 @@ title: Soulfist Guide
 class: Martial Artist
 subclass: Soulfist
 class_id: 304
-description: Comprehensive Guide to Robust Energy builds for Soulfist including pre-Ark Grid.
+description: Comprehensive Guide to Robust Energy and Supreme Art builds for Soulfist including pre-Ark Grid.
 synergy:
   name: Attack Power
   description: 6.0% Attack Power granted to the party. This can be on cast or on hit depending on the skill.
@@ -129,13 +129,13 @@ builds:
             - The Energy regenaration from Tireless is per cast, not per hit.
         - name: Lightning Palm
           level: 3
-          rune: Galewind
+          rune: Quick Recharge
           rune_rarity: epic
           notes: |-
             **Utility, Counter**
             - You can drop Flash Step to level 7 if you prefer having more tripods on this skill, it can do around 3% of damage distribution at level 10.
             - Counter or generating energy will be the main use of this skill.
-            - can be used with Quick Recharge Rune instead.
+            - can be used with Galewind Rune instead.
         - name: Sky Slash
           level_label: Hyper Awakening Technique
           notes: |-
@@ -278,28 +278,58 @@ builds:
       arkPassiveTips:
         - Aim for 330 Swift with lv.8 Cooldown Gems for now.
       rotation:
-        - Flash Step
-        - Flash Step
-        - Flash Step
-        - Lightning Palm
-        - Hype
-        - Skysplitting Fist
-        - Heavenly Spiral Palm
-        - Energy Blast
-        - Force Orb
-        - Tempest Blast
-        - Flash Step
-        - World Decimation
-        - Sky Slash
-        - Yin Yang
-        - Flash Step
-        - Flash Step
-        - Flash Step
-        - Heavenly Spiral Palm
-        - Energy Blast
-        - Skysplitting Fist
-        - Force Orb
-        - Tempest Blast
+        - title: General Damage Rotation
+          steps:
+          - Flash Step
+          - Flash Step
+          - Flash Step
+          - Lightning Palm
+          - Hype
+          - Skysplitting Fist
+          - Heavenly Spiral Palm
+          - Energy Blast
+          - Force Orb
+          - Sky Slash
+          - Yin Yang Palm
+          - Tempest Blast
+          - Lightning Palm
+          - Flash Step
+          - Flash Step
+          - Flash Step
+          - Skysplitting Fist
+          - Heavenly Spiral Palm
+          - Energy Blast
+          - Tempest Blast
+          - Force Orb
+        - title: Bomb Rotation
+          steps:
+          - Flash Step
+          - Flash Step
+          - Flash Step
+          - Lightning Palm
+          - Hype
+          - Skysplitting Fist
+          - Heavenly Spiral Palm
+          - Energy Blast
+          - Tempest Blast
+          - Force Orb
+          - Flash Step
+          - World Decimation
+          - Sky Slash
+          - Yin Yang Palm
+          - Heavenly Spiral Palm
+          - Energy Blast
+          - Tempest Blast
+          - Force Orb
+        - title: Outside of hype to lower downtime as much as possible
+          steps:
+          - Flash Step
+          - Flash Step
+          - Flash Step
+          - Lightning Palm
+          - Flash Step
+          - Flash Step
+          - Flash Step
     variants:
       - name: Blasties
         difficulty: 1
@@ -349,7 +379,7 @@ builds:
               - Weak Point Detection
               - Inner Lightning
             rune: Galewind
-            rune_rarity: legendary
+            rune_rarity: epic
             notes: |-
               **Force Skill*
               - Main Damage
@@ -375,8 +405,8 @@ builds:
               - Firepower Control
               - Aircleave
               - Weak Point Detection
-            rune: Vision
-            rune_rarity: epic
+            rune: Galewind
+            rune_rarity: legendary
             notes: |-
               **Martial Art Skill**
               - Recovers a lot of energy per use.
@@ -400,7 +430,7 @@ builds:
               - Swift Fingers
               - Reverse Polarities
               - Energy Training
-            rune: Vision
+            rune: Galewind
             rune_rarity: epic
             notes: |-
               **Martial Art Skill**
@@ -417,17 +447,16 @@ builds:
               **Utility Skill, Mobility, Synergy**
               - Synergy is on cast, not on hit.
               - Same cooldown no matter how many charges you use.
-              - Can be used with Galewind rune instead.
+              - Can be used with Vision rune instead.
               - The Energy regenaration from Tireless is per cast, not per hit.
           - name: Lightning Palm
             level: 3
-            rune: Bleed
-            rune_rarity: epic
+            rune: Poison
+            rune_rarity: legendary
             notes: |-
               **Utility, Counter**
               - You can drop Flash Step to level 7 if you prefer having more tripods on this skill, it can do around 3% of damage distribution at level 10.
               - Counter or generating energy will be the main use of this skill.
-              - can be used with Quick Recharge Rune instead.
           - name: Sky Slash
             level_label: Hyper Awakening Technique
             notes: |-
@@ -488,7 +517,7 @@ builds:
             dmg: 7.0
           - name: World Decimation
             dmg: 5.0
-          - name: Yin Yan Palm
+          - name: Yin Yang Palm
             dmg: 6.0
           - name: Skysplitting Fist
             dmg: 9.0
@@ -570,9 +599,9 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - Aim for 230 Swift with Lv. 8 Gems.
+          - Aim for 280 Swift with Lv. 8 Gems.
           - Depending on Bracelet or Crit syn you can drop Master or Keen Sense.
-          - Skillcode 781D20D86A3680F98FA9F462AF0B247C51F30BB3DAB31FD3A011E8AF44B36BA20DFDCD21BC7CEBC312BFBFEBB23E911EF9F69CDD7926B8FED3B1A60D5C5F0D41
+          - Skillcode C8E88F19D241F9C5804D5A9138C1A3D457EE9FB58F4FFD8458DBC059CA61BC8BC07E02DCE8CEA55D22A3C60D16B0DFD30E37E16279413849B756B8C676A68750
         rotation_sections:
           - title: General Damage Rotation
             steps:
@@ -584,8 +613,8 @@ builds:
             - Skysplitting Fist
             - Heavenly Spiral Palm
             - Energy Blast
-            - Tempest Blast
             - Force Orb
+            - Tempest Blast
             - Yin Yang Palm
             - Sky Slash
             - Lightning Palm
@@ -593,10 +622,8 @@ builds:
             - Flash Step
             - Flash Step
             - Skysplitting Fist
-            - Yin Yang Palm
             - Heavenly Spiral Palm
             - Energy Blast
-            - Skysplitting Fist
             - Tempest Blast
             - Force Orb
           - title: Bomb Rotation
@@ -611,15 +638,25 @@ builds:
             - Energy Blast
             - Tempest Blast
             - Force Orb
-            - Yin Yang Palm
             - Flash Step
             - World Decimation
             - Sky Slash
+            - Yin Yang Palm
             - Heavenly Spiral Palm
             - Energy Blast
             - Tempest Blast
+            - Skysplitting Fist
             - Force Orb
-      - name: Bombies WIP
+          - title: Outside of hype to lower downtime as much as possible
+            steps:
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Lightning Palm
+            - Flash Step
+            - Flash Step
+            - Flash Step
+      - name: Bombies
         difficulty: 2
         description: RS Ark grid build focusing entirely on Awakening to get big burst of damage, this build is not particularily recommended but it was added for people that don't care about other variants of RS and prefers the pre-ark grid version.
         stats: Specialization 30/30, Crit 5/30, Swiftness 5/30
@@ -664,7 +701,7 @@ builds:
               - Explosive Strength
               - Weak Point Detection
               - Inner Lightning
-            rune: Galewind
+            rune: Poison
             rune_rarity: legendary
             notes: |-
               **Force Skill*
@@ -691,8 +728,8 @@ builds:
               - Firepower Control
               - Aircleave
               - Weak Point Detection
-            rune: Vision
-            rune_rarity: epic
+            rune: Galewind
+            rune_rarity: legendary
             notes: |-
               **Martial Art Skill**
               - Recovers a lot of energy per use.
@@ -716,7 +753,7 @@ builds:
               - Swift Fingers
               - Reverse Polarities
               - Energy Training
-            rune: Vision
+            rune: Galewind
             rune_rarity: epic
             notes: |-
               **Martial Art Skill**
@@ -737,13 +774,13 @@ builds:
               - The Energy regenaration from Tireless is per cast, not per hit.
           - name: Lightning Palm
             level: 3
-            rune: Bleed
+            rune: Quick Recharge
             rune_rarity: epic
             notes: |-
               **Utility, Counter**
               - You can drop Flash Step to level 7 if you prefer having more tripods on this skill, it can end up with roughly 3% damage distribution.
               - Counter or generating energy will be the main use of this skill.
-              - can be used with Quick Recharge Rune instead.
+              - can be used with Galewind Rune instead.
           - name: Sky Slash
             level_label: Hyper Awakening Technique
             notes: |-
@@ -887,29 +924,61 @@ builds:
             tier: 2
         arkPassiveTips:
           - Aim for 330 Swift with lv.8 Cooldown Gems.
+          - Depending on Bracelet or Crit syn you can drop Master or Keen Sense.
+          - Skillcode DF660021DE3289BF91DCB3D6ACF490AA11B5CE1DFA6CCD66BF4591FD5DC8DF6CDB6E82E7F7E59B0A1E81B4FF5532C77691ABB49D145CD87A02E33FA2764E73C1
         rotation:
-          - Flash Step
-          - Flash Step
-          - Flash Step
-          - Lightning Palm
-          - Hype
-          - Skysplitting Fist
-          - Heavenly Spiral Palm
-          - Energy Blast
-          - Force Orb
-          - Tempest Blast
-          - Flash Step
-          - World Decimation
-          - Sky Slash
-          - Yin Yang
-          - Flash Step
-          - Flash Step
-          - Flash Step
-          - Heavenly Spiral Palm
-          - Energy Blast
-          - Skysplitting Fist
-          - Force Orb
-          - Tempest Blast
+          - title: General Damage Rotation
+            steps:
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Lightning Palm
+            - Hype
+            - Skysplitting Fist
+            - Heavenly Spiral Palm
+            - Energy Blast
+            - Force Orb
+            - Sky Slash
+            - Yin Yang Palm
+            - Tempest Blast
+            - Lightning Palm
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Skysplitting Fist
+            - Heavenly Spiral Palm
+            - Energy Blast
+            - Tempest Blast
+            - Force Orb
+          - title: Bomb Rotation
+            steps:
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Lightning Palm
+            - Hype
+            - Skysplitting Fist
+            - Heavenly Spiral Palm
+            - Energy Blast
+            - Tempest Blast
+            - Force Orb
+            - Flash Step
+            - World Decimation
+            - Sky Slash
+            - Yin Yang Palm
+            - Heavenly Spiral Palm
+            - Energy Blast
+            - Tempest Blast
+            - Force Orb
+          - title: Outside of hype to lower downtime as much as possible
+            steps:
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Lightning Palm
+            - Flash Step
+            - Flash Step
+            - Flash Step
       - name: Orbies
         difficulty: 3
         description: RS Ark grid build focusing on Force Orb casts and spamming Energy Bullet to extend Hype to allow for more Force Skills uses. This build should technically do more damage but is also the sweatiest of the bunch with higher uptime required and lower downtime, with added jank interactions with Energy Bullet near the end of Hype to be wary of.
@@ -955,7 +1024,7 @@ builds:
               - Explosive Strength
               - Weak Point Detection
               - Inner Lightning
-            rune: Galewind
+            rune: Bleed
             rune_rarity: legendary
             notes: |-
               **Force Skill*
@@ -982,7 +1051,7 @@ builds:
               - Enhanced Speed
               - Penetrating Pain
               - Trance
-            rune: Bleed
+            rune: Quick Recharge
             rune_rarity: legendary
             notes: |-
               **Force Skill**
@@ -1008,8 +1077,8 @@ builds:
               - Sturdy Armor
               - Aircleave
               - Weak Point Detection
-            rune: Vision
-            rune_rarity: epic
+            rune: Galewind
+            rune_rarity: legendary
             notes: |-
               **Martial Art Skill**
               - Recovers a lot of energy per use.
@@ -1155,15 +1224,11 @@ builds:
             category: enlightenment
             tier: 3
           - name: Keen Force
-            points: 1
+            points: 2
             category: enlightenment
             tier: 3
           - name: Limit Break
             points: 3
-            category: enlightenment
-            tier: 4
-          - name: Recoil Control
-            points: 1
             category: enlightenment
             tier: 4
           - name: Unleashed Power
@@ -1171,11 +1236,15 @@ builds:
             category: leap
             tier: 1
           - name: Release Potential
-            points: 4
+            points: 3
             category: leap
             tier: 1
           - name: Instant Spell
-            points: 2
+            points: 3
+            category: leap
+            tier: 1
+          - name: Awakening Amplifier
+            points: 1
             category: leap
             tier: 1
           - name: Final Strike
@@ -1183,11 +1252,10 @@ builds:
             category: leap
             tier: 2
         arkPassiveTips:
-          - Aim for 270 Swift with lv.8 Cooldown Gems. Lower as you get more comfortable if you feel like it.
+          - Aim for 430 Swift with lv.8 Cooldown Gems.
           - Technically able to play at base Swiftness but you will cycle slower.
-          - Swiftness is a bit wasted as a stat since you get attacked speed capped from Recoil Control.
           - Depending on Bracelet or Crit syn you can drop Master or Keen Sense.
-          - Skillcode 87457B2C234BC3DDFAA74585D2311E2250ADB44AAF5DD95B8C4CFD509290025AFB6AB071118D718902B1CBCB48676FA5CEE32DD01F0C4F930324CB77EAF31444
+          - Skillcode 2FC013AC8D4AC59278F310B65797D494697231C4DCF9236097A50D0BFCE8B414BF4DDDA89E13492A415454B32F8027C952EFCCA5975C85C52613AAAED23807C6
         rotation_sections:
           - title: Standard DPS rotation
             steps:
@@ -1251,12 +1319,31 @@ builds:
             - Tempest Blast
             - Energy Bullet
             - Force Orb
+          - title: Outside of hype to lower downtime as much as possible, make sure to not use Energy Bullet with too low of a cooldown otherwise you will get 6s downtime on Energy Bullet
+            steps:
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Energy Bullet
+            - Flash Step
+            - Flash Step
+            - Flash Step
+            - Energy Bullet
+            - Flash Step
+            - Flash Step
+            - Flash Step
   - name: Supreme Art
     engraving: Supreme Art
     difficulty: medium
     identity:
       name: Supreme Art
       description: Supreme Art Soulfist generates meter based on the inner force cost of Martial Arts Skills. Activating the identity (Z) will send out Supreme Technique, Supreme Palm, or Supreme Godfist depending on the identity stage.
+    synergy:
+      name: Attack Power
+      description: 6.0% Attack Power granted to the party. This can be on cast or on hit depending on the skill.
+      skills:
+        - Flash Step
+        - Bolting Crash
     variants:
       - name: Yin Yang
         difficulty: 2
@@ -1302,6 +1389,7 @@ builds:
               - Using Supreme Technique or Supreme Palm will empower the next Yin Yang Palm use
               - Using Yin Yang Palm will increase the damage of Supreme Art skills for 12 seconds
               - **Meter Generation**: 2060
+              - **Stagger**: 377
           - name: Illusion Strike
             level: 14
             tripods:
@@ -1313,6 +1401,7 @@ builds:
             notes: |-
               **Meter Generation Skill**
               - **Meter Generation**: 1540
+              - **Stagger**: 150
           - name: Celestial Palm
             level: 14
             tripods:
@@ -1325,6 +1414,7 @@ builds:
               **Meter Generation Skill**
               - The only non-paralysis immune skill in the kit.
               - **Meter Generation**: 1224
+              - **Stagger**: 150
           - name: Shadowbreaker
             level: 11
             tripods:
@@ -1337,6 +1427,7 @@ builds:
               **Meter Generation Skill**
               - Can be substituted with Quick Recharge
               - **Meter Generation**: 1152
+              - **Stagger**: 149
           - name: Bolting Crash
             level: 10
             tripods:
@@ -1349,6 +1440,7 @@ builds:
               **Utility, Counter**
               - Synergy is on hit, not on cast.
               - **Meter Generation**: 826
+              - **Stagger**: 76
           - name: Merciless Pummel
             level: 14
             tripods:
@@ -1360,6 +1452,7 @@ builds:
             notes: |-
               **Secondary Damage Skill**
               - **Meter Generation**: 1346
+              - **Stagger**: 300
           - name: Flash Step
             level: 7
             tripods:
@@ -1372,6 +1465,7 @@ builds:
               - Synergy is on cast, not on hit.
               - Same cooldown no matter how many charges you use.
               - **Meter Generation**: 346 per cast
+              - **Stagger**: 75 per cast
           - name: Skysplitting Fist
             level: 14
             tripods:
@@ -1383,6 +1477,7 @@ builds:
             notes: |-
               **Secondary Damage Skill**
               - **Meter Generation**: 2203
+              - **Stagger**: 294
           - name: Rule the World
             level_label: Hyper Awakening Technique
             notes: |-
@@ -1391,6 +1486,7 @@ builds:
               - The Leap node Sky Walk takes advantage of the multiple form changes to have reduced cooldown.
               - Sky Walk also allows for traversal through the boss.
               - **Meter Generation**: 3386
+              - **Stagger**: 351
           - name: Decimation Ray / Supernova Purgation Ray
             icon: Decimation Ray
             level_label: Awakening / Hyper Awakening
@@ -1399,6 +1495,7 @@ builds:
               - Does basically no damage.
               - Used mainly in the opener or to help reset meter state.
               - **Meter Generation**: 15000
+              - **Stagger**: 197
         gems:
           - skill: Supreme Art
             type: damage
@@ -1522,6 +1619,7 @@ builds:
         arkPassiveTips:
           - Try to get at least 90% crit rate. Critical swapped into Master if below Crit Rate. Keen Sense swapped into Limit Break if above Crit Rate.
           - If you are overcapped on crit rate because of multiple additional crit sources, consider using Blunt Thorn to utilize the overcap.
+          - Skillcode 7A340FCCB91DC1017106D7AB2EAE807A3F64C7557301A59C58FB2BAC733C198D680D4A21E01187885790325B5FDC865CCFE096FB514AFA7D71FEBE61CE72AB98
         rotation_sections:
           - title: Opener Rotation
             steps:
@@ -1553,14 +1651,14 @@ builds:
             - Supreme Godfist
           - title: Sample Standard Rotation (from 0 meter and all skills up)
             steps:
+            - Skysplitting Fist
+            - Merciless Pummel
+            - Rule the World
             - Illusion Strike
             - Celestial Palm
             - Shadowbreaker
             - Bolting Crash
             - Yin Yang Palm
-            - Skysplitting Fist
-            - Merciless Pummel
-            - Rule the World
             - Flash Step
             - Flash Step
             - Flash Step
