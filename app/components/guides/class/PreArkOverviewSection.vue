@@ -25,6 +25,7 @@ type ArkPassiveTipData = {
 }
 
 const props = defineProps<{
+  inlineTripods: Record<string, { name: string; url: string | null; description?: string | null; tier?: number }>
   preArkGrid: PreArkGrid
   isOpen: boolean
   hasHoverPointer: boolean
@@ -91,6 +92,7 @@ const toggleOpen = () => {
         skill-scope-base="pre-ark-priority"
         passive-scope-base="pre-ark-priority-passive"
         :items="props.preArkGrid.priorities ?? []"
+        :inline-tripods="props.inlineTripods"
         :part-parser="props.getInlineGuideTextParts"
         :has-hover-pointer="props.hasHoverPointer"
         :skill-icons="props.skillIcons"

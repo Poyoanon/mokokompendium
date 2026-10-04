@@ -498,4 +498,28 @@ describe('useD1Data race handling', () => {
       expect(query.locale).toBe('en')
     }
   })
+  it('loads priority tripods and uses the skill lookup name for note tripods', async () => {
+    vi.stubGlobal('window', {})
+    const fetchMock = createD1FetchMock((url, query) => {
+      if (url === '/api/tripods' && query.skill_name === 'Endure Pain') {
+        return Promise.resolve({ tripod_name: query.tripod_name, url: '/tripod.png', tier: 2, description: 'Resolved' })
+      }
+      return undefined
+    })
+    vi.stubGlobal('$fetch', fetchMock)
+    const { useD1Data } = await import('../../../../../app/composables/guides/class/useD1Data')
+    const { options, currentVariant } = createOptions(103)
+    options.getSkillLookupName = (skill: { name: string; icon?: string }) => skill.icon ?? skill.name
+    options.getTripodNamesFromNotes = (text?: string) => [...(text ?? '').matchAll(/<tripod>(.*?)<\/tripod>/g)].map(m => m[1])
+    currentVariant.value = {
+      skills: [{ name: 'Display Name', icon: 'Endure Pain', notes: 'Use <tripod>Taunt</tripod>' }],
+      priorities: ['Take <tripod>taunt</tripod> against bosses.'],
+    }
+    useD1Data(options)
+    await vi.waitFor(() => {
+      expect(options.inlineTripods.value['Display Name:Taunt']?.description).toBe('Resolved')
+      expect(options.inlineTripods.value.taunt?.description).toBe('Resolved')
+    })
+  })
+
 })

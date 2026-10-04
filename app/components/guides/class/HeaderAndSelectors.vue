@@ -4,6 +4,7 @@ import type { ArkGridVariant, Build } from '~/types/guide'
 const props = withDefaults(defineProps<{
   title: string
   description: string
+  classIcon?: string | null
   guideUpdatedDate?: string | null
   builds: Build[]
   selectedBuild: number
@@ -11,6 +12,7 @@ const props = withDefaults(defineProps<{
   selectedVariant: number
   currentVariantRecommended: boolean
 }>(), {
+  classIcon: null,
   guideUpdatedDate: null,
 })
 
@@ -34,11 +36,21 @@ const onVariantChange = (event: Event) => {
 
 <template>
   <header class="mk-card p-6 mb-6">
-    <p class="mk-eyebrow mb-2">Class Guide</p>
-    <h1 class="text-3xl font-bold mb-2">{{ props.title }}</h1>
-    <p class="mk-subtle text-sm">{{ props.description }}</p>
-    <div v-if="props.guideUpdatedDate" class="flex items-center gap-3 mt-3 text-xs text-zinc-500">
-      <span>Updated {{ props.guideUpdatedDate }}</span>
+    <div class="flex items-start gap-4">
+      <img
+        v-if="props.classIcon"
+        :src="props.classIcon"
+        :alt="`${props.title} icon`"
+        class="size-14 rounded-xl border border-zinc-700/70 bg-zinc-900/70 object-cover shrink-0"
+      >
+      <div class="flex-1 min-w-0">
+        <p class="mk-eyebrow mb-2">Class Guide</p>
+        <h1 class="text-3xl font-bold mb-2">{{ props.title }}</h1>
+        <p class="mk-subtle text-sm">{{ props.description }}</p>
+        <div v-if="props.guideUpdatedDate" class="flex items-center gap-3 mt-3 text-xs text-zinc-500">
+          <span>Updated {{ props.guideUpdatedDate }}</span>
+        </div>
+      </div>
     </div>
   </header>
 

@@ -1,7 +1,8 @@
+import { defineTooltipEventHandler } from '../utils/tooltip-cache'
 import { asD1Database } from '../utils/d1'
 import { buildLocaleAwareEqualsClause, buildLocalizedSelectSql } from '../utils/tooltip-locale'
+import { buildIconCdnUrl } from '../../app/utils/icon-cdn'
 
-const CDN_PROXY_BASE_URL = '/api/cdn/efui_iconatlas'
 const CACHE_TTL_SECONDS = 60 * 60 * 24 * 7
 const STALE_TTL_SECONDS = 60 * 60 * 24
 const CACHE_CONTROL_HEADER = `public, max-age=${CACHE_TTL_SECONDS}, s-maxage=${CACHE_TTL_SECONDS}, stale-while-revalidate=${STALE_TTL_SECONDS}`
@@ -22,13 +23,7 @@ type ArkPassiveNameRow = {
   classify_type: number
 }
 
-function getArkPassiveIconUrl(iconFile: string, iconIndex: number): string {
-  const folder = iconFile.toLowerCase()
-  const filename = `${iconFile.toLowerCase()}_${iconIndex}.png`
-  return `${CDN_PROXY_BASE_URL}/${folder}/${filename}`
-}
-
-export default defineEventHandler(async (event) => {
+export default defineTooltipEventHandler(async (event) => {
   const query = getQuery(event)
   const locale = query.locale
 
@@ -104,7 +99,8 @@ export default defineEventHandler(async (event) => {
   }
 
   const parsedTier = query.tier ? Number.parseInt(query.tier as string, 10) : null
-  const tier = parsedTier !== null && !Number.isNaN(parsedTier) ? parsedTier : null
+  const guideTier = parsedTier !== null && !Number.isNaN(parsedTier) ? parsedTier : null
+  const tableTier = guideTier !== null ? Math.max(0, guideTier - 1) : null
   const parsedLevel = query.level
     ? Number.parseInt(query.level as string, 10)
     : query.points
@@ -147,23 +143,23 @@ export default defineEventHandler(async (event) => {
      WHERE ${nameClause.sql}
      ORDER BY
        CASE
+         WHEN tier = ? THEN 0
+         ELSE 1
+       END,
+       CASE
          WHEN class_id = ? THEN 0
          WHEN class_id = 0 THEN 1
          ELSE 2
        END,
        CASE
-         WHEN tier = ? THEN 0
+         WHEN level = ? THEN 0
          ELSE 1
        END,
-        CASE
-          WHEN level = ? THEN 0
-          ELSE 1
-        END,
-        level,
-        classify_type,
-        icon_index
+       level,
+       classify_type,
+       icon_index
      LIMIT 1`
-  ).bind(...nameClause.bindings, classId ?? -1, tier ?? -1, level ?? -1).first() as ArkPassiveRow | null
+  ).bind(...nameClause.bindings, tableTier ?? -1, classId ?? -1, level ?? -1).first() as ArkPassiveRow | null
 
   if (!row) {
     return {
@@ -180,6 +176,6 @@ export default defineEventHandler(async (event) => {
     icon_file: row.icon_file,
     icon_index: row.icon_index,
     description: row.description ?? null,
-    url: getArkPassiveIconUrl(row.icon_file, row.icon_index)
+    url: buildIconCdnUrl(row.icon_file, row.icon_index)
   }
 })

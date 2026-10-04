@@ -245,7 +245,7 @@ const getNotePassiveDisplayName = (name: string) =>
                 :hover-open="props.hasHoverPointer"
                 :name="skill.name"
                 :icon-url="props.skillIcons[getSkillLookup(skill)] ?? null"
-                :header-lines="props.getSkillHeaderLines(skill.name)"
+                :header-lines="props.getSkillHeaderLines(getSkillLookup(skill))"
                 :description-parts="props.parseSkillDescription(props.skillDescriptions[getSkillLookup(skill)])"
               />
             </div>

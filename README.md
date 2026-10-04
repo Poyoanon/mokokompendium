@@ -38,3 +38,30 @@ Default local address: `http://localhost:3000`
 
 Contributions are welcome. Feel free to open an issue or submit a pull request.
 If you'd like to contribute to the class guides themselves, [check this wiki](https://github.com/Poyoanon/mokokompendium/wiki/Contributing-to-Class-Guides)!
+
+## Refreshing skill and tripod data
+
+Extract the main `EFGame_Extra/ClientData/TableData/EFTable_*.db` tables from
+`_data2.lpk` into `.data/aug31`. The importer deliberately excludes the separate
+`jss` override tables. Include Skill, SkillFeature, SkillEffect, SkillEffectVariable,
+SkillBuff, GameMsg, PC, CombatEffect, and AbilityFeature.
+
+Export the live database before generating a repair:
+
+```sh
+pnpm exec wrangler d1 export mokokompendium-skills --remote --output .data/remote-before.sql
+pnpm db:sync-skills:dry-run --baseline .data/remote-before.sql
+python scripts/test_skill_sync.py
+```
+
+Alternatively invoke `python scripts/sync_raw_skill_compendium.py --source PATH
+--baseline .data/remote-before.sql` directly. Review `.data/skill-sync/coverage.json`
+and `repair.sql`, then apply the SQL with `wrangler d1 execute --remote --file`.
+The script never writes remotely itself. It validates the repair against the
+export, checks repeatability, and preserves unrelated tables and custom columns.
+Descriptions use the existing 140,000 attack-power convention.
+
+If guide requests stall after deployment, inspect `_content_info.ready`. Only
+clear a stuck initialization flag after verifying every guide against the exact
+published `/__nuxt_content/classGuides/sql_dump.txt` bundle; setting the flag on
+an incomplete import would hide missing content.

@@ -1,3 +1,5 @@
+import { buildIconCdnUrl } from '~/utils/icon-cdn'
+
 interface IconResult {
   url: string | null
   tier?: number
@@ -8,8 +10,6 @@ interface IconResult {
 interface BatchIconResult {
   [name: string]: string | null
 }
-
-const CDN_PROXY_BASE_URL = '/api/cdn/efui_iconatlas'
 
 // Composable for fetching Lost Ark CDN icon URLs
 export function useIconUrl() {
@@ -99,9 +99,7 @@ export function useIconUrl() {
   // tier is tripod tier (1-3), index is icon index.
   // Example: getTripodUrl(3, 58) -> tripod_tier_3_58.png
   function getTripodUrl(tier: number, index: number): string {
-    const filename = `tripod_tier_${tier}_${index}.png`
-    const folder = 'tripod_tier'
-    return `${CDN_PROXY_BASE_URL}/${folder}/${filename}`
+    return buildIconCdnUrl(`tripod_tier_${tier}`, index)
   }
 
   return {

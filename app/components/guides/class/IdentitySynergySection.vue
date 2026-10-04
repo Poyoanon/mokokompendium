@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { GuideIdentity, GuideSynergy } from '~/types/guide'
 import SkillTooltip from './SkillTooltip.vue'
+import TripodTooltip from './TripodTooltip.vue'
+import type { InlineGuidePart } from '~/composables/guides/class/useParsing'
 
 type SkillHeaderLine = {
   text: string
@@ -13,6 +15,8 @@ type SkillDescriptionPart = {
 }
 
 const props = defineProps<{
+  inlineTripods: Record<string, { name: string; url: string | null; description?: string | null; tier?: number }>
+  partParser: (text: string) => InlineGuidePart[]
   identity?: GuideIdentity | null
   synergy?: GuideSynergy | null
   skillIcons: Record<string, string | null>
@@ -26,6 +30,7 @@ const props = defineProps<{
 }>()
 
 const hasContent = computed(() => Boolean(props.identity || props.synergy))
+const activeTripod = ref<string | null>(null)
 
 const getSynergySkillScope = (skillIndex: number) =>
   props.getInlineSkillScope('synergy', 0, skillIndex)
@@ -49,7 +54,29 @@ const isSynergySkillTooltipActive = (skillName: string, skillIndex: number) =>
     <div v-if="props.synergy" class="mk-card p-4">
       <p class="mk-eyebrow mb-1">Synergy</p>
       <p class="text-sm text-zinc-300 font-medium mb-1">{{ props.synergy.name }}</p>
-      <p class="text-sm text-zinc-400">{{ props.synergy.description }}</p>
+      <p class="text-sm text-zinc-400">
+        <template v-for="(part, index) in props.partParser(props.synergy.description)" :key="index">
+          <span v-if="part.type !== 'tripod'">{{ part.value }}</span>
+          <span
+            v-else
+            class="relative group inline-flex items-center gap-1 align-middle text-zinc-100 underline decoration-dotted underline-offset-2 cursor-help"
+            @click.stop="activeTripod = activeTripod === part.key ? null : part.key"
+          >
+            <img v-if="props.inlineTripods[part.key]?.url" :src="props.inlineTripods[part.key]?.url ?? ''" :alt="props.inlineTripods[part.key]?.name ?? part.name" class="size-4 rounded border border-zinc-700 shrink-0">
+            <span>{{ props.inlineTripods[part.key]?.name ?? part.name }}</span>
+            <TripodTooltip
+              v-if="props.inlineTripods[part.key]?.url"
+              :active="activeTripod === part.key"
+              :prefer-trigger-position="props.hasHoverPointer"
+              :hover-open="props.hasHoverPointer"
+              :name="props.inlineTripods[part.key]?.name ?? part.name"
+              :description="props.inlineTripods[part.key]?.description"
+              :tier="props.inlineTripods[part.key]?.tier"
+              :icon-url="props.inlineTripods[part.key]?.url"
+            />
+          </span>
+        </template>
+      </p>
 
       <div class="flex flex-wrap gap-x-2 gap-y-1 mt-2 text-sm text-zinc-300">
         <div

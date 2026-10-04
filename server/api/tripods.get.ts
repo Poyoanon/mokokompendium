@@ -1,17 +1,17 @@
+import { defineTooltipEventHandler } from '../utils/tooltip-cache'
 import { asD1Database } from '../utils/d1'
 import { buildLocaleAwareEqualsClause, buildLocalizedSelectSql } from '../utils/tooltip-locale'
+import { buildIconCdnUrl } from '../../app/utils/icon-cdn'
 
-const CDN_PROXY_BASE_URL = '/api/cdn/efui_iconatlas'
 const CACHE_TTL_SECONDS = 60 * 60 * 24 * 7
 const STALE_TTL_SECONDS = 60 * 60 * 24
 const CACHE_CONTROL_HEADER = `public, max-age=${CACHE_TTL_SECONDS}, s-maxage=${CACHE_TTL_SECONDS}, stale-while-revalidate=${STALE_TTL_SECONDS}`
 
 function getTripodUrl(tier: number, index: number): string {
-  const filename = `tripod_tier_${tier}_${index}.png`
-  return `${CDN_PROXY_BASE_URL}/tripod_tier/${filename}`
+  return buildIconCdnUrl(`tripod_tier_${tier}`, index)
 }
 
-export default defineEventHandler(async (event) => {
+export default defineTooltipEventHandler(async (event) => {
   const query = getQuery(event)
   const locale = query.locale
 

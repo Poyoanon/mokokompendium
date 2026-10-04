@@ -6,7 +6,7 @@ type RenderReadinessOptions = {
 
 const GUIDE_PROSE_SELECTOR = '.guide-page .prose'
 const GUIDE_IMAGE_SELECTOR = '.prose img'
-const GUIDE_CRITICAL_IMAGE_SELECTOR = '.guide-page img[src*="/api/cdn/"]'
+const GUIDE_CRITICAL_IMAGE_SELECTOR = '.guide-page img[src*="cdn.ags.lol/icon/"], .guide-page img[src*="/api/cdn/"]'
 const GUIDE_IMAGE_INIT_ATTR = 'data-mk-lazy-init'
 const GUIDE_IMAGE_SRC_ATTR = 'data-mk-lazy-src'
 const GUIDE_IMAGE_LOADED_CLASS = 'mk-image-loaded'

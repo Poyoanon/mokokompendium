@@ -152,6 +152,7 @@ export function useSectionBindings(options: SectionBindingsOptions) {
   }))
 
   const sharedInlineTextListBindings = computed(() => ({
+    inlineTripods: options.inlineTripods.value,
     ...sharedSkillTooltipBindings.value,
     ...sharedArkPassiveTooltipBindings,
   }))
@@ -263,6 +264,7 @@ export function useSectionBindings(options: SectionBindingsOptions) {
   }))
 
   const sharedPreArkOverviewBindings = computed(() => ({
+    inlineTripods: options.inlineTripods.value,
     hasHoverPointer: options.hasHoverPointer.value,
     skillIcons: options.skillIcons.value,
     skillDescriptions: options.skillDescriptions.value,

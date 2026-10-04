@@ -2,6 +2,7 @@
 import type { ArkPassiveCategory } from '~/types/guide'
 import ArkPassiveTooltip from './ArkPassiveTooltip.vue'
 import SkillTooltip from './SkillTooltip.vue'
+import TripodTooltip from './TripodTooltip.vue'
 
 type InlineTextPart =
   | { type: 'text'; value: string }
@@ -26,6 +27,7 @@ type ArkPassiveTipData = {
 }
 
 const props = withDefaults(defineProps<{
+  inlineTripods?: Record<string, { name: string; url: string | null; description?: string | null; tier?: number }>
   title: string
   items: string[]
   itemKeyPrefix: string
@@ -51,10 +53,13 @@ const props = withDefaults(defineProps<{
   hasArkPassiveTipData: (name: string) => boolean
   getArkPassiveTipCategory: (name: string) => ArkPassiveCategory
 }>(), {
+  inlineTripods: () => ({}),
   iconName: 'i-lucide-check',
   headingClass: 'mk-eyebrow mb-2',
   passiveScopeBase: null,
 })
+
+const activeTripod = ref<string | null>(null)
 
 const getSkillScope = (itemIndex: number, partIndex: number) =>
   props.getInlineSkillScope(props.skillScopeBase, itemIndex, partIndex)
@@ -166,7 +171,29 @@ const getPassiveDisplayName = (name: string) =>
               />
             </span>
             <span v-else-if="part.type === 'passive'" class="font-semibold text-zinc-100">{{ part.value }}</span>
-            <span v-else-if="part.type === 'tripod'" class="font-semibold text-zinc-100">{{ part.name }}</span>
+            <span
+              v-else-if="part.type === 'tripod'"
+              class="relative group inline-flex items-center gap-1 align-middle text-zinc-100 underline decoration-dotted underline-offset-2 cursor-help"
+              @click.stop="activeTripod = activeTripod === `${itemIndex}:${partIndex}` ? null : `${itemIndex}:${partIndex}`"
+            >
+              <img
+                v-if="props.inlineTripods[part.key]?.url"
+                :src="props.inlineTripods[part.key]?.url ?? ''"
+                :alt="props.inlineTripods[part.key]?.name ?? part.name"
+                class="size-4 rounded border border-zinc-700 shrink-0"
+              >
+              <span class="font-semibold">{{ props.inlineTripods[part.key]?.name ?? part.name }}</span>
+              <TripodTooltip
+                v-if="props.inlineTripods[part.key]?.url"
+                :active="activeTripod === `${itemIndex}:${partIndex}`"
+                :prefer-trigger-position="props.hasHoverPointer"
+                :hover-open="props.hasHoverPointer"
+                :name="props.inlineTripods[part.key]?.name ?? part.name"
+                :description="props.inlineTripods[part.key]?.description"
+                :tier="props.inlineTripods[part.key]?.tier"
+                :icon-url="props.inlineTripods[part.key]?.url"
+              />
+            </span>
           </template>
         </span>
       </li>
