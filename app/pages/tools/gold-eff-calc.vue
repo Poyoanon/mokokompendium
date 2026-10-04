@@ -3456,7 +3456,7 @@ function calculateAdvancedHoningStepCost(
 
                                             <div v-if="step.detail.variants.length > 1"
                                                  class="-translate-x-7 text-center max-[700px]:col-start-2 min-[701px]:max-[1099px]:col-start-3 row-start-1 justify-self-end min-[1100px]:col-auto min-[1100px]:row-auto">
-                                                {{ isStepExpanded(step.detail.id) ? '-' : '+' }}
+                                                {{ isStepExpanded(`${recommendation.id}-${step.detail.id}`) ? '-' : '+' }}
                                             </div>
                                         </button>
 
