@@ -1361,24 +1361,24 @@ builds:
           - skill: Maririn
             type: damage
             priority: 1
-          - skill: Pauru
-            type: damage
-            priority: 1
-          - skill: Elcid
+          - skill: Steed Charge
             type: damage
             priority: 2
-          - skill: Shurdi
+          - skill: Pauru
             type: damage
             priority: 3
-          - skill: Steed Charge
+          - skill: Shurdi
             type: damage
             priority: 4
           - skill: Winged Spirit
             type: damage
-            priority: 4
+            priority: 5
           - skill: Fleeting Gale Bird
             type: damage
-            priority: 4
+            priority: 6
+          - skill: Elcid
+            type: damage
+            priority: 6
           - skill: Water Elemental
             type: cooldown
             priority: 1
@@ -1387,7 +1387,7 @@ builds:
             priority: 2
           - skill: Fleeting Gale Bird
             type: cooldown
-            priority: 2
+            priority: 3
           - skill: Winged Spirit
             type: cooldown
             priority: 3
@@ -1636,15 +1636,18 @@ builds:
               - Use the Command Skill as soon as it comes up, as it does a lot of damage.
               - Kelsion lasts for 16s, so use it when the boss will remain targetable for most of its duration.
         gems:
+          - skill: Fleeting Gale Bird
+            type: damage
+            priority: 1
           - skill: Maririn
             type: damage
-            priority: 1
+            priority: 2
           - skill: Pauru
             type: damage
-            priority: 1
+            priority: 3
           - skill: Elcid
             type: damage
-            priority: 2
+            priority: 3
           - skill: Shurdi
             type: damage
             priority: 3
@@ -1654,18 +1657,15 @@ builds:
           - skill: Winged Spirit
             type: damage
             priority: 4
-          - skill: Fleeting Gale Bird
-            type: damage
-            priority: 4
           - skill: Water Elemental
             type: cooldown
             priority: 1
-          - skill: Steed Charge
-            type: cooldown
-            priority: 2
           - skill: Fleeting Gale Bird
             type: cooldown
             priority: 2
+          - skill: Steed Charge
+            type: cooldown
+            priority: 3
           - skill: Winged Spirit
             type: cooldown
             priority: 3
@@ -1916,24 +1916,24 @@ builds:
           - skill: Maririn
             type: damage
             priority: 1
-          - skill: Pauru
-            type: damage
-            priority: 1
-          - skill: Elcid
+          - skill: Steed Charge
             type: damage
             priority: 2
-          - skill: Shurdi
+          - skill: Pauru
             type: damage
             priority: 3
-          - skill: Steed Charge
+          - skill: Elcid
+            type: damage
+            priority: 4
+          - skill: Shurdi
             type: damage
             priority: 4
           - skill: Winged Spirit
             type: damage
-            priority: 4
+            priority: 5
           - skill: Fleeting Gale Bird
             type: damage
-            priority: 4
+            priority: 5
           - skill: Water Elemental
             type: cooldown
             priority: 1
@@ -1942,7 +1942,7 @@ builds:
             priority: 2
           - skill: Fleeting Gale Bird
             type: cooldown
-            priority: 2
+            priority: 3
           - skill: Winged Spirit
             type: cooldown
             priority: 3
