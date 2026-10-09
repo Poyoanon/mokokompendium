@@ -11,6 +11,12 @@ const tools = [
     description: 'Supersonic Breakthrough calculator for Evolution Damage and Swiftness breakpoints.',
     to: '/tools/ssb-calc',
     icon: 'i-lucide-gauge'
+  },
+  {
+    name: 'Gold Efficiency Calc',
+    description: 'Find what the next most efficient use of gold is, based on current progress.',
+    to: '/tools/gold-eff-calc',
+    icon: 'i-lucide-list-chevrons-up-down'
   }
 ]
 </script>
