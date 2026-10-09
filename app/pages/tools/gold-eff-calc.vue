@@ -28,6 +28,8 @@
         type AdvancedHoningCost
     } from '~/utils/gold-efficiency/advanced-honing'
 
+    import { buildIconCdnUrl } from '~/utils/icon-cdn'
+
     type AdvancedHoningRecommendation = {
         id: string
         slot: keyof typeof gear
@@ -1999,217 +2001,218 @@ function calculateAdvancedHoningStepCost(
         }
     ])
 
+
     const materialGroups = [
         {
             key: 'guardian-stones',
             label: 'Guardian Stones',
-            icon: '/images/materials/T4_Guardian.png',
+            icon: buildIconCdnUrl('Use_12', 89),
             items: [
                 {
                     key: 'guardian-stone-t4',
                     label: 'T4 Guardian Stone',
-                    icon: '/images/materials/T4_Guardian.png'
+                    icon: buildIconCdnUrl('Use_12', 89)
                 },
                 {
                     key: 'guardian-stone-t45',
                     label: 'T4.5 Guardian Stone',
-                    icon: '/images/materials/T45_Guardian.png'
+                    icon: buildIconCdnUrl('Use_13', 250)
                 }
             ]
         },
         {
             key: 'destruction-stones',
             label: 'Destruction Stones',
-            icon: '/images/materials/T4_Destruction.png',
+            icon: buildIconCdnUrl('Use_12', 88),
             items: [
                 {
                     key: 'destruction-stone-t4',
                     label: 'T4 Destruction Stone',
-                    icon: '/images/materials/T4_Destruction.png'
+                    icon: buildIconCdnUrl('Use_12', 88)
                 },
                 {
                     key: 'destruction-stone-t45',
                     label: 'T4.5 Destruction Stone',
-                    icon: '/images/materials/T45_Destruction.png'
+                    icon: buildIconCdnUrl('Use_13', 249)
                 }
             ]
         },
         {
             key: 'fusion-materials',
             label: 'Fusion Materials',
-            icon: '/images/materials/T4_Fusion.png',
+            icon: buildIconCdnUrl('Use_12', 86),
             items: [
                 {
                     key: 'fusion-t4',
                     label: 'T4 Fusion Materials',
-                    icon: '/images/materials/T4_Fusion.png'
+                    icon: buildIconCdnUrl('Use_12', 86)
                 },
                 {
                     key: 'fusion-t45',
                     label: 'T4.5 Fusion Materials',
-                    icon: '/images/materials/T45_Fusion.png'
+                    icon: buildIconCdnUrl('Use_13', 252)
                 }
             ]
         },
         {
             key: 'shards',
             label: 'Destiny Shards',
-            icon: '/images/materials/T4_Shard.png',
+            icon: buildIconCdnUrl('Use_12', 93), // Temporary: large shard pouch
             items: [
                 {
                     key: 'destiny-shard-small',
                     label: 'T4 Shards Small',
-                    icon: '/images/materials/T4_ShardS.png'
+                    icon: buildIconCdnUrl('Use_12', 91)
                 },
                 {
                     key: 'destiny-shard-medium',
                     label: 'T4 Shards Medium',
-                    icon: '/images/materials/T4_ShardM.png'
+                    icon: buildIconCdnUrl('Use_12', 92)
                 },
                 {
                     key: 'destiny-shard-large',
                     label: 'T4 Shards Large',
-                    icon: '/images/materials/T4_ShardL.png'
+                    icon: buildIconCdnUrl('Use_12', 93)
                 }
             ]
         },
         {
             key: 'leapstones',
             label: 'Leapstones',
-            icon: '/images/materials/T4_Leapstone.png',
+            icon: buildIconCdnUrl('Use_12', 85),
             items: [
                 {
                     key: 'leapstone-t4',
                     label: 'T4 Leapstones',
-                    icon: '/images/materials/T4_Leapstone.png'
+                    icon: buildIconCdnUrl('Use_12', 85)
                 },
                 {
                     key: 'leapstone-t45',
                     label: 'T4.5 Leapstones',
-                    icon: '/images/materials/T45_Leapstone.png'
+                    icon: buildIconCdnUrl('Use_13', 251)
                 }
             ]
         },
         {
             key: 'breath',
             label: 'Breaths/Juice',
-            icon: '/images/materials/T4_Juice.png',
+            icon: buildIconCdnUrl('Use_12', 172),
             items: [
                 {
                     key: 'glaciers-breath',
                     label: 'Glacier\'s Breath',
-                    icon: '/images/materials/GBreath.png'
+                    icon: buildIconCdnUrl('Use_12', 172)
                 },
                 {
                     key: 'lavas-breath',
                     label: 'Lava\'s Breath',
-                    icon: '/images/materials/LBreath.png'
+                    icon: buildIconCdnUrl('Use_12', 171)
                 }
             ]
         },
         {
             key: 'books',
             label: 'Books',
-            icon: '/images/materials/T4_Metal.png',
+            icon: buildIconCdnUrl('Use_12', 218),
             items: [
                 {
                     key: 'metal-11-14',
                     label: 'Metallurgy Hellfire 11-14',
-                    icon: '/images/materials/T4_Metal.png'
+                    icon: buildIconCdnUrl('Use_12', 218)
                 },
                 {
                     key: 'metal-15-18',
                     label: 'Metallurgy Hellfire 15-18',
-                    icon: '/images/materials/T4_Metal.png'
+                    icon: buildIconCdnUrl('Use_12', 218)
                 },
                 {
                     key: 'metal-19-20',
                     label: 'Metallurgy Hellfire 19-20',
-                    icon: '/images/materials/T4_Metal.png'
+                    icon: buildIconCdnUrl('Use_12', 218)
                 },
                 {
                     key: 'metal-19-20-e',
                     label: 'Enhanced Metallurgy Hellfire 19-20',
-                    icon: '/images/materials/T4_Metal.png'
+                    icon: buildIconCdnUrl('Use_12', 218)
                 },
                 {
                     key: 'tailor-11-14',
                     label: 'Tailoring Hellfire 11-14',
-                    icon: '/images/materials/T4_Tailor.png'
+                    icon: buildIconCdnUrl('Use_12', 219)
                 },
                 {
                     key: 'tailor-15-18',
                     label: 'Tailoring Hellfire 15-18',
-                    icon: '/images/materials/T4_Tailor.png'
+                    icon: buildIconCdnUrl('Use_12', 219)
                 },
                 {
                     key: 'tailor-19-20',
                     label: 'Tailoring Hellfire 19-20',
-                    icon: '/images/materials/T4_Tailor.png'
+                    icon: buildIconCdnUrl('Use_12', 219)
                 },
                 {
                     key: 'tailor-19-20-e',
                     label: 'Enhanced Tailoring Hellfire 19-20',
-                    icon: '/images/materials/T4_Tailor.png'
+                    icon: buildIconCdnUrl('Use_12', 219)
                 }
             ]
         },
         {
             key: 'scrolls',
             label: 'Scrolls',
-            icon: '/images/materials/TailorL4.png',
+            icon: buildIconCdnUrl('Use_13', 224),
             items: [
                 {
                     key: 'metal-l1',
                     label: 'Metallurgy Level 1',
-                    icon: '/images/materials/MetalL1.png'
+                    icon: buildIconCdnUrl('Use_12', 242)
                 },
                 {
                     key: 'metal-l2',
                     label: 'Metallurgy Level 2',
-                    icon: '/images/materials/MetalL2.png'
+                    icon: buildIconCdnUrl('Use_12', 244)
                 },
                 {
                     key: 'metal-l3',
                     label: 'Metallurgy Level 3',
-                    icon: '/images/materials/MetalL3.png'
+                    icon: buildIconCdnUrl('Use_13', 221)
                 },
                 {
                     key: 'metal-l4',
                     label: 'Metallurgy Level 4',
-                    icon: '/images/materials/MetalL4.png'
+                    icon: buildIconCdnUrl('Use_13', 223)
                 },
                 {
                     key: 'tailor-l1',
                     label: 'Tailoring Level 1',
-                    icon: '/images/materials/TailorL1.png'
+                    icon: buildIconCdnUrl('Use_12', 243)
                 },
                 {
                     key: 'tailor-l2',
                     label: 'Tailoring Level 2',
-                    icon: '/images/materials/TailorL2.png'
+                    icon: buildIconCdnUrl('Use_12', 245)
                 },
                 {
                     key: 'tailor-l3',
                     label: 'Tailoring Level 3',
-                    icon: '/images/materials/TailorL3.png'
+                    icon: buildIconCdnUrl('Use_13', 222)
                 },
                 {
                     key: 'tailor-l4',
                     label: 'Tailoring Level 4',
-                    icon: '/images/materials/TailorL4.png'
+                    icon: buildIconCdnUrl('Use_13', 224)
                 }
             ]
         },
         {
             key: 'chaos-stones',
             label: 'Chaos Stones',
-            icon: '/images/materials/chaosstone.png',
+            icon: buildIconCdnUrl('Use_6', 89),
             items: [
                 {
                     key: 'chaosstone',
                     label: 'Chaos Stones',
-                    icon: '/images/materials/chaosstone.png'
+                    icon: buildIconCdnUrl('Use_6', 89)
                 }
             ]
         }
@@ -2320,222 +2323,51 @@ function calculateAdvancedHoningStepCost(
     const stonePopoverOpen = ref(false)
 
     const engravings: Engraving[] = [
-        {
-            key: 'adrenaline',
-            name: 'Adrenaline',
-            icon: '/images/engravings/adrenaline.png'
-        },
-        {
-            key: 'all-out-attack',
-            name: 'All Out Attack',
-            icon: '/images/engravings/alloutattack.png'
-        },
-        {
-            key: 'ambush-master',
-            name: 'Ambush Master',
-            icon: '/images/engravings/ambushmaster.png'
-        },
-        {
-            key: 'awakening',
-            name: 'Awakening',
-            icon: '/images/engravings/awakening.png'
-        },
-        {
-            key: 'barricade',
-            name: 'Barricade',
-            icon: '/images/engravings/barricade.png'
-        },
-        {
-            key: 'broken-bone',
-            name: 'Broken Bone',
-            icon: '/images/engravings/brokenbone.png'
-        },
-        {
-            key: 'contender',
-            name: 'Contender',
-            icon: '/images/engravings/contender.png'
-        },
-        {
-            key: 'crisis-evasion',
-            name: 'Crisis Evasion',
-            icon: '/images/engravings/crisisevasion.png'
-        },
-        {
-            key: 'crushing-fist',
-            name: 'Crushing Fist',
-            icon: '/images/engravings/crushingfist.png'
-        },
-        {
-            key: 'cursed-doll',
-            name: 'Cursed Doll',
-            icon: '/images/engravings/curseddoll.png'
-        },
-        {
-            key: 'disrespect',
-            name: 'Disrespect',
-            icon: '/images/engravings/disrespect.png'
-        },
-        {
-            key: 'divine-protection',
-            name: 'Divine Protection',
-            icon: '/images/engravings/divineprotection.png'
-        },
-        {
-            key: 'drops-of-ether',
-            name: 'Drops of Ether',
-            icon: '/images/engravings/dropsofether.png'
-        },
-        {
-            key: 'emergency-rescue',
-            name: 'Emergency Rescue',
-            icon: '/images/engravings/emergencyrescue.png'
-        },
-        {
-            key: 'enhanced-shield',
-            name: 'Enhanced Shield',
-            icon: '/images/engravings/enhancedshield.png'
-        },
-        {
-            key: 'ether-predator',
-            name: 'Ether Predator',
-            icon: '/images/engravings/etherpredator.png'
-        },
-        {
-            key: 'expert',
-            name: 'Expert',
-            icon: '/images/engravings/expert.png'
-        },
-        {
-            key: 'explosive-expert',
-            name: 'Explosive Expert',
-            icon: '/images/engravings/explosiveexpert.png'
-        },
-        {
-            key: 'fortitude',
-            name: 'Fortitude',
-            icon: '/images/engravings/fortitude.png'
-        },
-        {
-            key: 'grudge',
-            name: 'Grudge',
-            icon: '/images/engravings/grudge.png'
-        },
-        {
-            key: 'heavy-armor',
-            name: 'Heavy Armor',
-            icon: '/images/engravings/heavyarmor.png'
-        },
-        {
-            key: 'hit-master',
-            name: 'Hit Master',
-            icon: '/images/engravings/hitmaster.png'
-        },
-        {
-            key: 'keen-blunt-weapon',
-            name: 'Keen Blunt Weapon',
-            icon: '/images/engravings/keenbluntweapon.png'
-        },
-        {
-            key: 'lightning-fury',
-            name: 'Lightning Fury',
-            icon: '/images/engravings/lightningfury.png'
-        },
-        {
-            key: 'magick-stream',
-            name: 'Magick Stream',
-            icon: '/images/engravings/magickstream.png'
-        },
-        {
-            key: 'mass-increase',
-            name: 'Mass Increase',
-            icon: '/images/engravings/massincrease.png'
-        },
-        {
-            key: 'master-brawler',
-            name: 'Master Brawler',
-            icon: '/images/engravings/masterbrawler.png'
-        },
-        {
-            key: 'master-of-escape',
-            name: 'Master of Escape',
-            icon: '/images/engravings/masterofescape.png'
-        },
-        {
-            key: 'masters-tenacity',
-            name: 'Master\'s Tenacity',
-            icon: '/images/engravings/masterstenacity.png'
-        },
-        {
-            key: 'max-mp-increase',
-            name: 'Max MP Increase',
-            icon: '/images/engravings/maxmpincrease.png'
-        },
-        {
-            key: 'mp-efficiency-increase',
-            name: 'MP Efficiency Increase',
-            icon: '/images/engravings/mpefficiencyincrease.png'
-        },
-        {
-            key: 'necromancy',
-            name: 'Necromancy',
-            icon: '/images/engravings/necromancy.png'
-        },
-        {
-            key: 'precise-dagger',
-            name: 'Precise Dagger',
-            icon: '/images/engravings/precisedagger.png'
-        },
-        {
-            key: 'preemptive-strike',
-            name: 'Preemptive Strike',
-            icon: '/images/engravings/preemptivestrike.png'
-        },
-        {
-            key: 'propulsion',
-            name: 'Propulsion',
-            icon: '/images/engravings/propulsion.png'
-        },
-        {
-            key: 'raid-captain',
-            name: 'Raid Captain',
-            icon: '/images/engravings/raidcaptain.png'
-        },
-        {
-            key: 'shield-piercing',
-            name: 'Shield Piercing',
-            icon: '/images/engravings/shieldpiercing.png'
-        },
-        {
-            key: 'sight-focus',
-            name: 'Sight Focus',
-            icon: '/images/engravings/sightfocus.png'
-        },
-        {
-            key: 'spirit-absorption',
-            name: 'Spirit Absorption',
-            icon: '/images/engravings/spiritabsorption.png'
-        },
-        {
-            key: 'stabilized-status',
-            name: 'Stabilized Status',
-            icon: '/images/engravings/stabilizedstatus.png'
-        },
-        {
-            key: 'strong-will',
-            name: 'Strong Will',
-            icon: '/images/engravings/strongwill.png'
-        },
-        {
-            key: 'super-charge',
-            name: 'Super Charge',
-            icon: '/images/engravings/supercharge.png'
-        },
-        {
-            key: 'vital-point-hit',
-            name: 'Vital Point Hit',
-            icon: '/images/engravings/vitalpointhit.png'
-        }
+        { key: 'adrenaline', name: 'Adrenaline', icon: buildIconCdnUrl('Ability', 235) },
+        { key: 'all-out-attack', name: 'All Out Attack', icon: buildIconCdnUrl('Ability', 236) },
+        { key: 'ambush-master', name: 'Ambush Master', icon: buildIconCdnUrl('Buff', 148) },
+        { key: 'awakening', name: 'Awakening', icon: buildIconCdnUrl('Buff', 113) },
+        { key: 'barricade', name: 'Barricade', icon: buildIconCdnUrl('Buff', 170) },
+        { key: 'broken-bone', name: 'Broken Bone', icon: buildIconCdnUrl('Buff', 94) },
+        { key: 'contender', name: 'Contender', icon: buildIconCdnUrl('Buff', 136) },
+        { key: 'crisis-evasion', name: 'Crisis Evasion', icon: buildIconCdnUrl('Buff', 162) },
+        { key: 'crushing-fist', name: 'Crushing Fist', icon: buildIconCdnUrl('Buff', 83) },
+        { key: 'cursed-doll', name: 'Cursed Doll', icon: buildIconCdnUrl('Buff', 237) },
+        { key: 'disrespect', name: 'Disrespect', icon: buildIconCdnUrl('achieve_04', 30) },
+        { key: 'divine-protection', name: 'Divine Protection', icon: buildIconCdnUrl('Buff', 229) },
+        { key: 'drops-of-ether', name: 'Drops of Ether', icon: buildIconCdnUrl('Buff', 18) },
+        { key: 'emergency-rescue', name: 'Emergency Rescue', icon: buildIconCdnUrl('Ability', 238) },
+        { key: 'enhanced-shield', name: 'Enhanced Shield', icon: buildIconCdnUrl('Buff', 239) },
+        { key: 'ether-predator', name: 'Ether Predator', icon: buildIconCdnUrl('Buff', 74) },
+        { key: 'expert', name: 'Expert', icon: buildIconCdnUrl('Ability', 237) },
+        { key: 'explosive-expert', name: 'Explosive Expert', icon: buildIconCdnUrl('Buff', 121) },
+        { key: 'fortitude', name: 'Fortitude', icon: buildIconCdnUrl('Buff', 66) },
+        { key: 'grudge', name: 'Grudge', icon: buildIconCdnUrl('Buff', 71) },
+        { key: 'heavy-armor', name: 'Heavy Armor', icon: buildIconCdnUrl('Buff', 46) },
+        { key: 'hit-master', name: 'Hit Master', icon: buildIconCdnUrl('Ability', 233) },
+        { key: 'keen-blunt-weapon', name: 'Keen Blunt Weapon', icon: buildIconCdnUrl('achieve_03', 40) },
+        { key: 'lightning-fury', name: 'Lightning Fury', icon: buildIconCdnUrl('Buff', 191) },
+        { key: 'magick-stream', name: 'Magick Stream', icon: buildIconCdnUrl('Buff', 63) },
+        { key: 'mass-increase', name: 'Mass Increase', icon: buildIconCdnUrl('Ability', 231) },
+        { key: 'master-brawler', name: 'Master Brawler', icon: buildIconCdnUrl('Ability', 224) },
+        { key: 'master-of-escape', name: 'Master of Escape', icon: buildIconCdnUrl('Buff', 10) },
+        { key: 'masters-tenacity', name: 'Master\'s Tenacity', icon: buildIconCdnUrl('Buff', 147) },
+        { key: 'max-mp-increase', name: 'Max MP Increase', icon: buildIconCdnUrl('Buff', 122) },
+        { key: 'mp-efficiency-increase', name: 'MP Efficiency Increase', icon: buildIconCdnUrl('Buff', 166) },
+        { key: 'necromancy', name: 'Necromancy', icon: buildIconCdnUrl('Buff', 29) },
+        { key: 'precise-dagger', name: 'Precise Dagger', icon: buildIconCdnUrl('Ability', 239) },
+        { key: 'preemptive-strike', name: 'Preemptive Strike', icon: buildIconCdnUrl('achieve_08', 62) },
+        { key: 'propulsion', name: 'Propulsion', icon: buildIconCdnUrl('Ability', 232) },
+        { key: 'raid-captain', name: 'Raid Captain', icon: buildIconCdnUrl('Buff', 210) },
+        { key: 'shield-piercing', name: 'Shield Piercing', icon: buildIconCdnUrl('Buff', 89) },
+        { key: 'sight-focus', name: 'Sight Focus', icon: buildIconCdnUrl('Ability', 234) },
+        { key: 'spirit-absorption', name: 'Spirit Absorption', icon: buildIconCdnUrl('Buff', 65) },
+        { key: 'stabilized-status', name: 'Stabilized Status', icon: buildIconCdnUrl('Buff', 105) },
+        { key: 'strong-will', name: 'Strong Will', icon: buildIconCdnUrl('Buff', 44) },
+        { key: 'super-charge', name: 'Super Charge', icon: buildIconCdnUrl('achieve_06', 14) },
+        { key: 'vital-point-hit', name: 'Vital Point Hit', icon: buildIconCdnUrl('Buff', 168) },
     ]
+
 
     const selectedEngraving = ref<Engraving | null>(null)
 
