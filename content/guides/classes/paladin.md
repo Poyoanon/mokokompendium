@@ -88,7 +88,7 @@ builds:
           - "Keep Wrath of God and Heavenly Blessings up and alternate them. Heavenly Blessings has the long cooldown and is the bottleneck for AP uptime; cast Wrath of God first when Magick Stream and Luminary are not stacked."
           - "Brand is your second priority after the buffs: Light's Vestige, from one brand skill plus a backup."
           - "Alternate Holy Protection and God's Decree to try and cover every attack coming your way."
-          - "Bring both counters (Holy Sword and Executioner's Sword). Once you know a raid you can drop one for Holy Area."
+          - "Bring both counters (Holy Sword and Executioner's Sword). Once you know a raid you can drop Executioner's Sword for Holy Area, but keep Holy Sword."
           - "Enter Holy Aura as soon as the meter is full, and use Light of Judgment off cooldown outside of aura."
           - "Divine Justice (T skill): use it off cooldown and sync it with your DPS; it also gives a lot of meter through Righteous Light."
           - "Wealth runes: Light of Judgment > Holy Explosion (Holy Explosion core) > Holy Area > Holy Sword > Wrath of God. Quick Recharge: Light Shock > Sword of Justice > Heavenly Blessings > Holy Area > Holy Protection."
@@ -606,7 +606,7 @@ builds:
             notes: |-
               **Mobility**
         gems:
-          - skill: Execution of Judgment
+          - skill: Judgment Blade
             type: damage
             priority: 1
           - skill: Holy Sword
@@ -615,7 +615,7 @@ builds:
           - skill: Execution of Justice
             type: damage
             priority: 3
-          - skill: Execution of Judgment
+          - skill: Judgment Blade
             type: cooldown
             priority: 1
           - skill: Holy Sword
@@ -845,7 +845,7 @@ builds:
             notes: |-
               **Mobility**
         gems:
-          - skill: Execution of Judgment
+          - skill: Judgment Blade
             type: damage
             priority: 1
           - skill: Holy Sword
@@ -854,7 +854,7 @@ builds:
           - skill: Execution of Justice
             type: damage
             priority: 3
-          - skill: Execution of Judgment
+          - skill: Judgment Blade
             type: cooldown
             priority: 1
           - skill: Holy Sword
@@ -1076,7 +1076,7 @@ builds:
             notes: |-
               **Mobility**
         gems:
-          - skill: Execution of Judgment
+          - skill: Judgment Blade
             type: damage
             priority: 1
           - skill: Flash Slash
@@ -1094,7 +1094,7 @@ builds:
           - skill: Punishment
             type: damage
             priority: 6
-          - skill: Execution of Judgment
+          - skill: Judgment Blade
             type: cooldown
             priority: 1
           - skill: Spin Slash
